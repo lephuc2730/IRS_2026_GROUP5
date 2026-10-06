@@ -48,6 +48,52 @@ The save-map service returned `result=0`, and the runtime log reported `Map save
 Week 5-6 runtime evidence run:
 https://github.com/lephuc2730/IRS_2026_GROUP5/actions/runs/37423519986
 
+
+## Exact Lab 04 Part 6 and Lab 05 TF GUI evidence
+
+A final verification run followed the remaining lab-sheet steps literally in the official unit environment.
+
+### Lab 04 Part 6.1
+
+Both Week 5 nodes were run at the same time:
+
+- `/pineapple_gossip_bot`
+- `/plc_hmi_listener`
+
+The same run also captured:
+
+- `ros2 node list`
+- `ros2 topic info /status_updates -v`
+- `ros2 interface show std_msgs/String` (with the canonical `std_msgs/msg/String` fallback)
+- a live `rqt_graph` GUI screenshot
+- publisher output and live PLC-listener output
+
+Evidence files are stored under `docs/evidence/`, including:
+
+- `lab04_nodes.txt`
+- `lab04_publisher.log`
+- `lab04_listener.log`
+- `lab04_status_topic_info.txt`
+- `lab04_rqt_graph.png`
+
+### Lab 05 Step 9
+
+While the mapping launch file was running, the exact command requested by the lab was launched:
+
+```bash
+ros2 run rqt_tf_tree rqt_tf_tree
+```
+
+The live GUI was captured from the official warehouse runtime. Evidence files include:
+
+- `docs/evidence/lab05_rqt_tf_tree.png`
+- `docs/evidence/lab05_rqt_tf_tree_root.png`
+- `docs/evidence/lab05_rqt_tf_tree.log`
+- `docs/evidence/lab05_nodes.txt`
+
+Exact Lab 04-05 evidence run:
+https://github.com/lephuc2730/IRS_2026_GROUP5/actions/runs/37431121395
+
 ## Scope
 
 This is genuine runtime evidence from the official public course simulation running headlessly in Ubuntu CI. It is not a manually fabricated screenshot or synthetic map. The headless environment is different from an in-person lab desktop, but it uses the official warehouse Docker image and ROS2 workspace image.
