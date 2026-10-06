@@ -129,6 +129,10 @@ jobs:
           echo "rqt_graph window ID: $GRAPH_ID"
 
           if [ -n "$GRAPH_ID" ]; then
+            xdotool windowsize --sync "$GRAPH_ID" 1400 850 || true
+            xdotool windowmove "$GRAPH_ID" 40 40 || true
+            sleep 3
+            xwininfo -id "$GRAPH_ID" > exact-evidence/lab04_rqt_graph_window_info.txt 2>&1 || true
             import -display :99 -window "$GRAPH_ID" exact-evidence/lab04_rqt_graph.png || true
             xwd -display :99 -id "$GRAPH_ID" -out exact-evidence/lab04_rqt_graph.xwd || true
             convert exact-evidence/lab04_rqt_graph.xwd exact-evidence/lab04_rqt_graph_xwd.png || true
@@ -180,6 +184,10 @@ jobs:
           echo "rqt_tf_tree window ID: $TF_ID"
 
           if [ -n "$TF_ID" ]; then
+            xdotool windowsize --sync "$TF_ID" 1400 850 || true
+            xdotool windowmove "$TF_ID" 40 40 || true
+            sleep 3
+            xwininfo -id "$TF_ID" > exact-evidence/lab05_rqt_tf_tree_window_info.txt 2>&1 || true
             import -display :99 -window "$TF_ID" exact-evidence/lab05_rqt_tf_tree.png || true
             xwd -display :99 -id "$TF_ID" -out exact-evidence/lab05_rqt_tf_tree.xwd || true
             convert exact-evidence/lab05_rqt_tf_tree.xwd exact-evidence/lab05_rqt_tf_tree_xwd.png || true
