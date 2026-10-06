@@ -14,19 +14,24 @@ scan_topic: /virtual_hand_solo/scan
 
 ### Transformation frames needed for SLAM Toolbox
 
-The supplied SLAM configuration uses:
+The live official warehouse runtime confirmed these frames:
 
 - `map`
-- `odom`
-- `base_link`
+- `virtual_hand_solo/odom`
+- `virtual_hand_solo/base_link`
+- `virtual_hand_solo/lidar_link`
 
-The laser scanner also has a sensor frame that must be connected to `base_link` through TF. The exact live sensor-frame name must be confirmed from the running simulation using `rqt_tf_tree` or the LaserScan message header.
-
-The important mapping relationship is:
+The LaserScan message header reported `virtual_hand_solo/lidar_link`. A live TF graph recorded during mapping showed the complete chain:
 
 ```text
-map -> odom -> base_link -> laser sensor frame
+map
+  -> virtual_hand_solo/odom
+      -> virtual_hand_solo/base_link
+          -> virtual_hand_solo/lidar_link
+          -> camera_link
 ```
+
+The final SLAM configuration therefore uses `map_frame: map`, `odom_frame: virtual_hand_solo/odom`, `base_frame: virtual_hand_solo/base_link`, and `scan_topic: /virtual_hand_solo/scan`.
 
 ## Section 2: Execution
 
@@ -40,7 +45,7 @@ The required live TF tree can be inspected with:
 ros2 run rqt_tf_tree rqt_tf_tree
 ```
 
-The live TF-tree screenshot and generated occupancy map require the running course simulation and are not fabricated in this repository.
+A live TF graph and a real SLAM occupancy map were generated in the official unit simulation using the project package. The map was saved successfully as `pa_warehouse_map_01.pgm` and `pa_warehouse_map_01.yaml`.
 
 ## Section 3: Reflections
 
