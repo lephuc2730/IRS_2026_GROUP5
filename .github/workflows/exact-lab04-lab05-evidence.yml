@@ -196,6 +196,11 @@ jobs:
 
       - name: Commit exact Lab 04-05 evidence to repository
         run: |
+          cd student
+          git fetch origin main
+          git reset --hard origin/main
+          cd ..
+
           mkdir -p student/docs/evidence
           cp -a exact-evidence/. student/docs/evidence/
 
@@ -204,9 +209,18 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/evidence
           git commit -m "Add exact Lab 04 multi-node and Lab 05 rqt TF evidence"
+
+          for attempt in 1 2 3; do
+            if git push origin main; then
+              exit 0
+            fi
+            echo "Push conflict on attempt $attempt; rebasing on latest main..."
+            git pull --rebase origin main
+          done
           git push origin main
 
       - name: Upload exact evidence artifact
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: exact-lab04-lab05-evidence
