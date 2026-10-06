@@ -1,63 +1,66 @@
-[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-06-07-35-20-083077-runnervm8df0l-485
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-10-06-07-43-32-876060-runnervm8df0l-484
 [INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [async_slam_toolbox_node-1]: process started with pid [499]
-[INFO] [rviz2-2]: process started with pid [500]
+[INFO] [async_slam_toolbox_node-1]: process started with pid [498]
+[INFO] [rviz2-2]: process started with pid [499]
 [rviz2-2] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
-[async_slam_toolbox_node-1] [INFO] [1791272120.552868818] [slam_toolbox]: Configuring
-[async_slam_toolbox_node-1] [INFO] [1791272120.566215887] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
-[async_slam_toolbox_node-1] [INFO] [1791272120.590046724] [slam_toolbox]: Activating
-[rviz2-2] [INFO] [1791272120.681526626] [rviz2]: Stereo is NOT SUPPORTED
-[rviz2-2] [INFO] [1791272120.681628547] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
-[rviz2-2] [INFO] [1791272120.726812569] [rviz2]: Stereo is NOT SUPPORTED
-[rviz2-2] [INFO] [1791272120.892351999] [SlamToolboxPlugin]: Start the slam_toolbox node state check.
-[async_slam_toolbox_node-1] [INFO] [1791272121.311869796] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272120.811 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272122.411271838] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272121.557 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272124.274154236] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272123.774 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272125.232590560] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272123.763 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272127.209914082] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272126.710 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272128.197775204] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272126.704 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272128.911590588] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272121.570 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272130.173296187] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272129.671 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272131.230908520] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272129.666 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272132.158437560] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272124.524 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272613.366231701] [slam_toolbox]: Configuring
+[async_slam_toolbox_node-1] [INFO] [1791272613.379646315] [slam_toolbox]: Using solver plugin solver_plugins::CeresSolver
+[async_slam_toolbox_node-1] [INFO] [1791272613.410054063] [slam_toolbox]: Activating
+[rviz2-2] [INFO] [1791272613.478897122] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] [INFO] [1791272613.479018528] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[rviz2-2] [INFO] [1791272613.543067330] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-2] [INFO] [1791272613.704513877] [SlamToolboxPlugin]: Start the slam_toolbox node state check.
+[async_slam_toolbox_node-1] [INFO] [1791272614.330236251] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272613.830 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272615.308162981] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272613.826 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272617.361230695] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272616.861 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272618.351462794] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272616.857 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272620.343127980] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272619.835 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272621.302069708] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272619.830 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272621.302174843] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272613.830 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272623.239262913] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272622.739 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272624.317393799] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272622.736 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272624.317507741] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272616.861 for reason 'discarding message because the queue is full'
 [async_slam_toolbox_node-1] Info: clipped range threshold to be within minimum and maximum range!
 [async_slam_toolbox_node-1] Registering sensor: [Custom Described Lidar]
-[rviz2-2] [INFO] [1791272133.839986794] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272132.139 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272134.330304971] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272133.829 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272134.635238011] [rviz2]: Trying to create a map of size 321 x 320 using 1 swatches
-[rviz2-2] [ERROR] [1791272134.653011849] [rviz2]: rviz/glsl120/indexed_8bit_image.vert
+[rviz2-2] [INFO] [1791272626.830388075] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272625.157 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272627.272356645] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272626.769 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272627.461665714] [rviz2]: Trying to create a map of size 321 x 321 using 1 swatches
+[rviz2-2] [ERROR] [1791272627.475717883] [rviz2]: rviz/glsl120/indexed_8bit_image.vert
 [rviz2-2] rviz/glsl120/indexed_8bit_image.frag
 [rviz2-2]  GLSL link result : 
 [rviz2-2] active samplers with a different type refer to the same texture image unit
-[rviz2-2] [INFO] [1791272135.382675551] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272127.410 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272136.929867287] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272135.356 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272137.438201567] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272136.932 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272137.902550469] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272129.671 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272139.450966697] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272137.872 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272140.595286458] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272140.066 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272140.822143677] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272133.389 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272142.426690681] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272140.809 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272143.739261136] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272143.238 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272144.065452433] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272136.144 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272144.963590305] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272143.235 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272146.795518572] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272146.281 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272147.110805283] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272139.338 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272147.819812866] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272146.278 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272149.752554677] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272149.251 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272150.023072309] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272142.422 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272150.769015184] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272149.248 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272152.832664003] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272152.331 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272153.181832366] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272145.551 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272153.271578450] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272151.521 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272155.357782499] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272154.857 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272155.741172582] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272147.827 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272155.812374991] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272153.997 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272158.467048175] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272157.965 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272158.676489232] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272157.215 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272158.728773214] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272150.757 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272161.344436513] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272160.843 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272161.620563841] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272153.999 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272161.620670781] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272160.127 for reason 'discarding message because the queue is full'
-[async_slam_toolbox_node-1] [INFO] [1791272164.393091036] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272163.886 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-2] [INFO] [1791272164.604830943] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272163.145 for reason 'discarding message because the queue is full'
-[rviz2-2] [INFO] [1791272164.646648354] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272157.220 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272627.590056783] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272619.835 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272629.849268425] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272628.300 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272630.354574634] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272629.854 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272630.693935939] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272622.739 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272632.961537684] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272631.413 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272633.456716483] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272632.956 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272633.800383852] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272626.488 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272635.518140495] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272633.770 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272636.015771229] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272635.515 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272636.395546624] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272628.303 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272638.018216153] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272636.358 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272639.251474269] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272638.751 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272639.556714405] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272631.416 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272641.095135212] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272639.536 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272642.302825147] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272641.801 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272642.584737796] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272634.777 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272644.178276289] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272642.572 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272645.418782622] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272644.917 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272645.726908159] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272637.990 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272646.684914754] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272645.688 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272647.932316570] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272647.432 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272648.435156887] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272640.295 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272649.199060192] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272647.424 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272650.516477155] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272650.016 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272651.594760647] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272643.356 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272651.701462289] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272650.014 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272653.673599323] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272653.166 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272654.760709311] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272653.163 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272654.760823504] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272646.499 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272656.829464959] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272656.328 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272657.293258020] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272655.544 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272657.916209041] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272650.016 for reason 'discarding message because the queue is full'
+[async_slam_toolbox_node-1] [INFO] [1791272659.977081610] [slam_toolbox]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272659.476 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-2] [INFO] [1791272660.262622299] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1791272658.703 for reason 'discarding message because the queue is full'
+[rviz2-2] [INFO] [1791272661.075722205] [rviz]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1791272653.166 for reason 'discarding message because the queue is full'

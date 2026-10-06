@@ -1,0 +1,24 @@
+
+xwininfo: Window id: 0x600006 "rqt_graph__RosGraph - rqt"
+
+  Absolute upper-left X:  40
+  Absolute upper-left Y:  40
+  Relative upper-left X:  40
+  Relative upper-left Y:  40
+  Width: 1400
+  Height: 850
+  Depth: 24
+  Visual: 0x1cf
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0x600005 (not installed)
+  Bit Gravity State: NorthWestGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +40+40  -480+40  -480-190  +40-190
+  -geometry 1400x850+40+40
+

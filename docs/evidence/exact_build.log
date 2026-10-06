@@ -1,33 +1,21 @@
 Starting >>> hand_solo_virtual_nav
 Starting >>> pa_warehouse_status
 running egg_info
-creating ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info
-writing ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/PKG-INFO
-writing dependency_links to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/dependency_links.txt
-writing entry points to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/entry_points.txt
-writing requirements to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/requires.txt
-writing top-level names to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/top_level.txt
-writing manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
-running egg_info
 creating ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info
+running egg_info
+creating ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info
 writing ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/PKG-INFO
 writing dependency_links to ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/dependency_links.txt
 writing entry points to ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/entry_points.txt
 writing requirements to ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/requires.txt
 writing top-level names to ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/top_level.txt
 writing manifest file '../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
-reading manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
-adding license file 'LICENSE'
+writing ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/PKG-INFO
+writing dependency_links to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/dependency_links.txt
+writing entry points to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/entry_points.txt
+writing requirements to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/requires.txt
+writing top-level names to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/top_level.txt
 writing manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
-running build
-running build_py
-creating /workspace/irs_ws/build/hand_solo_virtual_nav/build
-creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib
-creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
-copying hand_solo_virtual_nav/hs_waypoint_follower.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
-copying hand_solo_virtual_nav/__init__.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
-running install
-running install_lib
 reading manifest file '../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
 adding license file 'LICENSE'
 writing manifest file '../../../build/pa_warehouse_status/pa_warehouse_status.egg-info/SOURCES.txt'
@@ -41,6 +29,35 @@ copying pa_warehouse_status/plc_topic_probe.py -> /workspace/irs_ws/build/pa_war
 copying pa_warehouse_status/pineapple_gossip_bot.py -> /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status
 copying pa_warehouse_status/__init__.py -> /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status
 running install
+running install_lib
+reading manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+copying hand_solo_virtual_nav/hs_waypoint_follower.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+copying hand_solo_virtual_nav/__init__.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+running install
+running install_lib
+creating /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
+copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/plc_hmi_listener.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
+copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/plc_topic_probe.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
+copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/pineapple_gossip_bot.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
+copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/__init__.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
+byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/plc_hmi_listener.py to plc_hmi_listener.cpython-312.pyc
+byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/plc_topic_probe.py to plc_topic_probe.cpython-312.pyc
+byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/pineapple_gossip_bot.py to pineapple_gossip_bot.cpython-312.pyc
+byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index
+creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index
+creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index/packages
+copying resource/pa_warehouse_status -> /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/irs_ws/install/pa_warehouse_status/share/pa_warehouse_status
+running install_egg_info
 creating /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
 copying /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/hs_waypoint_follower.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
 copying /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/__init__.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
@@ -59,34 +76,17 @@ copying config/pa_slam_params.yaml -> /workspace/irs_ws/install/hand_solo_virtua
 creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
 copying rviz/pa_rviz_mapping.rviz -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
 running install_egg_info
-running install_lib
-Copying ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info to /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav-0.0.0-py3.12.egg-info
-running install_scripts
-creating /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
-copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/plc_hmi_listener.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
-copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/plc_topic_probe.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
-copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/pineapple_gossip_bot.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
-copying /workspace/irs_ws/build/pa_warehouse_status/build/lib/pa_warehouse_status/__init__.py -> /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status
-byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/plc_hmi_listener.py to plc_hmi_listener.cpython-312.pyc
-byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/plc_topic_probe.py to plc_topic_probe.cpython-312.pyc
-byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/pineapple_gossip_bot.py to pineapple_gossip_bot.cpython-312.pyc
-byte-compiling /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status/__init__.py to __init__.cpython-312.pyc
-running install_data
-creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index
-creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index
-creating /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index/packages
-copying resource/pa_warehouse_status -> /workspace/irs_ws/install/pa_warehouse_status/share/ament_index/resource_index/packages
-copying package.xml -> /workspace/irs_ws/install/pa_warehouse_status/share/pa_warehouse_status
-running install_egg_info
 Copying ../../../build/pa_warehouse_status/pa_warehouse_status.egg-info to /workspace/irs_ws/install/pa_warehouse_status/lib/python3.12/site-packages/pa_warehouse_status-0.0.0-py3.12.egg-info
+running install_scripts
+Copying ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info to /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav-0.0.0-py3.12.egg-info
 running install_scripts
 Installing hs_waypoint_follower script to /workspace/irs_ws/install/hand_solo_virtual_nav/lib/hand_solo_virtual_nav
 writing list of installed files to '/workspace/irs_ws/build/hand_solo_virtual_nav/install.log'
-Finished <<< hand_solo_virtual_nav [2.36s]
 Installing pineapple_gossip_bot script to /workspace/irs_ws/install/pa_warehouse_status/lib/pa_warehouse_status
 Installing plc_hmi_listener script to /workspace/irs_ws/install/pa_warehouse_status/lib/pa_warehouse_status
 Installing plc_topic_probe script to /workspace/irs_ws/install/pa_warehouse_status/lib/pa_warehouse_status
 writing list of installed files to '/workspace/irs_ws/build/pa_warehouse_status/install.log'
-Finished <<< pa_warehouse_status [2.36s]
+Finished <<< hand_solo_virtual_nav [2.59s]
+Finished <<< pa_warehouse_status [2.58s]
 
-Summary: 2 packages finished [2.55s]
+Summary: 2 packages finished [2.78s]
