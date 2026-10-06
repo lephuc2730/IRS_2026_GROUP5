@@ -3,6 +3,8 @@ name: Exact Lab 04-05 Evidence
 on:
   push:
     branches: [exact-lab-evidence-run]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: write
