@@ -11,9 +11,8 @@ jobs:
   ros2-proof:
     runs-on: ubuntu-latest
     container:
-      image: ubuntu:noble
+      image: ros:jazzy-ros-base
     env:
-      ROS_DISTRO: jazzy
       ROS_DOMAIN_ID: "37"
       PYTHONUNBUFFERED: "1"
 
@@ -21,17 +20,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install ROS 2 Jazzy
-        uses: ros-tooling/setup-ros@v0.7
-        with:
-          required-ros-distributions: jazzy
-
-      - name: Install project runtime dependencies
+      - name: Install ROS2 test dependencies
         shell: bash
         run: |
           apt-get update
-          apt-get install -y xvfb
-          apt-get install -y             ros-jazzy-slam-toolbox             ros-jazzy-rviz2             ros-jazzy-tf2-ros             ros-jazzy-rqt-graph             ros-jazzy-rqt-tf-tree
+          apt-get install -y             python3-colcon-common-extensions             xvfb             ros-jazzy-slam-toolbox             ros-jazzy-rviz2             ros-jazzy-tf2-ros
 
       - name: Build Week 5 and Week 6 packages
         shell: bash
@@ -39,7 +32,9 @@ jobs:
           source /opt/ros/jazzy/setup.bash
           colcon build             --packages-select pa_warehouse_status hand_solo_virtual_nav             --event-handlers console_direct+
           source install/setup.bash
+          echo "Week 5 executables:"
           ros2 pkg executables pa_warehouse_status
+          echo "Week 6 executables:"
           ros2 pkg executables hand_solo_virtual_nav
 
       - name: Week 5 publisher proof
@@ -61,10 +56,9 @@ jobs:
           cat week5_publisher.log
           echo "===== /status_updates proof ====="
           cat week5_status_topic.log
-
           grep -q "data:" week5_status_topic.log
 
-      - name: Week 5 PLC JSON parser proof with controlled test message
+      - name: Week 5 PLC JSON parser proof
         shell: bash
         run: |
           source /opt/ros/jazzy/setup.bash
@@ -74,7 +68,6 @@ jobs:
           LISTENER_PID=$!
 
           sleep 3
-
           ros2 topic pub --once /ci_plc_status std_msgs/msg/String             "{data: '{\"stamp\": {\"sec\": 123, \"nanosec\": 456}, \"box\": {\"weight_raw\": 987, \"location\": \"CI_TEST_STATION\"}, \"counts\": {\"big\": 1, \"medium\": 2, \"small\": 3, \"total\": 6}}'}"
 
           sleep 3
@@ -83,7 +76,6 @@ jobs:
 
           echo "===== PLC parser proof ====="
           cat week5_plc_listener.log
-
           grep -q "CI_TEST_STATION" week5_plc_listener.log
           grep -q "total=6" week5_plc_listener.log
 
@@ -100,11 +92,8 @@ jobs:
           RESULT=$?
           set -e
 
-          echo "===== Week 6 mapping launch log ====="
           cat week6_mapping_launch.log
 
-          # 124 means timeout stopped a launch that was still running.
-          # 0 means it exited cleanly. Any other code is a real launch failure.
           if [ "$RESULT" -ne 0 ] && [ "$RESULT" -ne 124 ]; then
             echo "Week 6 launch failed with exit code $RESULT"
             exit "$RESULT"
@@ -116,15 +105,15 @@ jobs:
           {
             echo "# ROS2 Jazzy Ubuntu proof"
             echo
-            echo "- Runner: Ubuntu Noble container on GitHub Actions"
-            echo "- ROS distribution: Jazzy"
-            echo "- pa_warehouse_status: built successfully"
-            echo "- hand_solo_virtual_nav: built successfully"
-            echo "- /status_updates: message observed"
-            echo "- PLC JSON parser: controlled JSON test passed"
-            echo "- Week 6 mapping launch: smoke-tested under Xvfb"
+            echo "- GitHub-hosted Ubuntu runner"
+            echo "- ROS2 Jazzy container"
+            echo "- Week 5 package built successfully"
+            echo "- Week 6 package built successfully"
+            echo "- /status_updates publisher observed"
+            echo "- PLC JSON parser passed a controlled ROS2 message test"
+            echo "- Week 6 SLAM/RViz launch file smoke-tested under Xvfb"
             echo
-            echo "Important: this CI proof does not replace the required live warehouse HMI, live PLC topic identification, final TF-tree screenshot, or real SLAM warehouse map."
+            echo "This CI proof does not replace live warehouse HMI/PLC/TF/map evidence."
           } > ROS2_PROOF_SUMMARY.md
           cat ROS2_PROOF_SUMMARY.md
 
