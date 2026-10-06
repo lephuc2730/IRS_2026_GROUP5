@@ -8,7 +8,7 @@ The captured Week 5 topic-list evidence shows **75 active ROS2 topics** in the P
 
 Sensor-related examples are `/virtual_hand_solo/scan`, `/virtual_hand_solo/odom`, `/odom`, and `/joint_states`. Command-related examples are `/cmd_vel`, `/amr/cmd_vel`, `/cmd_vel_nav`, and `/cmd_vel_teleop`. Status-related examples include `/diagnostics`, `/hmi/unified_status`, and `/status_updates`.
 
-From the supplied topic-list screenshot, `/hmi/unified_status` is the strongest PLC/HMI status candidate by name. However, the lab requires the correct topic to be confirmed by echoing a JSON payload containing `stamp`, `box`, and `counts`. The included `plc_topic_probe` node checks likely String topics for that structure.
+The PLC/HMI status topic was confirmed in the official Pine-Apple warehouse runtime as `/hmi/unified_status`. Running `ros2 topic echo /hmi/unified_status --once` returned JSON containing the required `stamp`, `box`, and `counts` objects. The alternative response topics `/sta_response`, `/sct_response`, and `/svr_response` were not published in this runtime.
 
 ### Package Structure Analysis
 
