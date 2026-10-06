@@ -1,0 +1,192 @@
+name: Week5-6 Official Runtime Evidence
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  runtime-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout student repository
+        uses: actions/checkout@v4
+        with:
+          path: student
+
+      - name: Install headless GUI tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool x11-utils imagemagick poppler-utils
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 2
+
+      - name: Clone official unit world and stage project
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official Pine-Apple warehouse
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron-workspace irs-openplc-runtime
+          sleep 45
+          docker compose ps
+
+      - name: Confirm live Hand Solo frames and topics
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            ros2 topic list > /workspace/runtime_topics.txt
+            ros2 topic info /cmd_vel -v > /workspace/cmd_vel_info.txt
+            timeout 10s ros2 run tf2_ros tf2_echo               virtual_hand_solo/odom virtual_hand_solo/base_link               > /workspace/tf_odom_to_base.txt 2>&1 || true
+            timeout 10s ros2 topic echo /virtual_hand_solo/scan --once               > /workspace/scan_runtime.txt
+            timeout 10s ros2 topic echo /virtual_hand_solo/odom --once               > /workspace/odom_runtime.txt
+          '
+
+      - name: Configure Week 6 with confirmed live frames
+        working-directory: world
+        run: |
+          PARAMS=workspace/workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/config/pa_slam_params.yaml
+          sed -i 's|odom_frame: odom|odom_frame: virtual_hand_solo/odom|' "$PARAMS"
+          sed -i 's|base_frame: base_link|base_frame: virtual_hand_solo/base_link|' "$PARAMS"
+          sed -i 's|scan_topic: /scan|scan_topic: /virtual_hand_solo/scan|' "$PARAMS"
+          cat "$PARAMS"
+
+      - name: Build both student packages in official workspace
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select pa_warehouse_status hand_solo_virtual_nav               --event-handlers console_direct+               > /workspace/runtime_build.log 2>&1
+            source install/setup.bash
+            ros2 pkg executables pa_warehouse_status               > /workspace/runtime_week5_executables.txt
+            ros2 pkg executables hand_solo_virtual_nav               > /workspace/runtime_week6_executables.txt
+          '
+
+      - name: Week 5 live publisher and HMI evidence
+        working-directory: world
+        continue-on-error: true
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 run pa_warehouse_status pineapple_gossip_bot               > /workspace/runtime_week5_publisher.log 2>&1
+          '
+          sleep 5
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            timeout 10s ros2 topic echo /status_updates --once               > /workspace/runtime_status_updates.txt
+            timeout 10s ros2 topic echo /hmi/unified_status --once               > /workspace/runtime_plc_status.txt
+          '
+          echo "Visible X11 windows before HMI toggle:" > workspace_windows.txt
+          xdotool search --onlyvisible --name ".*" getwindowname %@             >> workspace_windows.txt 2>&1 || true
+          xdotool key r || true
+          sleep 3
+          import -display :99 -window root student/week5_hmi_runtime.png || true
+
+      - name: Launch Week 6 SLAM and RViz
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 launch hand_solo_virtual_nav mapping_launch.py               > /workspace/runtime_week6_mapping.log 2>&1
+          '
+          sleep 12
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            timeout 15s ros2 topic echo /map --once               > /workspace/runtime_map_sample.txt
+            ros2 node list > /workspace/runtime_nodes_during_mapping.txt
+            ros2 service list > /workspace/runtime_services_during_mapping.txt
+          '
+
+      - name: Drive virtual Hand Solo for real SLAM data
+        working-directory: world
+        continue-on-error: true
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            timeout 7s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.35}, angular: {z: 0.0}}" || true
+            timeout 5s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.55}}" || true
+            timeout 7s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.35}, angular: {z: 0.0}}" || true
+            timeout 5s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.55}}" || true
+            ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.0}}"
+          '
+          sleep 8
+
+      - name: Collect live TF graph and save map
+        working-directory: world
+        continue-on-error: true
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace
+            ros2 run tf2_tools view_frames               > /workspace/runtime_view_frames.log 2>&1 || true
+            ros2 service type /slam_toolbox/save_map               > /workspace/runtime_save_map_service_type.txt 2>&1 || true
+            ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap               "{name: {data: /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01}}"               > /workspace/runtime_save_map.log 2>&1 || true
+            ls -la /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps               > /workspace/runtime_map_files.txt
+          '
+          sleep 5
+
+      - name: Capture RViz mapping evidence
+        continue-on-error: true
+        run: |
+          echo "Visible X11 windows during mapping:" > mapping_windows.txt
+          xdotool search --onlyvisible --name ".*" getwindowname %@             >> mapping_windows.txt 2>&1 || true
+          RVIZ_ID=$(xdotool search --onlyvisible --name "RViz" | tail -1 || true)
+          if [ -n "$RVIZ_ID" ]; then
+            xdotool windowactivate "$RVIZ_ID" || true
+            sleep 2
+            import -display :99 -window "$RVIZ_ID" student/week6_rviz_mapping.png || true
+          else
+            import -display :99 -window root student/week6_rviz_mapping.png || true
+          fi
+
+      - name: Convert live TF graph PDF to image
+        continue-on-error: true
+        run: |
+          find world/workspace/workspace -maxdepth 2 -name 'frames*.pdf' -print
+          TF_PDF=$(find world/workspace/workspace -maxdepth 2 -name 'frames*.pdf' | head -1 || true)
+          if [ -n "$TF_PDF" ]; then
+            pdftoppm -png -f 1 -singlefile "$TF_PDF" student/week6_tf_tree
+          fi
+
+      - name: Gather runtime evidence
+        run: |
+          mkdir -p runtime-evidence
+          cp -a world/workspace/workspace/runtime_* runtime-evidence/ 2>/dev/null || true
+          cp -a student/week5_hmi_runtime.png runtime-evidence/ 2>/dev/null || true
+          cp -a student/week6_rviz_mapping.png runtime-evidence/ 2>/dev/null || true
+          cp -a student/week6_tf_tree.png runtime-evidence/ 2>/dev/null || true
+          cp -a workspace_windows.txt runtime-evidence/ 2>/dev/null || true
+          cp -a mapping_windows.txt runtime-evidence/ 2>/dev/null || true
+          cp -a world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01.* runtime-evidence/ 2>/dev/null || true
+          docker compose -f world/compose.yaml logs --no-color --tail=300 irs-simulation             > runtime-evidence/irs-simulation.log 2>&1 || true
+
+      - name: Upload Week 5-6 runtime evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: week5-6-official-runtime-evidence
+          path: runtime-evidence/
+
+      - name: Stop official warehouse
+        if: always()
+        working-directory: world
+        run: docker compose down -v || true
