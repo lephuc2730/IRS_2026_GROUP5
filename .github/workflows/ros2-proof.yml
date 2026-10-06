@@ -1,0 +1,140 @@
+name: ROS2 Jazzy Proof
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ros2-proof:
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:noble
+    env:
+      ROS_DISTRO: jazzy
+      ROS_DOMAIN_ID: "37"
+      PYTHONUNBUFFERED: "1"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install ROS 2 Jazzy
+        uses: ros-tooling/setup-ros@v0.7
+        with:
+          required-ros-distributions: jazzy
+
+      - name: Install project runtime dependencies
+        shell: bash
+        run: |
+          apt-get update
+          apt-get install -y xvfb
+          apt-get install -y             ros-jazzy-slam-toolbox             ros-jazzy-rviz2             ros-jazzy-tf2-ros             ros-jazzy-rqt-graph             ros-jazzy-rqt-tf-tree
+
+      - name: Build Week 5 and Week 6 packages
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon build             --packages-select pa_warehouse_status hand_solo_virtual_nav             --event-handlers console_direct+
+          source install/setup.bash
+          ros2 pkg executables pa_warehouse_status
+          ros2 pkg executables hand_solo_virtual_nav
+
+      - name: Week 5 publisher proof
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+
+          ros2 run pa_warehouse_status pineapple_gossip_bot             > week5_publisher.log 2>&1 &
+          PUBLISHER_PID=$!
+
+          sleep 4
+          timeout 12s ros2 topic echo /status_updates --once             > week5_status_topic.log
+
+          kill $PUBLISHER_PID || true
+          wait $PUBLISHER_PID || true
+
+          echo "===== Publisher node log ====="
+          cat week5_publisher.log
+          echo "===== /status_updates proof ====="
+          cat week5_status_topic.log
+
+          grep -q "data:" week5_status_topic.log
+
+      - name: Week 5 PLC JSON parser proof with controlled test message
+        shell: bash
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+
+          ros2 run pa_warehouse_status plc_hmi_listener             --ros-args -p plc_topic:=/ci_plc_status             > week5_plc_listener.log 2>&1 &
+          LISTENER_PID=$!
+
+          sleep 3
+
+          ros2 topic pub --once /ci_plc_status std_msgs/msg/String             "{data: '{\"stamp\": {\"sec\": 123, \"nanosec\": 456}, \"box\": {\"weight_raw\": 987, \"location\": \"CI_TEST_STATION\"}, \"counts\": {\"big\": 1, \"medium\": 2, \"small\": 3, \"total\": 6}}'}"
+
+          sleep 3
+          kill $LISTENER_PID || true
+          wait $LISTENER_PID || true
+
+          echo "===== PLC parser proof ====="
+          cat week5_plc_listener.log
+
+          grep -q "CI_TEST_STATION" week5_plc_listener.log
+          grep -q "total=6" week5_plc_listener.log
+
+      - name: Week 6 launch-file smoke proof
+        shell: bash
+        env:
+          LIBGL_ALWAYS_SOFTWARE: "1"
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          source install/setup.bash
+
+          set +e
+          xvfb-run -a timeout 15s             ros2 launch hand_solo_virtual_nav mapping_launch.py             > week6_mapping_launch.log 2>&1
+          RESULT=$?
+          set -e
+
+          echo "===== Week 6 mapping launch log ====="
+          cat week6_mapping_launch.log
+
+          # 124 means timeout stopped a launch that was still running.
+          # 0 means it exited cleanly. Any other code is a real launch failure.
+          if [ "$RESULT" -ne 0 ] && [ "$RESULT" -ne 124 ]; then
+            echo "Week 6 launch failed with exit code $RESULT"
+            exit "$RESULT"
+          fi
+
+      - name: Create proof summary
+        shell: bash
+        run: |
+          {
+            echo "# ROS2 Jazzy Ubuntu proof"
+            echo
+            echo "- Runner: Ubuntu Noble container on GitHub Actions"
+            echo "- ROS distribution: Jazzy"
+            echo "- pa_warehouse_status: built successfully"
+            echo "- hand_solo_virtual_nav: built successfully"
+            echo "- /status_updates: message observed"
+            echo "- PLC JSON parser: controlled JSON test passed"
+            echo "- Week 6 mapping launch: smoke-tested under Xvfb"
+            echo
+            echo "Important: this CI proof does not replace the required live warehouse HMI, live PLC topic identification, final TF-tree screenshot, or real SLAM warehouse map."
+          } > ROS2_PROOF_SUMMARY.md
+          cat ROS2_PROOF_SUMMARY.md
+
+      - name: Upload proof logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ros2-jazzy-proof
+          path: |
+            ROS2_PROOF_SUMMARY.md
+            week5_publisher.log
+            week5_status_topic.log
+            week5_plc_listener.log
+            week6_mapping_launch.log
