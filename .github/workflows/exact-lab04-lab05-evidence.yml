@@ -1,0 +1,216 @@
+name: Exact Lab 04-05 Evidence
+
+on:
+  push:
+    branches: [exact-lab-evidence-run]
+
+permissions:
+  contents: write
+
+jobs:
+  exact-lab-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: student
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Start headless X11 display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool imagemagick x11-utils x11-apps
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 2
+
+      - name: Clone official unit environment and stage project
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official Pine-Apple environment
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron-workspace irs-openplc-runtime
+          sleep 45
+          docker compose ps
+
+      - name: Install GUI ROS tools in workspace container
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            apt-get update
+            DEBIAN_FRONTEND=noninteractive apt-get install -y               ros-jazzy-rqt-graph               ros-jazzy-rqt-tf-tree               ros-jazzy-tf2-tools
+          '
+
+      - name: Build Week 5 and Week 6 packages
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select pa_warehouse_status hand_solo_virtual_nav               --event-handlers console_direct+               > /workspace/exact_build.log 2>&1
+            source install/setup.bash
+            ros2 pkg executables pa_warehouse_status               > /workspace/lab04_executables.txt
+            ros2 pkg executables hand_solo_virtual_nav               > /workspace/lab05_executables.txt
+          '
+
+      - name: Lab 04 Part 6.1 - run both nodes simultaneously
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+
+            ros2 run pa_warehouse_status pineapple_gossip_bot               > /workspace/lab04_publisher.log 2>&1 &
+            echo $! > /tmp/lab04_publisher.pid
+
+            ros2 run pa_warehouse_status plc_hmi_listener               > /workspace/lab04_listener.log 2>&1 &
+            echo $! > /tmp/lab04_listener.pid
+
+            sleep 10
+
+            ros2 node list | sort > /workspace/lab04_nodes.txt
+            ros2 topic info /status_updates -v > /workspace/lab04_status_topic_info.txt
+
+            (ros2 interface show std_msgs/String               > /workspace/lab04_string_interface.txt 2>&1) ||             (ros2 interface show std_msgs/msg/String               > /workspace/lab04_string_interface.txt 2>&1)
+
+            timeout 10s ros2 topic echo /status_updates --once               > /workspace/lab04_status_updates_sample.txt
+            timeout 10s ros2 topic echo /hmi/unified_status --once               > /workspace/lab04_plc_sample.txt
+
+            grep -q "/pineapple_gossip_bot" /workspace/lab04_nodes.txt
+            grep -q "/plc_hmi_listener" /workspace/lab04_nodes.txt
+            grep -q "Received PLC status" /workspace/lab04_listener.log
+
+            echo "===== active Week 5 nodes ====="
+            cat /workspace/lab04_nodes.txt
+            echo "===== publisher output ====="
+            tail -20 /workspace/lab04_publisher.log
+            echo "===== listener output ====="
+            tail -30 /workspace/lab04_listener.log
+          '
+
+      - name: Lab 04 final rqt_graph
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            export DISPLAY=:99
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 run rqt_graph rqt_graph               > /workspace/lab04_rqt_graph.log 2>&1
+          '
+          sleep 10
+
+      - name: Capture real Lab 04 rqt_graph screenshot
+        run: |
+          mkdir -p exact-evidence
+          xdotool search --onlyvisible --name ".*" getwindowname %@             > exact-evidence/lab04_window_list.txt 2>&1 || true
+          cat exact-evidence/lab04_window_list.txt
+
+          GRAPH_ID=$(xdotool search --onlyvisible --name "rqt_graph" | tail -1 || true)
+          if [ -z "$GRAPH_ID" ]; then
+            GRAPH_ID=$(xdotool search --onlyvisible --name "rqt" | tail -1 || true)
+          fi
+          echo "rqt_graph window ID: $GRAPH_ID"
+
+          if [ -n "$GRAPH_ID" ]; then
+            import -display :99 -window "$GRAPH_ID" exact-evidence/lab04_rqt_graph.png || true
+            xwd -display :99 -id "$GRAPH_ID" -out exact-evidence/lab04_rqt_graph.xwd || true
+            convert exact-evidence/lab04_rqt_graph.xwd exact-evidence/lab04_rqt_graph_xwd.png || true
+          fi
+          import -display :99 -window root exact-evidence/lab04_rqt_graph_root.png || true
+
+      - name: Lab 05 - launch mapping and create live TF tree
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+
+          docker exec -d "$WS_ID" bash -lc '
+            export DISPLAY=:99
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 launch hand_solo_virtual_nav mapping_launch.py               > /workspace/lab05_mapping.log 2>&1
+          '
+          sleep 12
+
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            timeout 5s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.30}, angular: {z: 0.0}}" || true
+            timeout 4s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.50}}" || true
+            ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.0}}"
+            ros2 node list | sort > /workspace/lab05_nodes.txt
+            timeout 10s ros2 run tf2_ros tf2_echo               map virtual_hand_solo/lidar_link               > /workspace/lab05_tf_echo.txt 2>&1 || true
+          '
+
+          docker exec -d "$WS_ID" bash -lc '
+            export DISPLAY=:99
+            source /opt/ros/jazzy/setup.bash
+            ros2 run rqt_tf_tree rqt_tf_tree               > /workspace/lab05_rqt_tf_tree.log 2>&1
+          '
+          sleep 12
+
+      - name: Capture real Lab 05 rqt_tf_tree screenshot
+        run: |
+          xdotool search --onlyvisible --name ".*" getwindowname %@             > exact-evidence/lab05_window_list.txt 2>&1 || true
+          cat exact-evidence/lab05_window_list.txt
+
+          TF_ID=$(xdotool search --onlyvisible --name "rqt_tf_tree" | tail -1 || true)
+          if [ -z "$TF_ID" ]; then
+            TF_ID=$(xdotool search --onlyvisible --name "TF Tree" | tail -1 || true)
+          fi
+          if [ -z "$TF_ID" ]; then
+            TF_ID=$(xdotool search --onlyvisible --name "rqt" | tail -1 || true)
+          fi
+          echo "rqt_tf_tree window ID: $TF_ID"
+
+          if [ -n "$TF_ID" ]; then
+            import -display :99 -window "$TF_ID" exact-evidence/lab05_rqt_tf_tree.png || true
+            xwd -display :99 -id "$TF_ID" -out exact-evidence/lab05_rqt_tf_tree.xwd || true
+            convert exact-evidence/lab05_rqt_tf_tree.xwd exact-evidence/lab05_rqt_tf_tree_xwd.png || true
+          fi
+          import -display :99 -window root exact-evidence/lab05_rqt_tf_tree_root.png || true
+
+      - name: Copy runtime logs into evidence folder
+        working-directory: world
+        run: |
+          cp workspace/workspace/lab04_* ../exact-evidence/ 2>/dev/null || true
+          cp workspace/workspace/lab05_* ../exact-evidence/ 2>/dev/null || true
+          cp workspace/workspace/exact_build.log ../exact-evidence/ 2>/dev/null || true
+          ls -lah ../exact-evidence/
+
+      - name: Commit exact Lab 04-05 evidence to repository
+        run: |
+          mkdir -p student/docs/evidence
+          cp -a exact-evidence/. student/docs/evidence/
+
+          cd student
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/evidence
+          git commit -m "Add exact Lab 04 multi-node and Lab 05 rqt TF evidence"
+          git push origin main
+
+      - name: Upload exact evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact-lab04-lab05-evidence
+          path: exact-evidence/
+
+      - name: Stop official simulation
+        if: always()
+        working-directory: world
+        run: docker compose down -v || true
