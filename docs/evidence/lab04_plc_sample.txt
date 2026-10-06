@@ -1,0 +1,2 @@
+data: '{"stamp":{"sec":1791272106,"nanosec":490961664},"box":{"weight_raw":"\n","location":"\n"},"counts":{"big":null,"medium":null,"sm...'
+---

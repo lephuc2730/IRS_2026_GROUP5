@@ -1,0 +1,36 @@
+Type: std_msgs/msg/String
+
+Publisher count: 1
+
+Node name: pineapple_gossip_bot
+Node namespace: /
+Topic type: std_msgs/msg/String
+Topic type hash: RIHS01_df668c740482bbd48fb39d76a70dfd4bd59db1288021743503259e948f6b1a18
+Endpoint type: PUBLISHER
+GID: 01.10.21.6c.7c.21.91.1b.33.04.f0.1c.00.00.16.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: status_updates_listener
+Node namespace: /
+Topic type: std_msgs/msg/String
+Topic type hash: RIHS01_df668c740482bbd48fb39d76a70dfd4bd59db1288021743503259e948f6b1a18
+Endpoint type: SUBSCRIPTION
+GID: 01.10.55.57.ac.05.73.d6.24.d5.f2.7a.00.00.0d.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

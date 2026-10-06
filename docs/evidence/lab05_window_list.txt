@@ -1,0 +1,7 @@
+
+rqt_graph__RosGraph - rqt
+/workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz/pa_rviz_mapping.rviz* - RViz
+IRS_Warehouse
+rqt_tf_tree__RosTfTree - rqt
+rviz2
+

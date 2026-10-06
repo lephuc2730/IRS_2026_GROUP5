@@ -1,0 +1,466 @@
+[INFO] [1791272090.768225795] [plc_hmi_listener]: Listening for PLC status on /hmi/unified_status
+Received PLC status:
+  Time: 1791272091.262097664
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272091.789946624
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272092.322872064
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272092.860941056
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272093.394642944
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272093.925940736
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272094.455687168
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272094.987257600
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272095.522944512
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272096.56268800
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272096.591808768
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272097.122989312
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272097.673377024
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272098.206385920
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272098.745168384
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272099.287668224
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272099.823735552
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272100.495992064
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272101.93163776
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272101.765026048
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272102.446849280
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272103.119722240
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272103.680321536
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272104.210238464
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272104.743239936
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272105.381133824
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272105.952006656
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272106.490961664
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272107.148800256
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272107.829721088
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272108.500164864
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272109.194487552
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272109.838445312
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272110.381484288
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272110.909443584
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272111.437635584
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272111.972381952
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272112.500429056
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272113.30766080
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272113.562620928
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272114.107499008
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272114.641100288
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272115.177272832
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272115.712374784
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272116.250467584
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272116.783362816
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272117.337327360
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272117.959764224
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272118.652631040
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272119.384403968
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272120.79277824
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272120.810745856
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272121.568885504
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272122.288845824
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272123.64462592
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272123.772841216
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272124.522546688
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
+  Time: 1791272125.239606016
+  Box weight raw: 
+
+  Location: 
+
+  Counts: big=None, medium=None, small=None, total=None
+
+Received PLC status:
