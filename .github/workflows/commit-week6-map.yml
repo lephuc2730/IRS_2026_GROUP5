@@ -1,0 +1,100 @@
+name: Commit Generated Week 6 Map
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-commit-map:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout current main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: student
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install headless display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 2
+
+      - name: Clone official unit simulation and stage project
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official simulation
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron-workspace
+          docker compose up -d irs-simulation omron-workspace
+          sleep 45
+          docker compose ps
+
+      - name: Build and launch Week 6 mapping
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select hand_solo_virtual_nav
+            source install/setup.bash
+            ros2 launch hand_solo_virtual_nav mapping_launch.py               > /workspace/map_commit_mapping.log 2>&1 &
+          '
+          sleep 12
+
+      - name: Drive Hand Solo and create map
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+
+            timeout 7s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.35}, angular: {z: 0.0}}" || true
+            timeout 5s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.55}}" || true
+            timeout 7s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.35}, angular: {z: 0.0}}" || true
+            timeout 5s ros2 topic pub -r 10 /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.55}}" || true
+            ros2 topic pub --once /cmd_vel geometry_msgs/msg/Twist               "{linear: {x: 0.0}, angular: {z: 0.0}}"
+          '
+          sleep 8
+
+      - name: Save pa_warehouse_map_01
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            mkdir -p /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps
+            ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap               "{name: {data: /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01}}"
+            test -s /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01.pgm
+            test -s /workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01.yaml
+          '
+
+      - name: Commit generated PGM and YAML to GitHub
+        run: |
+          cp world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01.pgm              student/hand_solo_virtual_nav/maps/pa_warehouse_map_01.pgm
+          cp world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/hand_solo_virtual_nav/maps/pa_warehouse_map_01.yaml              student/hand_solo_virtual_nav/maps/pa_warehouse_map_01.yaml
+
+          cd student
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hand_solo_virtual_nav/maps/pa_warehouse_map_01.pgm                   hand_solo_virtual_nav/maps/pa_warehouse_map_01.yaml
+          git commit -m "Week 6: save generated Pine-Apple warehouse map" || true
+          git push origin main
+
+      - name: Stop simulation
+        if: always()
+        working-directory: world
+        run: docker compose down -v || true
