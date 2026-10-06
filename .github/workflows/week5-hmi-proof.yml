@@ -19,7 +19,7 @@ jobs:
       - name: Install headless GUI tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y xvfb xdotool imagemagick
+          sudo apt-get install -y xvfb xdotool imagemagick x11-apps
           Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
           echo "DISPLAY=:99" >> "$GITHUB_ENV"
           sleep 2
@@ -53,14 +53,23 @@ jobs:
 
       - name: Open Robot HMI and capture real screenshot
         run: |
-          xdotool search --onlyvisible --name ".*" getwindowname %@ > window_list.txt 2>&1 || true
-          cat window_list.txt
+          mkdir -p hmi-proof
+          xdotool search --onlyvisible --name ".*" getwindowname %@ > hmi-proof/window_list.txt 2>&1 || true
+          cat hmi-proof/window_list.txt
 
           SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1)
           echo "Simulation window ID: $SIM_ID"
           xdotool key --window "$SIM_ID" r
           sleep 4
-          import -display :99 -window root student/week5_robot_hmi.png
+
+          import -display :99 -window "$SIM_ID" hmi-proof/week5_robot_hmi_window.png || true
+          import -display :99 -window root hmi-proof/week5_robot_hmi_root.png || true
+
+          xwd -display :99 -id "$SIM_ID" -out hmi-proof/week5_robot_hmi.xwd || true
+          convert hmi-proof/week5_robot_hmi.xwd hmi-proof/week5_robot_hmi_xwd.png || true
+
+          echo "Captured HMI files:"
+          ls -lah hmi-proof
 
       - name: Collect HMI ROS proof
         working-directory: world
@@ -71,17 +80,15 @@ jobs:
             timeout 10s ros2 topic echo /status_updates --once               > /workspace/hmi_status_updates.txt
             timeout 10s ros2 topic echo /hmi/unified_status --once               > /workspace/hmi_plc_status.txt
           '
-          mkdir -p hmi-proof
-          cp student/week5_robot_hmi.png hmi-proof/
-          cp window_list.txt hmi-proof/
-          cp workspace/workspace/hmi_*.txt hmi-proof/ 2>/dev/null || true
-          cp workspace/workspace/hmi_*.log hmi-proof/ 2>/dev/null || true
+          cp workspace/workspace/hmi_*.txt ../hmi-proof/ 2>/dev/null || true
+          cp workspace/workspace/hmi_*.log ../hmi-proof/ 2>/dev/null || true
+          ls -lah ../hmi-proof
 
       - name: Upload Week 5 HMI evidence
         uses: actions/upload-artifact@v4
         with:
           name: week5-hmi-evidence
-          path: world/hmi-proof/
+          path: hmi-proof/
 
       - name: Stop official warehouse
         if: always()
