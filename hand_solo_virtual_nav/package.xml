@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>hand_solo_virtual_nav</name>
+  <version>0.0.0</version>
+  <description>Hand Solo virtual navigation and Week 6 SLAM mapping package.</description>
+  <maintainer email="group5@example.invalid">IRS Group 5</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>slam_toolbox</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
