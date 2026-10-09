@@ -1,0 +1,1 @@
+Retry Week 7 autonomous navigation with Robot HMI switched to Autonomous Mode.
