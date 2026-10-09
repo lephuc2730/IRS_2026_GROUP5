@@ -4,12 +4,12 @@ This checklist maps the supplied lab sheets to the final repository and runtime 
 
 Status meanings:
 
-- **DONE** — performed and verified in the official Pine-Apple/ROS2 environment.
-- **EQUIVALENT** — the required technical outcome was performed, but a headless Ubuntu CI equivalent was used instead of the exact local GUI/manual action.
+- **DONE** - performed and verified in the official Pine-Apple/ROS2 environment.
+- **EQUIVALENT** - the required technical outcome was performed, but a headless Ubuntu CI equivalent was used instead of the exact local GUI/manual action.
 
-## Lab 04 — Pine-Apple ROS2 Communication Hub
+## Lab 04 - Pine-Apple ROS2 Communication Hub
 
-### Part 1 — Explore the ROS2 ecosystem
+### Part 1 - Explore the ROS2 ecosystem
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -26,7 +26,7 @@ Status meanings:
 | Find movement/velocity topic | DONE | `/cmd_vel` and related velocity topics identified. |
 | Find PLC status topic | DONE | Confirmed as `/hmi/unified_status`. |
 
-### Part 2 — GitHub repository
+### Part 2 - GitHub repository
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -35,7 +35,7 @@ Status meanings:
 | Initial structure commit | DONE | Repository contains structured Week 5/6 commit history. |
 | Push to GitHub | DONE | Main branch contains package code, maps, reports and evidence. |
 
-### Part 3 — First ROS2 package
+### Part 3 - First ROS2 package
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -45,7 +45,7 @@ Status meanings:
 | Source workspace | DONE | `install/setup.bash` sourced in runtime. |
 | Run node | DONE | Final implemented node runs successfully. The original one-line starter output was superseded by the completed publisher implementation. |
 
-### Part 4 — Status update publisher
+### Part 4 - Status update publisher
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -56,7 +56,7 @@ Status meanings:
 | Robot HMI displays messages | DONE | Real HMI screenshot captured. |
 | `ros2 topic echo /status_updates` | DONE | Sample stored in `docs/evidence/lab04_status_updates_sample.txt`. |
 
-### Part 5 — PLC status listener
+### Part 5 - PLC status listener
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -67,7 +67,7 @@ Status meanings:
 | Parse JSON | DONE | `stamp`, `box`, and `counts` parsed. |
 | Rebuild/run listener | DONE | Live listener log stored in `docs/evidence/lab04_listener.log`. |
 
-### Part 6 — Testing and integration
+### Part 6 - Testing and integration
 
 | Lab item | Status | Evidence / note |
 |---|---|---|
@@ -80,7 +80,7 @@ Status meanings:
 
 ---
 
-## Lab 05 — Hand Solo's Mapping Mission
+## Lab 05 - Hand Solo's Mapping Mission
 
 | Step | Status | Evidence / note |
 |---|---|---|
@@ -103,7 +103,7 @@ Status meanings:
 
 ## Final evidence location
 
-- `docs/evidence/` — exact Lab 04 multi-node and Lab 05 rqt GUI evidence
-- `hand_solo_virtual_nav/maps/` — generated `.pgm` and `.yaml` map files
-- `docs/RUNTIME_EVIDENCE.md` — runtime evidence summary
+- `docs/evidence/` - exact Lab 04 multi-node and Lab 05 rqt GUI evidence
+- `hand_solo_virtual_nav/maps/` - generated `.pgm` and `.yaml` map files
+- `docs/RUNTIME_EVIDENCE.md` - runtime evidence summary
 - GitHub Actions exact verification run: https://github.com/lephuc2730/IRS_2026_GROUP5/actions/runs/37431121395
