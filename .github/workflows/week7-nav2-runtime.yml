@@ -1,0 +1,152 @@
+name: Week 7 Nav2 Runtime Test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  nav2-runtime:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout student project
+        uses: actions/checkout@v4
+        with:
+          path: student
+
+      - name: Install headless GUI tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool imagemagick
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 2
+
+      - name: Clone official unit world and stage Week 7 project
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official Pine-Apple simulation
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron-workspace irs-openplc-runtime
+          sleep 45
+          docker compose ps
+
+      - name: Build Week 7 package
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select hand_solo_virtual_nav               --event-handlers console_direct+               > /workspace/week7_build.log 2>&1
+            source install/setup.bash
+            ros2 pkg executables hand_solo_virtual_nav               > /workspace/week7_executables.txt
+          '
+
+      - name: Launch Nav2 stack
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            export DISPLAY=:99
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 launch hand_solo_virtual_nav nav_launch.py               > /workspace/week7_nav_launch.log 2>&1
+          '
+          sleep 20
+
+      - name: Inspect Nav2 runtime state
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            ros2 node list | sort > /workspace/week7_nodes.txt
+            ros2 action list -t > /workspace/week7_actions.txt
+            ros2 topic list | sort > /workspace/week7_topics.txt
+
+            for n in map_server amcl controller_server planner_server behavior_server bt_navigator waypoint_follower velocity_smoother; do
+              echo "===== $n =====" >> /workspace/week7_lifecycle.txt
+              ros2 lifecycle get /$n >> /workspace/week7_lifecycle.txt 2>&1 || true
+            done
+
+            timeout 12s ros2 topic echo /map --once               > /workspace/week7_map_sample.txt 2>&1 || true
+            timeout 12s ros2 topic echo /amcl_pose --once               > /workspace/week7_amcl_pose.txt 2>&1 || true
+
+            echo "===== NODES ====="
+            cat /workspace/week7_nodes.txt
+            echo "===== LIFECYCLE ====="
+            cat /workspace/week7_lifecycle.txt
+            echo "===== ACTIONS ====="
+            cat /workspace/week7_actions.txt
+          '
+
+      - name: Send a short autonomous Nav2 goal
+        working-directory: world
+        continue-on-error: true
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            echo "===== ODOM BEFORE =====" > /workspace/week7_goal_test.log
+            timeout 10s ros2 topic echo /virtual_hand_solo/odom --once               >> /workspace/week7_goal_test.log 2>&1 || true
+
+            echo "===== GOAL =====" >> /workspace/week7_goal_test.log
+            timeout 70s ros2 action send_goal /navigate_to_pose nav2_msgs/action/NavigateToPose               "{pose: {header: {frame_id: map}, pose: {position: {x: 0.10, y: -0.50, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}}"               --feedback >> /workspace/week7_goal_test.log 2>&1 || true
+
+            echo "===== ODOM AFTER =====" >> /workspace/week7_goal_test.log
+            timeout 10s ros2 topic echo /virtual_hand_solo/odom --once               >> /workspace/week7_goal_test.log 2>&1 || true
+
+            cat /workspace/week7_goal_test.log
+          '
+
+      - name: Run custom waypoint follower
+        working-directory: world
+        continue-on-error: true
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            timeout 150s ros2 run hand_solo_virtual_nav hs_waypoint_follower               > /workspace/week7_waypoint.log 2>&1 || true
+            cat /workspace/week7_waypoint.log
+          '
+
+      - name: Capture RViz navigation screen
+        continue-on-error: true
+        run: |
+          mkdir -p week7-evidence
+          xdotool search --onlyvisible --name ".*" getwindowname %@             > week7-evidence/window_list.txt 2>&1 || true
+          RVIZ_ID=$(xdotool search --onlyvisible --name "RViz" | tail -1 || true)
+          if [ -n "$RVIZ_ID" ]; then
+            xdotool windowsize --sync "$RVIZ_ID" 1400 850 || true
+            xdotool windowmove "$RVIZ_ID" 30 30 || true
+            sleep 2
+            import -display :99 -window "$RVIZ_ID" week7-evidence/week7_rviz_nav2.png || true
+          fi
+          import -display :99 -window root week7-evidence/week7_root.png || true
+
+      - name: Gather Week 7 logs
+        run: |
+          cp -a world/workspace/workspace/week7_* week7-evidence/ 2>/dev/null || true
+          docker compose -f world/compose.yaml logs --no-color --tail=250 irs-simulation             > week7-evidence/irs-simulation.log 2>&1 || true
+          ls -lah week7-evidence
+
+      - name: Upload Week 7 evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: week7-nav2-runtime-test
+          path: week7-evidence/
+
+      - name: Stop official simulation
+        if: always()
+        working-directory: world
+        run: docker compose down -v || true
