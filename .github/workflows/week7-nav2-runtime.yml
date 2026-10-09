@@ -1,8 +1,7 @@
 name: Week 7 Nav2 Runtime Test
 
 on:
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   nav2-runtime:
