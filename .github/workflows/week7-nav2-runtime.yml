@@ -37,6 +37,21 @@ jobs:
           sleep 45
           docker compose ps
 
+      - name: Open Robot HMI and set Autonomous Mode
+        run: |
+          mkdir -p week7-evidence
+          SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1)
+          echo "Simulation window ID: $SIM_ID"
+          xdotool key --window "$SIM_ID" r
+          sleep 3
+
+          # Lab 06 requires the HMI to be in Autonomous Mode.
+          # The button is in the left HMI panel at approximately x=220, y=183.
+          xdotool mousemove --window "$SIM_ID" 220 183 click 1
+          sleep 3
+
+          import -display :99 -window root             week7-evidence/week7_hmi_autonomous_mode.png || true
+
       - name: Build Week 7 package
         working-directory: world
         run: |
