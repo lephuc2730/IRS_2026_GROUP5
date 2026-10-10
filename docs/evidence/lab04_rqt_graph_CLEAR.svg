@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="950" viewBox="0 0 1800 950">
+  <style>
+    .title{font:700 54px Arial,sans-serif;fill:#111}
+    .node{fill:#f8f8f8;stroke:#222;stroke-width:5}
+    .topic{fill:#eaf4fb;stroke:#126a9a;stroke-width:5}
+    .label{font:700 34px Arial,sans-serif;fill:#111;text-anchor:middle}
+    .sub{font:28px Arial,sans-serif;fill:#333;text-anchor:middle}
+    .edge{stroke:#111;stroke-width:6;fill:none;marker-end:url(#arrow)}
+    .edgeLabel{font:26px Arial,sans-serif;fill:#333;text-anchor:middle}
+    .note{font:700 28px Arial,sans-serif;fill:#075c8c}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <text x="900" y="70" class="title">Week 5 — Final ROS2 Communication Graph</text>
+
+  <rect x="80" y="170" width="420" height="160" rx="28" class="node"/>
+  <text x="290" y="235" class="label">/hmi_unified_status_node</text>
+  <text x="290" y="285" class="sub">PLC/HMI bridge publisher</text>
+
+  <rect x="690" y="170" width="420" height="160" rx="28" class="topic"/>
+  <text x="900" y="235" class="label">/hmi/unified_status</text>
+  <text x="900" y="285" class="sub">std_msgs/msg/String (JSON)</text>
+
+  <rect x="1300" y="170" width="420" height="160" rx="28" class="node"/>
+  <text x="1510" y="235" class="label">/plc_hmi_listener</text>
+  <text x="1510" y="285" class="sub">PLC JSON subscriber / parser</text>
+
+  <path d="M500 250 H690" class="edge"/>
+  <path d="M1110 250 H1300" class="edge"/>
+  <text x="595" y="220" class="edgeLabel">publishes</text>
+  <text x="1205" y="220" class="edgeLabel">subscribes</text>
+
+  <rect x="80" y="555" width="420" height="160" rx="28" class="node"/>
+  <text x="290" y="620" class="label">/pineapple_gossip_bot</text>
+  <text x="290" y="670" class="sub">custom status publisher</text>
+
+  <rect x="690" y="555" width="420" height="160" rx="28" class="topic"/>
+  <text x="900" y="620" class="label">/status_updates</text>
+  <text x="900" y="670" class="sub">std_msgs/msg/String</text>
+
+  <rect x="1300" y="555" width="420" height="160" rx="28" class="node"/>
+  <text x="1510" y="620" class="label">/status_updates_listener</text>
+  <text x="1510" y="670" class="sub">Robot HMI listener</text>
+
+  <path d="M500 635 H690" class="edge"/>
+  <path d="M1110 635 H1300" class="edge"/>
+  <text x="595" y="605" class="edgeLabel">publishes</text>
+  <text x="1205" y="605" class="edgeLabel">subscribes</text>
+
+  <text x="900" y="860" class="note" text-anchor="middle">
+    Reconstructed from the verified live rqt_graph relationships in the official Pine-Apple ROS2 Jazzy runtime.
+  </text>
+</svg>
