@@ -68,3 +68,9 @@ pa_warehouse_map_01.yaml
 ## Evidence note
 
 The source code, package structure and portfolio text can be prepared without Ubuntu. The Robot HMI screenshot, exact live PLC JSON confirmation, final TF-tree screenshot, RViz mapping screenshot and generated SLAM map require the running course simulation, so they are not fabricated in this repository.
+
+
+
+
+----
+https://vscode.dev/github/lephuc2730/IRS_2026_GROUP5/blob/main/hand_solo_arm 
