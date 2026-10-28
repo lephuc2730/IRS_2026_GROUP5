@@ -61,30 +61,30 @@ class HSWaypointRunner(Node):
         return bool(res and res.status == 4)  # 4 = STATUS_SUCCEEDED
 
     # --- script-style sequence (no arrays, no names) --------------------------
-    def run(self):
+    def run(self):      
         # Waypoint 1
+        if not self._send_and_wait([0.0, 0.349, 1.57, 0.785, 0.0, 0.0]): return
+        time.sleep(3) #trigger under proixmity condition
+
+        # Waypoint 2
+        if not self._send_and_wait([0.0, 0.524, 1.57, -1.57, 1.57, 0.0]): return
+        time.sleep(1.5)
+        
+        # Waypoint 3
         if not self._send_and_wait([0.0, 0.0, 1.57, 0.0, 1.57, 0.0]): return
         time.sleep(10.0)
 
-        # Waypoint 2
-        if not self._send_and_wait([0.785, -0.5, 1.2, 0.0, 1.0, 0.0]): return
-        time.sleep(5)
-
-        # Waypoint 3
-        if not self._send_and_wait([0.785, -0.8, 1.4, 0.0, 0.8, 0.0]): return
-        time.sleep(1.5)
-
         # Waypoint 4
-        if not self._send_and_wait([0.785, -0.3, 1.2, 0.0, 1.0, 0.0]): return
-        time.sleep(0.5)
+        #if not self._send_and_wait([0.785, -0.3, 1.2, 0.0, 1.0, 0.0]): return
+        #time.sleep(0.5)
 
         # Waypoint 5
-        if not self._send_and_wait([-0.785, -0.5, 1.2, 0.0, 1.0, 0.0]): return
-        time.sleep(0.5)
+        #if not self._send_and_wait([-0.785, -0.5, 1.2, 0.0, 1.0, 0.0]): return
+        #time.sleep(0.5)
 
         # Waypoint 6
-        if not self._send_and_wait([0.0, 0.0, 1.57, 0.0, 1.57, 0.0]): return
-        time.sleep(1.0)
+        #if not self._send_and_wait([0.0, 0.0, 1.57, 0.0, 1.57, 0.0]): return
+        #time.sleep(1.0)
 
         self.get_logger().info('Sequence complete ✅')
 
