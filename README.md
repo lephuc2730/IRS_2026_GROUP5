@@ -68,3 +68,8 @@ pa_warehouse_map_01.yaml
 ## Evidence note
 
 The source code, package structure and portfolio text can be prepared without Ubuntu. The Robot HMI screenshot, exact live PLC JSON confirmation, final TF-tree screenshot, RViz mapping screenshot and generated SLAM map require the running course simulation, so they are not fabricated in this repository.
+
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5d68b84e-ea67-4727-88fc-d4c43a616657" />
+
+
