@@ -1,3 +1,3 @@
-rviz-evidence/week10_carry_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 152963B 0.000u 0:00.000
-rviz-evidence/week10_pick_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 152785B 0.000u 0:00.000
-rviz-evidence/week10_place_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 155099B 0.000u 0:00.000
+rviz-evidence/week10_carry_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 153697B 0.000u 0:00.000
+rviz-evidence/week10_pick_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 151739B 0.000u 0:00.000
+rviz-evidence/week10_place_position_rviz.png PNG 1532x903 1920x1080+0+0 8-bit sRGB 153361B 0.000u 0:00.000
