@@ -66,13 +66,13 @@ jobs:
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_moveit_before.png
 
       - name: Set and capture Pick Carry Place
-        continue-on-error: true
         run: |
           RVIZ_ID=$(cut -d= -f2 rviz-evidence/selected_window.txt | head -1)
 
           # Click MotionPlanning -> Joints tab.
-          xdotool mousemove --window "$RVIZ_ID" 50 484 click 1
-          sleep 2
+          xdotool mousemove --window "$RVIZ_ID" 195 425 click 1
+          sleep 3
+          import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_joints_default.png
 
           set_joint () {
             local row_y="$1"
@@ -83,36 +83,36 @@ jobs:
 
           # PICK: [0.785, -0.8, 1.4, 0, 0.8, 0] rad
           # approx [45, -46, 80, 0, 46, 0] degrees
-          set_joint 553 383
-          set_joint 568 326
-          set_joint 584 465
-          set_joint 599 355
-          set_joint 615 384
-          set_joint 630 355
+          set_joint 496 383
+          set_joint 512 326
+          set_joint 528 465
+          set_joint 544 355
+          set_joint 560 384
+          set_joint 576 355
           xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_pick_position_rviz.png
 
           # CARRY: [0.785, -0.3, 1.2, 0, 1.0, 0] rad
           # approx [45, -17, 69, 0, 57, 0] degrees
-          set_joint 553 383
-          set_joint 568 344
-          set_joint 584 450
-          set_joint 599 355
-          set_joint 615 391
-          set_joint 630 355
+          set_joint 496 383
+          set_joint 512 344
+          set_joint 528 450
+          set_joint 544 355
+          set_joint 560 391
+          set_joint 576 355
           xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_carry_position_rviz.png
 
           # PLACE: [-0.785, -0.5, 1.2, 0, 1.0, 0] rad
           # approx [-45, -29, 69, 0, 57, 0] degrees
-          set_joint 553 326
-          set_joint 568 337
-          set_joint 584 450
-          set_joint 599 355
-          set_joint 615 391
-          set_joint 630 355
+          set_joint 496 326
+          set_joint 512 337
+          set_joint 528 450
+          set_joint 544 355
+          set_joint 560 391
+          set_joint 576 355
           xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_place_position_rviz.png
@@ -134,7 +134,6 @@ jobs:
           test "$P" != "$L"
 
       - name: Commit corrected screenshots
-        if: false
         run: |
           cd student
           git fetch origin main
@@ -142,6 +141,7 @@ jobs:
           cd ..
           mkdir -p student/docs/evidence/week10
           cp rviz-evidence/week10_moveit_before.png student/docs/evidence/week10/
+          cp rviz-evidence/week10_joints_default.png student/docs/evidence/week10/
           cp rviz-evidence/week10_pick_position_rviz.png student/docs/evidence/week10/
           cp rviz-evidence/week10_carry_position_rviz.png student/docs/evidence/week10/
           cp rviz-evidence/week10_place_position_rviz.png student/docs/evidence/week10/
