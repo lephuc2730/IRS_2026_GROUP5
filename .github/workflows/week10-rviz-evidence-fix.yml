@@ -97,36 +97,36 @@ jobs:
 
           # PICK: [0.785, -0.8, 1.4, 0, 0.8, 0] rad
           # approx [45, -46, 80, 0, 46, 0] degrees
-          set_joint 502 383
-          set_joint 519 326
-          set_joint 535 465
-          set_joint 552 355
-          set_joint 568 384
-          set_joint 585 355
+          set_joint 502 380
+          set_joint 519 323
+          set_joint 535 461
+          set_joint 552 351
+          set_joint 568 380
+          set_joint 585 351
           xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_pick_position_rviz.png
 
           # CARRY: [0.785, -0.3, 1.2, 0, 1.0, 0] rad
           # approx [45, -17, 69, 0, 57, 0] degrees
-          set_joint 502 383
-          set_joint 519 344
-          set_joint 535 450
-          set_joint 552 355
-          set_joint 568 391
-          set_joint 585 355
+          set_joint 502 380
+          set_joint 519 341
+          set_joint 535 446
+          set_joint 552 351
+          set_joint 568 388
+          set_joint 585 351
           xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_carry_position_rviz.png
 
           # PLACE: [-0.785, -0.5, 1.2, 0, 1.0, 0] rad
           # approx [-45, -29, 69, 0, 57, 0] degrees
-          set_joint 502 326
-          set_joint 519 337
-          set_joint 535 450
-          set_joint 552 355
-          set_joint 568 391
-          set_joint 585 355
+          set_joint 502 323
+          set_joint 519 334
+          set_joint 535 446
+          set_joint 552 351
+          set_joint 568 388
+          set_joint 585 351
           xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_place_position_rviz.png
