@@ -1,0 +1,167 @@
+name: Week 10 RViz Evidence Fix
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/week10-rviz-evidence-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  rviz-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: student
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Start headless X11
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool imagemagick x11-utils wmctrl
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 3
+
+      - name: Start official Hand Solo MoveIt environment
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          cd world
+          docker compose pull irs-simulation omron_handsolo
+          docker compose up -d irs-simulation omron_handsolo
+          sleep 65
+          docker compose ps
+          cd ..
+          mkdir -p rviz-evidence
+          xdotool search --onlyvisible --name ".*" getwindowname %@ > rviz-evidence/window_list.txt 2>&1 || true
+          cat rviz-evidence/window_list.txt
+
+      - name: Select exact MoveIt RViz window
+        run: |
+          RVIZ_ID=$(xdotool search --onlyvisible --name "handsolo-moveit.rviz.*RViz" | head -1 || true)
+          if [ -z "$RVIZ_ID" ]; then
+            RVIZ_ID=$(xdotool search --onlyvisible --name "handsolo-moveit" | head -1 || true)
+          fi
+          echo "RVIZ_ID=$RVIZ_ID" | tee rviz-evidence/selected_window.txt
+          if [ -z "$RVIZ_ID" ]; then
+            echo "Could not find the Hand Solo MoveIt RViz top-level window."
+            exit 1
+          fi
+          xdotool getwindowname "$RVIZ_ID" | tee -a rviz-evidence/selected_window.txt
+          xwininfo -id "$RVIZ_ID" > rviz-evidence/window_info_before.txt
+          xdotool windowsize --sync "$RVIZ_ID" 1532 903
+          xdotool windowmove "$RVIZ_ID" 0 0
+          xdotool windowraise "$RVIZ_ID" || true
+          xdotool windowactivate --sync "$RVIZ_ID" || true
+          sleep 5
+          xwininfo -id "$RVIZ_ID" > rviz-evidence/window_info_after.txt
+          import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_moveit_before.png
+
+      - name: Set and capture Pick Carry Place
+        run: |
+          RVIZ_ID=$(cut -d= -f2 rviz-evidence/selected_window.txt | head -1)
+
+          # Click MotionPlanning -> Joints tab.
+          xdotool mousemove --window "$RVIZ_ID" 50 484 click 1
+          sleep 2
+
+          set_joint () {
+            local row_y="$1"
+            local x_value="$2"
+            xdotool mousemove --window "$RVIZ_ID" "$x_value" "$row_y" click 1
+            sleep 0.35
+          }
+
+          # PICK: [0.785, -0.8, 1.4, 0, 0.8, 0] rad
+          # approx [45, -46, 80, 0, 46, 0] degrees
+          set_joint 553 383
+          set_joint 568 326
+          set_joint 584 465
+          set_joint 599 355
+          set_joint 615 384
+          set_joint 630 355
+          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          sleep 4
+          import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_pick_position_rviz.png
+
+          # CARRY: [0.785, -0.3, 1.2, 0, 1.0, 0] rad
+          # approx [45, -17, 69, 0, 57, 0] degrees
+          set_joint 553 383
+          set_joint 568 344
+          set_joint 584 450
+          set_joint 599 355
+          set_joint 615 391
+          set_joint 630 355
+          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          sleep 4
+          import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_carry_position_rviz.png
+
+          # PLACE: [-0.785, -0.5, 1.2, 0, 1.0, 0] rad
+          # approx [-45, -29, 69, 0, 57, 0] degrees
+          set_joint 553 326
+          set_joint 568 337
+          set_joint 584 450
+          set_joint 599 355
+          set_joint 615 391
+          set_joint 630 355
+          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          sleep 4
+          import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_place_position_rviz.png
+
+          identify rviz-evidence/week10_*_position_rviz.png | tee rviz-evidence/image_identify.txt
+          sha256sum rviz-evidence/week10_*_position_rviz.png | tee rviz-evidence/image_hashes.txt
+
+          for f in rviz-evidence/week10_*_position_rviz.png; do
+            BYTES=$(stat -c%s "$f")
+            echo "$f size=$BYTES"
+            test "$BYTES" -gt 20000
+          done
+
+          P=$(sha256sum rviz-evidence/week10_pick_position_rviz.png | awk '{print $1}')
+          C=$(sha256sum rviz-evidence/week10_carry_position_rviz.png | awk '{print $1}')
+          L=$(sha256sum rviz-evidence/week10_place_position_rviz.png | awk '{print $1}')
+          test "$P" != "$C"
+          test "$C" != "$L"
+          test "$P" != "$L"
+
+      - name: Commit corrected screenshots
+        run: |
+          cd student
+          git fetch origin main
+          git reset --hard origin/main
+          cd ..
+          mkdir -p student/docs/evidence/week10
+          cp rviz-evidence/week10_moveit_before.png student/docs/evidence/week10/
+          cp rviz-evidence/week10_pick_position_rviz.png student/docs/evidence/week10/
+          cp rviz-evidence/week10_carry_position_rviz.png student/docs/evidence/week10/
+          cp rviz-evidence/week10_place_position_rviz.png student/docs/evidence/week10/
+          cp rviz-evidence/image_identify.txt student/docs/evidence/week10/
+          cp rviz-evidence/image_hashes.txt student/docs/evidence/week10/
+          cp rviz-evidence/selected_window.txt student/docs/evidence/week10/
+          cp rviz-evidence/window_list.txt student/docs/evidence/week10/rviz_fix_window_list.txt
+
+          cd student
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/evidence/week10
+          git commit -m "Fix Week 10 Pick Carry Place RViz evidence"
+          git push origin main
+
+      - name: Upload corrected RViz evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: week10-rviz-evidence-fixed
+          path: rviz-evidence/
+
+      - name: Stop environment
+        if: always()
+        working-directory: world
+        run: docker compose down -v || true
