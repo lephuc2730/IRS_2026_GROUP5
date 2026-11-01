@@ -1,0 +1,16 @@
+# An array of goal statuses.
+GoalStatus[] status_list
+	int8 STATUS_UNKNOWN   = 0
+	int8 STATUS_ACCEPTED  = 1
+	int8 STATUS_EXECUTING = 2
+	int8 STATUS_CANCELING = 3
+	int8 STATUS_SUCCEEDED = 4
+	int8 STATUS_CANCELED  = 5
+	int8 STATUS_ABORTED   = 6
+	GoalInfo goal_info
+		unique_identifier_msgs/UUID goal_id
+			uint8[16] uuid
+		builtin_interfaces/Time stamp
+			int32 sec
+			uint32 nanosec
+	int8 status

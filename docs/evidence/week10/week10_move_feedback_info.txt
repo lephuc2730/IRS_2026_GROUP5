@@ -1,0 +1,36 @@
+Type: moveit_msgs/action/MoveGroup_FeedbackMessage
+
+Publisher count: 1
+
+Node name: move_group
+Node namespace: /
+Topic type: moveit_msgs/action/MoveGroup_FeedbackMessage
+Topic type hash: RIHS01_c5b66e44e3b976db5536bf3eb773d83238c1d1d8c53ccaa7ccba28fad55fa352
+Endpoint type: PUBLISHER
+GID: 01.10.7c.00.0a.81.91.81.a3.0c.c5.46.00.00.9d.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: rviz2_moveit
+Node namespace: /
+Topic type: moveit_msgs/action/MoveGroup_FeedbackMessage
+Topic type hash: RIHS01_c5b66e44e3b976db5536bf3eb773d83238c1d1d8c53ccaa7ccba28fad55fa352
+Endpoint type: SUBSCRIPTION
+GID: 01.10.7e.4f.fb.1f.42.4a.ec.cc.57.b0.00.00.a8.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (10)
+  Durability: VOLATILE
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

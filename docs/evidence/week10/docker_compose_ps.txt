@@ -1,0 +1,4 @@
+NAME                      IMAGE                                                                            COMMAND                  SERVICE           CREATED              STATUS              PORTS
+omron_handsolo            ghcr.io/collaborativeroboticslab/omron_handsolo:jazzy                            "/ros_entrypoint.sh …"   omron_handsolo    About a minute ago   Up About a minute   
+world-irs-simulation-1    ghcr.io/collaborativeroboticslab/industrial-robots-and-systems-warehouse:jazzy   "/ros_entrypoint.sh …"   irs-simulation    About a minute ago   Up About a minute   
+world-omron-workspace-1   ghcr.io/collaborativeroboticslab/omron-workspace:jazzy                           "/ros_entrypoint.sh …"   omron-workspace   About a minute ago   Up About a minute   

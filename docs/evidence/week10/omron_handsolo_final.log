@@ -1,0 +1,300 @@
+omron_handsolo  | [tm_driver-1] [INFO] [1793496504.695139510] [rclcpp]: PVTPoint(0.02551,-0.00524,4.05000,-0.01502,4.03042,-0.01341,0.17007,-0.03491,27.00000,-0.10010,26.86947,-0.08940,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496504.795332893] [rclcpp]: PVTPoint(0.04535,-0.00931,7.20000,-0.02669,7.16519,-0.02384,0.22676,-0.04655,36.00000,-0.13347,35.82595,-0.11919,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496504.899257919] [rclcpp]: PVTPoint(0.07086,-0.01455,11.25000,-0.04171,11.19561,-0.03725,0.28345,-0.05819,45.00000,-0.16684,44.78244,-0.14899,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.002248773] [rclcpp]: PVTPoint(0.10204,-0.02095,16.20000,-0.06006,16.12168,-0.05364,0.34014,-0.06983,54.00000,-0.20021,53.73893,-0.17879,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.105817400] [rclcpp]: PVTPoint(0.13889,-0.02851,22.05000,-0.08175,21.94340,-0.07301,0.39693,-0.08149,63.01641,-0.23364,62.71175,-0.20865,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.250228867] [rclcpp]: PVTPoint(0.18141,-0.03724,28.80000,-0.10678,28.66076,-0.09536,0.45362,-0.09312,72.01641,-0.26701,71.66824,-0.23844,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.353694040] [rclcpp]: PVTPoint(0.22959,-0.04713,36.45000,-0.13514,36.27378,-0.12068,0.51070,-0.10484,81.07823,-0.30060,80.68625,-0.26845,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.459767188] [rclcpp]: PVTPoint(0.28345,-0.05819,44.99999,-0.16684,44.78244,-0.14899,0.56690,-0.11638,90.00000,-0.33368,89.56488,-0.29799,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.563585444] [rclcpp]: PVTPoint(0.33761,-0.06931,53.59786,-0.19872,53.33874,-0.17746,0.51304,-0.10532,81.45000,-0.30198,81.05622,-0.26968,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.666358739] [rclcpp]: PVTPoint(0.38610,-0.07926,61.29708,-0.22726,61.00073,-0.20295,0.45635,-0.09369,72.45000,-0.26861,72.09973,-0.23988,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.766934700] [rclcpp]: PVTPoint(0.42893,-0.08806,68.09630,-0.25247,67.76708,-0.22546,0.39966,-0.08205,63.45000,-0.23525,63.14324,-0.21008,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.867563760] [rclcpp]: PVTPoint(0.46609,-0.09568,73.99552,-0.27434,73.63778,-0.24500,0.34297,-0.07041,54.45000,-0.20188,54.18676,-0.18028,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496505.968294111] [rclcpp]: PVTPoint(0.49758,-0.10215,78.99473,-0.29288,78.61282,-0.26155,0.28628,-0.05877,45.45000,-0.16851,45.23027,-0.15048,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.071916610] [rclcpp]: PVTPoint(0.52340,-0.10745,83.09395,-0.30808,82.69222,-0.27512,0.22959,-0.04713,36.45000,-0.13514,36.27378,-0.12068,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.174580189] [rclcpp]: PVTPoint(0.54355,-0.11159,86.29317,-0.31994,85.87598,-0.28571,0.17290,-0.03550,27.45000,-0.10177,27.31729,-0.09089,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.277167995] [rclcpp]: PVTPoint(0.55803,-0.11456,88.59239,-0.32846,88.16408,-0.29333,0.11621,-0.02386,18.45000,-0.06840,18.36080,-0.06109,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.379921078] [rclcpp]: PVTPoint(0.56685,-0.11637,89.99161,-0.33365,89.55653,-0.29796,0.05952,-0.01222,9.45000,-0.03504,9.40431,-0.03129,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.479998080] [rclcpp]: PVTPoint(0.57000,-0.11702,90.49217,-0.33551,90.05467,-0.29962,-0.00000,0.00000,-0.00000,0.00000,-0.00000,0.00000,0.10547)
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496506.587608642] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496506.587782639] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496506.588048608] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.587352853] [rclcpp]: TM_DRV: traj. exec. time:= 2.107105
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.587396034] [rclcpp]: Goal reached, success!
+omron_handsolo  | [tm_driver-1] [INFO] [1793496506.589064705] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.614285895] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.617577504] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.617885672] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496516.617944242] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496516.617988455] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.618291323] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.618606074] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.619430351] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496516.619720726] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.619842805] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.620000962] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.621917580] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.622233904] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.654397785] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.656695348] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.658257891] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496516.658680334] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.659824351] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.659923768] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.660019227] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.660526950] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.660590299] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.660799060] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.661211625] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662170738] [rclcpp]: [ACTION] Received new action goal b102a867-d045-903e-494a-6a43c007f2a7
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662191136] [rclcpp]: [ACTION] -----GOAL ACCEPT-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.662385218] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496516.662422598] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted![0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662362257] [rclcpp]: [ACTION] goals_queue_ size: 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662668800] [rclcpp]: [ACTION] -----goal execution thread begin-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662722882] [rclcpp]: [ACTION] traj. total time:= 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662745724] [rclcpp]: PVTPoint(0.57000,-0.11702,90.49217,-0.33551,90.05467,-0.29962,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.662784146] [rclcpp]: PVTPoint(0.87000,-0.31022,90.34794,-0.33430,89.83302,-0.30016,6.00000,-3.86410,-2.88473,0.02415,-4.43313,-0.01090,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.765853579] [rclcpp]: PVTPoint(1.77000,-0.88984,89.91523,-0.33068,89.16805,-0.30180,12.00000,-7.72821,-5.76945,0.04830,-8.86626,-0.02180,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.869291512] [rclcpp]: PVTPoint(3.27000,-1.85586,89.19404,-0.32464,88.05976,-0.30452,18.00000,-11.59231,-8.65418,0.07245,-13.29939,-0.03270,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496516.971257773] [rclcpp]: PVTPoint(5.37000,-3.20830,88.18439,-0.31619,86.50817,-0.30834,24.00000,-15.45642,-11.53891,0.09660,-17.73253,-0.04360,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.077147740] [rclcpp]: PVTPoint(8.07000,-4.94715,86.88626,-0.30532,84.51326,-0.31324,30.00000,-19.32052,-14.42364,0.12076,-22.16566,-0.05450,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.180145667] [rclcpp]: PVTPoint(11.37000,-7.07240,85.29966,-0.29203,82.07504,-0.31924,36.00000,-23.18462,-17.30836,0.14491,-26.59879,-0.06541,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.282555711] [rclcpp]: PVTPoint(15.27000,-9.58407,83.42459,-0.27634,79.19350,-0.32632,42.05020,-27.08106,-20.21723,0.16926,-31.06901,-0.07640,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.383256417] [rclcpp]: PVTPoint(19.77000,-12.48215,81.26104,-0.25822,75.86865,-0.33450,48.05020,-30.94516,-23.10195,0.19341,-35.50214,-0.08730,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.484519328] [rclcpp]: PVTPoint(24.79762,-15.72002,78.84383,-0.23799,72.15397,-0.34363,49.80000,-32.07206,-23.94324,0.20045,-36.79499,-0.09048,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.586955855] [rclcpp]: PVTPoint(29.48083,-18.73609,76.59219,-0.21913,68.69375,-0.35214,43.80000,-28.20796,-21.05851,0.17630,-32.36186,-0.07958,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.689686401] [rclcpp]: PVTPoint(33.56405,-21.36575,74.62903,-0.20270,65.67685,-0.35956,37.80000,-24.34385,-18.17378,0.15215,-27.92873,-0.06868,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.792607094] [rclcpp]: PVTPoint(37.04726,-23.60900,72.95435,-0.18868,63.10326,-0.36589,31.80000,-20.47975,-15.28906,0.12800,-23.49560,-0.05777,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.895479966] [rclcpp]: PVTPoint(39.93047,-25.46584,71.56813,-0.17707,60.97298,-0.37113,25.80000,-16.61565,-12.40433,0.10385,-19.06246,-0.04687,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496517.999142792] [rclcpp]: PVTPoint(42.21369,-26.93627,70.47039,-0.16788,59.28601,-0.37528,19.80000,-12.75154,-9.51960,0.07970,-14.62933,-0.03597,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.102265234] [rclcpp]: PVTPoint(43.89690,-28.02029,69.66112,-0.16111,58.04236,-0.37833,13.80000,-8.88744,-6.63487,0.05555,-10.19620,-0.02507,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.204759386] [rclcpp]: PVTPoint(44.98012,-28.71790,69.14032,-0.15675,57.24202,-0.38030,7.80000,-5.02334,-3.75015,0.03140,-5.76307,-0.01417,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.306116413] [rclcpp]: PVTPoint(45.46333,-29.02910,68.90800,-0.15480,56.88500,-0.38118,1.80000,-1.15923,-0.86542,0.00725,-1.32994,-0.00327,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.407562739] [rclcpp]: PVTPoint(45.49130,-29.04712,68.89455,-0.15469,56.86433,-0.38123,-0.00000,0.00000,0.00000,-0.00000,0.00000,0.00000,0.03054)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.440525039] [rclcpp]: TM_DRV: traj. exec. time:= 1.777781
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.440564654] [rclcpp]: Goal reached, success!
+omron_handsolo  | [tm_driver-1] [INFO] [1793496518.440722750] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496518.441217366] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496518.441344407] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496518.450667457] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.483218915] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484137316] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484311483] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496523.484348453] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496523.484370434] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484385191] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484548318] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484596258] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496523.484608801] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484642585] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484675296] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.484989446] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.485120502] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.508916687] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.509551118] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.510580310] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496523.510737064] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.511192749] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.511534050] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.511614541] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.512290523] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.512347920] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.512384128] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.512683009] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.515352057] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496523.515372325] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted![0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.514138145] [rclcpp]: [ACTION] Received new action goal e3d74099-8872-5be9-8e41-75245b6794bc
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.514163312] [rclcpp]: [ACTION] -----GOAL ACCEPT-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.514269351] [rclcpp]: [ACTION] goals_queue_ size: 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.515159886] [rclcpp]: [ACTION] -----goal execution thread begin-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.515203558] [rclcpp]: [ACTION] traj. total time:= 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.515228244] [rclcpp]: PVTPoint(45.49131,-29.04712,68.89455,-0.15469,56.86433,-0.38123,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.515244335] [rclcpp]: PVTPoint(45.47479,-29.34712,69.08616,-0.16129,56.67026,-0.36494,-0.33036,-6.00000,3.83206,-0.13202,-3.88141,0.32573,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.615861714] [rclcpp]: PVTPoint(45.42524,-30.24712,69.66097,-0.18109,56.08805,-0.31608,-0.66071,-12.00000,7.66412,-0.26404,-7.76282,0.65147,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.718255517] [rclcpp]: PVTPoint(45.34265,-31.74712,70.61898,-0.21410,55.11770,-0.23465,-0.99107,-18.00000,11.49618,-0.39605,-11.64422,0.97720,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.821427542] [rclcpp]: PVTPoint(45.22702,-33.84712,71.96020,-0.26030,53.75920,-0.12064,-1.32142,-24.00000,15.32825,-0.52807,-15.52563,1.30293,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496523.923962811] [rclcpp]: PVTPoint(45.07836,-36.54712,73.68463,-0.31971,52.01257,0.02594,-1.65178,-30.00000,19.16031,-0.66009,-19.40704,1.62867,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.026744213] [rclcpp]: PVTPoint(44.91172,-39.57378,75.61769,-0.38631,50.05462,0.19025,-1.53615,-27.90000,17.81909,-0.61388,-18.04855,1.51466,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.128273624] [rclcpp]: PVTPoint(44.77461,-42.06383,77.20803,-0.44110,48.44380,0.32543,-1.20580,-21.90000,13.98702,-0.48186,-14.16714,1.18893,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.228766069] [rclcpp]: PVTPoint(44.67055,-43.95389,78.41516,-0.48268,47.22112,0.42804,-0.87544,-15.90000,10.15496,-0.34985,-10.28573,0.86319,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.330470519] [rclcpp]: PVTPoint(44.59952,-45.24394,79.23909,-0.51107,46.38658,0.49808,-0.54509,-9.90000,6.32290,-0.21783,-6.40432,0.53746,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.431112568] [rclcpp]: PVTPoint(44.56153,-45.93400,79.67981,-0.52625,45.94018,0.53554,-0.21473,-3.90000,2.49084,-0.08581,-2.52292,0.21173,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.533507788] [rclcpp]: PVTPoint(44.55455,-46.06078,79.76079,-0.52904,45.85817,0.54242,0.00000,0.00000,-0.00000,0.00000,0.00000,-0.00000,0.06501)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.599915170] [rclcpp]: TM_DRV: traj. exec. time:= 1.084689
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.599955226] [rclcpp]: Goal reached, success!
+omron_handsolo  | [tm_driver-1] [INFO] [1793496524.600133350] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496524.601226011] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496524.601825716] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496524.604972983] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.305783294] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.306856438] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307134300] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496526.307197268] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496526.307248334] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307288820] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307538048] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307612287] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496526.307639999] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307703398] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.307759924] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.308835994] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.308968893] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.346917541] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.348929777] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.349989386] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496526.351312750] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351588097] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351636227] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351717109] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351809252] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351875787] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.351927053] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.354170564] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.371926611] [rclcpp]: [ACTION] Received new action goal f41bf4eb-c418-3d32-d207-1e01fce58d32
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.371949955] [rclcpp]: [ACTION] -----GOAL ACCEPT-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.372049892] [rclcpp]: [ACTION] goals_queue_ size: 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.372156272] [rclcpp]: [ACTION] -----goal execution thread begin-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.372201487] [rclcpp]: [ACTION] traj. total time:= 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.372228027] [rclcpp]: PVTPoint(44.55455,-46.06078,79.76079,-0.52904,45.85817,0.54242,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.372243075] [rclcpp]: PVTPoint(44.55357,-45.76078,79.64539,-0.51760,45.97412,0.54118,-0.01960,6.00000,-2.30798,0.22874,2.31905,-0.02486,0.10000)
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.376450452] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496526.376500837] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted![0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.475145768] [rclcpp]: PVTPoint(44.55063,-44.86078,79.29919,-0.48329,46.32198,0.53745,-0.03920,12.00000,-4.61597,0.45748,4.63810,-0.04973,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.578396052] [rclcpp]: PVTPoint(44.54573,-43.36078,78.72220,-0.42611,46.90174,0.53123,-0.05879,18.00000,-6.92395,0.68623,6.95715,-0.07459,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.680929000] [rclcpp]: PVTPoint(44.53887,-41.26078,77.91440,-0.34605,47.71341,0.52253,-0.07839,24.00000,-9.23194,0.91497,9.27620,-0.09946,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.791941083] [rclcpp]: PVTPoint(44.53005,-38.56078,76.87581,-0.24311,48.75698,0.51134,-0.09799,30.00000,-11.53992,1.14371,11.59525,-0.12432,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.893697978] [rclcpp]: PVTPoint(44.51927,-35.26078,75.60642,-0.11730,50.03246,0.49767,-0.11759,36.00000,-13.84790,1.37245,13.91430,-0.14918,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496526.997019506] [rclcpp]: PVTPoint(44.50654,-31.36315,74.10714,0.03129,51.53892,0.48152,-0.13464,41.22000,-15.85585,1.57146,15.93187,-0.17082,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.098142054] [rclcpp]: PVTPoint(44.49405,-27.53855,72.63595,0.17710,53.01716,0.46567,-0.11504,35.22000,-13.54787,1.34272,13.61282,-0.14595,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.200333191] [rclcpp]: PVTPoint(44.48352,-24.31394,71.39556,0.30003,54.26350,0.45230,-0.09544,29.22000,-11.23988,1.11398,11.29377,-0.12109,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.302610510] [rclcpp]: PVTPoint(44.47494,-21.68934,70.38597,0.40009,55.27793,0.44143,-0.07584,23.22000,-8.93190,0.88523,8.97472,-0.09622,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.404812356] [rclcpp]: PVTPoint(44.46833,-19.66474,69.60718,0.47728,56.06046,0.43304,-0.05625,17.22000,-6.62391,0.65649,6.65567,-0.07136,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.507477263] [rclcpp]: PVTPoint(44.46368,-18.24014,69.05919,0.53159,56.61108,0.42713,-0.03665,11.22000,-4.31593,0.42775,4.33662,-0.04650,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.609693577] [rclcpp]: PVTPoint(44.46098,-17.41553,68.74199,0.56302,56.92979,0.42372,-0.01705,5.22000,-2.00795,0.19901,2.01757,-0.02163,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.711783994] [rclcpp]: PVTPoint(44.46023,-17.18619,68.65377,0.57177,57.01843,0.42277,0.00000,-0.00000,0.00000,-0.00000,-0.00000,0.00000,0.08743)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.801921827] [rclcpp]: TM_DRV: traj. exec. time:= 1.429696
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.801961261] [rclcpp]: Goal reached, success!
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496527.802166927] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496527.802355682] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496527.802695199] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496527.810485288] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.375240523] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.375747374] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.375949353] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496528.376006210] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496528.376060462] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.376122058] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.376779862] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.377535100] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496528.377648773] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.377746917] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.377798935] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.378590992] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.379935893] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.408829070] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.410744565] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.411247559] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496528.412507864] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.413023472] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.413079958] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.413204792] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.450135159] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.450706882] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.450760983] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.451064212] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.483232886] [rclcpp]: [ACTION] Received new action goal c5074ffe-cb1b-320a-db18-8eb6b5b3911c
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.483271508] [rclcpp]: [ACTION] -----GOAL ACCEPT-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.483390762] [rclcpp]: [ACTION] goals_queue_ size: 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.484127688] [rclcpp]: [ACTION] -----goal execution thread begin-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.484186648] [rclcpp]: [ACTION] traj. total time:= 2
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.484217166] [rclcpp]: PVTPoint(44.46024,-17.18619,68.65377,0.57177,57.01843,0.42277,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.484236913] [rclcpp]: PVTPoint(44.16024,-17.22508,68.65560,0.57091,57.01792,0.42140,-6.00000,-0.77767,0.03665,-0.01714,-0.01016,-0.02735,0.10000)
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.485194911] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496528.485254413] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted![0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.591139192] [rclcpp]: PVTPoint(43.26024,-17.34173,68.66110,0.56834,57.01640,0.41730,-12.00000,-1.55534,0.07329,-0.03427,-0.02032,-0.05470,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.693742412] [rclcpp]: PVTPoint(41.76024,-17.53614,68.67026,0.56406,57.01386,0.41046,-18.00000,-2.33301,0.10994,-0.05141,-0.03048,-0.08204,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.794542067] [rclcpp]: PVTPoint(39.66024,-17.80833,68.68309,0.55806,57.01031,0.40089,-24.00000,-3.11067,0.14659,-0.06855,-0.04063,-0.10939,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.895347974] [rclcpp]: PVTPoint(36.96024,-18.15828,68.69958,0.55035,57.00573,0.38858,-30.00000,-3.88834,0.18323,-0.08568,-0.05079,-0.13674,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496528.999620808] [rclcpp]: PVTPoint(33.66024,-18.58600,68.71973,0.54092,57.00015,0.37354,-36.00000,-4.66601,0.21988,-0.10282,-0.06095,-0.16409,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.110190298] [rclcpp]: PVTPoint(29.76024,-19.09148,68.74355,0.52978,56.99354,0.35576,-42.00000,-5.44368,0.25652,-0.11995,-0.07111,-0.19144,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.217191202] [rclcpp]: PVTPoint(25.26024,-19.67473,68.77104,0.51693,56.98593,0.33525,-48.00000,-6.22135,0.29317,-0.13709,-0.08127,-0.21878,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.320992050] [rclcpp]: PVTPoint(20.16024,-20.33575,68.80219,0.50236,56.97729,0.31201,-54.00000,-6.99902,0.32982,-0.15423,-0.09143,-0.24613,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.422598700] [rclcpp]: PVTPoint(14.46024,-21.07454,68.83700,0.48608,56.96764,0.28603,-60.00000,-7.77669,0.36646,-0.17136,-0.10158,-0.27348,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.573203065] [rclcpp]: PVTPoint(8.46024,-21.85221,68.87365,0.46895,56.95748,0.25868,-60.00000,-7.77669,0.36646,-0.17136,-0.10158,-0.27348,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.673553006] [rclcpp]: PVTPoint(2.46024,-22.62987,68.91029,0.45181,56.94732,0.23133,-60.00000,-7.77669,0.36646,-0.17136,-0.10158,-0.27348,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.773639693] [rclcpp]: PVTPoint(-3.53976,-23.40754,68.94694,0.43468,56.93717,0.20398,-60.00000,-7.77669,0.36646,-0.17136,-0.10158,-0.27348,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.884436732] [rclcpp]: PVTPoint(-9.53976,-24.18521,68.98359,0.41754,56.92701,0.17663,-60.00000,-7.77669,0.36646,-0.17136,-0.10158,-0.27348,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496529.987407963] [rclcpp]: PVTPoint(-15.53768,-24.96261,69.02022,0.40041,56.91685,0.14930,-59.46000,-7.70670,0.36316,-0.16982,-0.10067,-0.27102,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.087609947] [rclcpp]: PVTPoint(-21.18778,-25.69493,69.05473,0.38427,56.90729,0.12354,-53.46000,-6.92903,0.32652,-0.15269,-0.09051,-0.24367,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.188201180] [rclcpp]: PVTPoint(-26.23789,-26.34948,69.08557,0.36985,56.89874,0.10052,-47.46000,-6.15136,0.28987,-0.13555,-0.08035,-0.21632,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.336465864] [rclcpp]: PVTPoint(-30.68799,-26.92626,69.11275,0.35714,56.89120,0.08024,-41.46000,-5.37369,0.25323,-0.11841,-0.07019,-0.18898,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.437151696] [rclcpp]: PVTPoint(-34.53809,-27.42528,69.13627,0.34614,56.88468,0.06269,-35.46000,-4.59602,0.21658,-0.10128,-0.06004,-0.16163,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.543690713] [rclcpp]: PVTPoint(-37.78819,-27.84653,69.15612,0.33686,56.87918,0.04788,-29.46000,-3.81835,0.17993,-0.08414,-0.04988,-0.13428,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.717880139] [rclcpp]: PVTPoint(-40.43829,-28.19001,69.17231,0.32929,56.87469,0.03580,-23.46000,-3.04068,0.14329,-0.06700,-0.03972,-0.10693,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.820892678] [rclcpp]: PVTPoint(-42.48839,-28.45573,69.18483,0.32344,56.87122,0.02645,-17.46000,-2.26302,0.10664,-0.04987,-0.02956,-0.07958,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496530.921226408] [rclcpp]: PVTPoint(-43.93849,-28.64368,69.19369,0.31929,56.86877,0.01984,-11.46000,-1.48535,0.06999,-0.03273,-0.01940,-0.05223,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.024258373] [rclcpp]: PVTPoint(-44.78859,-28.75386,69.19888,0.31687,56.86733,0.01597,-5.46000,-0.70768,0.03335,-0.01559,-0.00924,-0.02489,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.127985844] [rclcpp]: PVTPoint(-45.04076,-28.78655,69.20042,0.31615,56.86690,0.01482,-0.00000,-0.00000,0.00000,-0.00000,-0.00000,-0.00000,0.09168)
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.220693580] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.220855244] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.220481302] [rclcpp]: TM_DRV: traj. exec. time:= 2.736270
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.220523551] [rclcpp]: Goal reached, success!
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.222023286] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.225331545] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.729971788] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.730385755] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.730646855] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496531.730712679] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496531.730766029] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.730806395] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731002994] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731069168] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496531.731119192] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731178734] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731231262] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731609662] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.731760656] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.761332871] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.762381490] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.762753558] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496531.762947963] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.763172294] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.763533201] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.763835368] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.763974500] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.764058617] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.764158395] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.764510626] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.765197532] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496531.765235674] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request accepted![0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.764758558] [rclcpp]: [ACTION] Received new action goal 0f8a3a1f-8ed6-1361-03ce-8234a4fc5020
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.764779608] [rclcpp]: [ACTION] -----GOAL ACCEPT-----
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.764891928] [rclcpp]: [ACTION] goals_queue_ size: 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.764964876] [rclcpp]: [ACTION] -----goal execution thread begin-----
+omron_handsolo  | [tm_driver-1] [WARN] [1793496531.765017033] [rclcpp]: [ACTION] Traj.: skip 1 more last point
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.765026271] [rclcpp]: [ACTION] traj. total time:= 1
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.765051648] [rclcpp]: PVTPoint(-45.04076,-28.78655,69.20042,0.31615,56.86690,0.01482,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000,0.00000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.765070824] [rclcpp]: PVTPoint(-44.74076,-28.59636,69.33793,0.31231,57.09052,0.01765,6.00000,3.80379,2.75031,-0.07672,4.47235,0.05666,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.873785618] [rclcpp]: PVTPoint(-43.84076,-28.02579,69.75048,0.30080,57.76137,0.02615,12.00000,7.60757,5.50062,-0.15344,8.94471,0.11333,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496531.974686353] [rclcpp]: PVTPoint(-42.34076,-27.07484,70.43806,0.28162,58.87946,0.04032,18.00000,11.41136,8.25093,-0.23016,13.41706,0.16999,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.084221774] [rclcpp]: PVTPoint(-40.24076,-25.74352,71.40067,0.25477,60.44478,0.06015,24.00000,15.21515,11.00124,-0.30688,17.88941,0.22665,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.186660085] [rclcpp]: PVTPoint(-37.54076,-24.03181,72.63831,0.22025,62.45734,0.08565,30.00000,19.01894,13.75156,-0.38360,22.36177,0.28331,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.307157372] [rclcpp]: PVTPoint(-34.24076,-21.93973,74.15098,0.17805,64.91714,0.11681,36.00000,22.82272,16.50187,-0.46032,26.83412,0.33998,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.487265475] [rclcpp]: PVTPoint(-30.34076,-19.46727,75.93868,0.12818,67.82417,0.15364,42.02480,26.64223,19.26354,-0.53735,31.32496,0.39687,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.587547697] [rclcpp]: PVTPoint(-25.84077,-16.61443,78.00141,0.07064,71.17843,0.19614,48.02480,30.44602,22.01385,-0.61407,35.79731,0.45353,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.692627396] [rclcpp]: PVTPoint(-20.82813,-13.43660,80.29913,0.00655,74.91481,0.24348,49.38000,31.30517,22.63506,-0.63140,36.80747,0.46633,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.796255920] [rclcpp]: PVTPoint(-16.18604,-10.49368,82.42699,-0.05281,78.37499,0.28732,43.38000,27.50138,19.88475,-0.55468,32.33512,0.40967,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496532.898663342] [rclcpp]: PVTPoint(-12.14396,-7.93114,84.27983,-0.10449,81.38793,0.32549,37.38000,23.69759,17.13444,-0.47796,27.86276,0.35301,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.001726871] [rclcpp]: PVTPoint(-8.70187,-5.74898,85.85763,-0.14850,83.95363,0.35800,31.38000,19.89381,14.38413,-0.40124,23.39041,0.29635,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.105035404] [rclcpp]: PVTPoint(-5.85978,-3.94719,87.16040,-0.18484,86.07211,0.38484,25.38000,16.09002,11.63382,-0.32452,18.91806,0.23968,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.207754541] [rclcpp]: PVTPoint(-3.61769,-2.52579,88.18814,-0.21351,87.74334,0.40601,19.38000,12.28623,8.88350,-0.24780,14.44570,0.18302,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.310855756] [rclcpp]: PVTPoint(-1.97560,-1.48476,88.94085,-0.23451,88.96734,0.42152,13.38000,8.48245,6.13319,-0.17108,9.97335,0.12636,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.410918997] [rclcpp]: PVTPoint(-0.93351,-0.82411,89.41853,-0.24783,89.74411,0.43136,7.38000,4.67866,3.38288,-0.09436,5.50099,0.06969,0.10000)
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.510944748] [rclcpp]: PVTPoint(-0.47459,-0.53318,89.62889,-0.25370,90.08618,0.43569,-0.00000,-0.00000,-0.00000,0.00000,-0.00000,-0.00000,0.12368)
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496533.635303472] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Controller 'tmr_arm_controller' successfully finished[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496533.635467377] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status SUCCEEDED ...[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.634720185] [rclcpp]: TM_DRV: traj. exec. time:= 1.869669
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.634760350] [rclcpp]: Goal reached, success!
+omron_handsolo  | [tm_driver-1] [INFO] [1793496533.634941400] [rclcpp]: [ACTION] -----goal execution thread end-----
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496533.644982320] [move_group.moveit.moveit.ros.move_group.move_action]: Solution was found and executed.[0m

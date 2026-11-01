@@ -1,0 +1,112 @@
+omron_handsolo  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-01-01-25-55-088955-runnervm48cm3-1
+omron_handsolo  | [INFO] [launch]: Default logging verbosity is set to INFO
+omron_handsolo  | [INFO] [move_group-3]: process started with pid [28]
+omron_handsolo  | [INFO] [rviz2-4]: process started with pid [29]
+omron_handsolo  | [INFO] [tm_driver-1]: process started with pid [26]
+omron_handsolo  | [INFO] [robot_state_publisher-2]: process started with pid [27]
+omron_handsolo  | [tm_driver-1] [WARN] [1793496355.740948071] [tm_driver_node]: Parameter 'tm_use_simulation' is set to true, using fake robot.
+omron_handsolo  | [tm_driver-1] [INFO] [1793496355.741730830] [rclcpp]: Ethernet slave communication: TmSvrCommunication
+omron_handsolo  | [tm_driver-1] [INFO] [1793496355.741754766] [rclcpp]: Listen node communication: TmSctCommunication
+omron_handsolo  | [tm_driver-1] [INFO] [1793496355.752675198] [rclcpp]: TM_ROS: fake publisher thread begin
+omron_handsolo  | [robot_state_publisher-2] [INFO] [1793496355.763207558] [robot_state_publisher]: Robot initialized
+omron_handsolo  | [tm_driver-1] [INFO] [1793496355.768855934] [rclcpp]: $TMSCT,17,Tag,QueueTag(1,0),*26
+omron_handsolo  | [tm_driver-1] 
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496355.943810822] [move_group]: Using default pipeline 'ompl'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496355.949799237] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0 seconds[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496355.950300566] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [rviz2-4] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496356.194483118] [rviz2]: Stereo is NOT SUPPORTED[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496356.194579108] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496356.243790744] [rviz2]: Stereo is NOT SUPPORTED[0m
+omron_handsolo  | [rviz2-4] [33m[WARN] [1793496356.364669001] [rcl.logging_rosout]: Publisher already registered for node name: 'rviz2_moveit'. If this is due to multiple nodes with the same name then all logs for the logger named 'rviz2_moveit' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.[0m
+omron_handsolo  | [rviz2-4] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+omron_handsolo  | [rviz2-4]          at line 321 in /opt/ros/jazzy/include/class_loader/class_loader/class_loader_core.hpp
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496356.417637993] [rviz2_moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.00593315 seconds[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496356.418187254] [rviz2_moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496356.802569919] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'tmr_arm': 1 1 1 1 1 1[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.570951203] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.571133425] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.572111822] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.573204213] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.573232206] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.573428106] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.574357422] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.574431991] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.575081441] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.575129982] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.575505818] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496357.575903374] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry[0m
+omron_handsolo  | [move_group-3] [33m[WARN] [1793496357.577524469] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
+omron_handsolo  | [move_group-3] [31m[ERROR] [1793496357.577560416] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates[0m
+omron_handsolo  | [rviz2-4] [31m[ERROR] [1793496362.095940211] [rviz2_moveit.moveit.ros.motion_planning_frame]: Action server: /recognize_objects not available[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496362.112807062] [rviz2_moveit.moveit.ros.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496362.305606508] [rviz2_moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.00768444 seconds[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496362.305693822] [rviz2_moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496363.173796748] [rviz2_moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'tmr_arm': 1 1 1 1 1 1[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496364.434266042] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496364.436265416] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Listening to '/monitored_planning_scene'[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496364.560643329] [interactive_marker_display_94038714309584]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.098749426] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.100070516] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Listening to '/moveit_cpp/monitored_planning_scene'[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.166853890] [interactive_marker_display_94038714309584]: Sending request for interactive markers[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.172630251] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.176606045] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178263217] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178287673] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178598727] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178617112] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178654351] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178665111] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.178686422] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.182351643] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.185743532] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.185768900] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.187288262] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.187310684] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.187960495] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.241213174] [move_group.moveit.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for tmr_arm_controller[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.241474454] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.241524238] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.242311225] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is managing controllers[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.242345620] [move_group]: MoveGroup debug mode is ON[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/ClearOctomapService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/GetUrdfService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.270315453] [rviz2_moveit.moveit.ros.motion_planning_frame]: group tmr_arm[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.270365777] [rviz2_moveit.moveit.ros.motion_planning_frame]: Constructing new MoveGroup connection for group 'tmr_arm' in namespace ''[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupMoveAction'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupPlanService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+omron_handsolo  | [move_group-3] [96mLoading 'move_group/SaveGeometryToFileService'...[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.286552742] [move_group.moveit.moveit.ros.move_group.executable]: 
+omron_handsolo  | [move_group-3] 
+omron_handsolo  | [move_group-3] ********************************************************
+omron_handsolo  | [move_group-3] * MoveGroup using: 
+omron_handsolo  | [move_group-3] *     - apply_planning_scene_service
+omron_handsolo  | [move_group-3] *     - clear_octomap_service
+omron_handsolo  | [move_group-3] *     - get_group_urdf
+omron_handsolo  | [move_group-3] *     - load_geometry_from_file
+omron_handsolo  | [move_group-3] *     - CartesianPathService
+omron_handsolo  | [move_group-3] *     - execute_trajectory_action
+omron_handsolo  | [move_group-3] *     - get_planning_scene_service
+omron_handsolo  | [move_group-3] *     - kinematics_service
+omron_handsolo  | [move_group-3] *     - move_action
+omron_handsolo  | [move_group-3] *     - motion_plan_service
+omron_handsolo  | [move_group-3] *     - query_planners_service
+omron_handsolo  | [move_group-3] *     - state_validation_service
+omron_handsolo  | [move_group-3] *     - save_geometry_to_file
+omron_handsolo  | [move_group-3] ********************************************************
+omron_handsolo  | [move_group-3] [0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.286650836] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl[0m
+omron_handsolo  | [move_group-3] [0m[INFO] [1793496365.286794015] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete[0m
+omron_handsolo  | [move_group-3] 
+omron_handsolo  | [move_group-3] [92mYou can start planning now![0m
+omron_handsolo  | [move_group-3] 
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.309651850] [rviz2_moveit.moveit.ros.move_group_interface]: Ready to take commands for planning group tmr_arm.[0m
+omron_handsolo  | [rviz2-4] [0m[INFO] [1793496365.478122658] [interactive_marker_display_94038714309584]: Service response received for initialization[0m

@@ -1,0 +1,2 @@
+[36mQStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'[0m
+[INFO] [1793496479.370150937] [rclcpp]: signal_handler(SIGINT/SIGTERM)

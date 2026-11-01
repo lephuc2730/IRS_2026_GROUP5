@@ -1,0 +1,24 @@
+
+xwininfo: Window id: 0x1200006 "rqt_tf_tree__RosTfTree - rqt"
+
+  Absolute upper-left X:  20
+  Absolute upper-left Y:  20
+  Relative upper-left X:  20
+  Relative upper-left Y:  20
+  Width: 1700
+  Height: 900
+  Depth: 24
+  Visual: 0x1cf
+  Visual Class: TrueColor
+  Border width: 0
+  Class: InputOutput
+  Colormap: 0x1200005 (not installed)
+  Bit Gravity State: NorthWestGravity
+  Window Gravity State: NorthWestGravity
+  Backing Store State: NotUseful
+  Save Under State: no
+  Map State: IsViewable
+  Override Redirect State: no
+  Corners:  +20+20  -200+20  -200-160  +20-160
+  -geometry 1700x900+20+20
+

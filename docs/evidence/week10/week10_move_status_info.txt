@@ -1,0 +1,36 @@
+Type: action_msgs/msg/GoalStatusArray
+
+Publisher count: 1
+
+Node name: move_group
+Node namespace: /
+Topic type: action_msgs/msg/GoalStatusArray
+Topic type hash: RIHS01_6c1684b00f177d37438febe6e709fc4e2b0d4248dca4854946f9ed8b30cda83e
+Endpoint type: PUBLISHER
+GID: 01.10.7c.00.0a.81.91.81.a3.0c.c5.46.00.00.9e.03
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (1)
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+
+Subscription count: 1
+
+Node name: rviz2_moveit
+Node namespace: /
+Topic type: action_msgs/msg/GoalStatusArray
+Topic type hash: RIHS01_6c1684b00f177d37438febe6e709fc4e2b0d4248dca4854946f9ed8b30cda83e
+Endpoint type: SUBSCRIPTION
+GID: 01.10.7e.4f.fb.1f.42.4a.ec.cc.57.b0.00.00.a9.04
+QoS profile:
+  Reliability: RELIABLE
+  History (Depth): KEEP_LAST (1)
+  Durability: TRANSIENT_LOCAL
+  Lifespan: Infinite
+  Deadline: Infinite
+  Liveliness: AUTOMATIC
+  Liveliness lease duration: Infinite
+

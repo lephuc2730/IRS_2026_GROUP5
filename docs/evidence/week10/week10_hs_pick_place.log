@@ -1,0 +1,3 @@
+[INFO] [1793496504.427533323] [hs_waypoint_runner]: Waiting for MoveGroup action server...
+[INFO] [1793496504.428618740] [hs_waypoint_runner]: MoveGroup action server ready.
+[INFO] [1793496534.809993641] [hs_waypoint_runner]: Sequence complete ✅

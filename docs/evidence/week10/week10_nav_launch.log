@@ -1,0 +1,316 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-01-01-27-15-004441-runnervm48cm3-300
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [map_server-1]: process started with pid [314]
+[INFO] [amcl-2]: process started with pid [315]
+[INFO] [lifecycle_manager-3]: process started with pid [316]
+[INFO] [controller_server-4]: process started with pid [317]
+[INFO] [planner_server-5]: process started with pid [354]
+[INFO] [behavior_server-6]: process started with pid [355]
+[INFO] [bt_navigator-7]: process started with pid [356]
+[INFO] [waypoint_follower-8]: process started with pid [357]
+[INFO] [velocity_smoother-9]: process started with pid [358]
+[INFO] [lifecycle_manager-10]: process started with pid [359]
+[INFO] [rviz2-11]: process started with pid [360]
+[map_server-1] [INFO] [1793496435.952382129] [map_server]: 
+[map_server-1] 	map_server lifecycle node launched. 
+[map_server-1] 	Waiting on external lifecycle transitions to activate
+[map_server-1] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[map_server-1] [INFO] [1793496435.952458332] [map_server]: Creating
+[amcl-2] [INFO] [1793496435.948410533] [amcl]: 
+[amcl-2] 	amcl lifecycle node launched. 
+[amcl-2] 	Waiting on external lifecycle transitions to activate
+[amcl-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-2] [INFO] [1793496435.951262257] [amcl]: Creating
+[lifecycle_manager-3] [INFO] [1793496436.141633680] [lifecycle_manager_localization]: Creating
+[lifecycle_manager-3] [INFO] [1793496436.158774821] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[lifecycle_manager-3] [INFO] [1793496436.164827121] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-3] [INFO] [1793496436.164870883] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[map_server-1] [INFO] [1793496436.172403851] [map_server]: Configuring
+[map_server-1] [INFO] [1793496436.172492227] [map_io]: Loading yaml file: /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map/pa_warehouse_map_01.yaml
+[map_server-1] [INFO] [1793496436.172824952] [map_io]: resolution: 0.05
+[map_server-1] [INFO] [1793496436.172841743] [map_io]: origin[0]: -6.543
+[map_server-1] [INFO] [1793496436.172849798] [map_io]: origin[1]: -7
+[map_server-1] [INFO] [1793496436.172856400] [map_io]: origin[2]: 0
+[map_server-1] [INFO] [1793496436.172862642] [map_io]: free_thresh: 0.196
+[map_server-1] [INFO] [1793496436.172868413] [map_io]: occupied_thresh: 0.65
+[map_server-1] [INFO] [1793496436.172875807] [map_io]: mode: trinary
+[map_server-1] [INFO] [1793496436.172883471] [map_io]: negate: 0
+[map_server-1] [INFO] [1793496436.173180809] [map_io]: Loading image_file: /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map/pa_warehouse_map_01.pgm
+[map_server-1] [INFO] [1793496436.194483761] [map_io]: Read map /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map/pa_warehouse_map_01.pgm: 318 X 319 map @ 0.05 m/cell
+[lifecycle_manager-3] [INFO] [1793496436.240333567] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[amcl-2] [INFO] [1793496436.243840965] [amcl]: Configuring
+[amcl-2] [INFO] [1793496436.243933850] [amcl]: initTransforms
+[controller_server-4] [INFO] [1793496436.356180994] [controller_server]: 
+[controller_server-4] 	controller_server lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-2] [INFO] [1793496436.380851460] [amcl]: initPubSub
+[velocity_smoother-9] [INFO] [1793496436.384321224] [velocity_smoother]: 
+[velocity_smoother-9] 	velocity_smoother lifecycle node launched. 
+[velocity_smoother-9] 	Waiting on external lifecycle transitions to activate
+[velocity_smoother-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-8] [INFO] [1793496436.474789669] [waypoint_follower]: 
+[waypoint_follower-8] 	waypoint_follower lifecycle node launched. 
+[waypoint_follower-8] 	Waiting on external lifecycle transitions to activate
+[waypoint_follower-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[waypoint_follower-8] [INFO] [1793496436.475765490] [waypoint_follower]: Creating
+[amcl-2] [INFO] [1793496436.475151170] [amcl]: Subscribed to map topic.
+[controller_server-4] [INFO] [1793496436.477791807] [controller_server]: Creating controller server
+[planner_server-5] [INFO] [1793496436.481075062] [planner_server]: 
+[planner_server-5] 	planner_server lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1793496436.516904949] [planner_server]: Creating
+[lifecycle_manager-10] [INFO] [1793496436.579876726] [lifecycle_manager_navigation]: Creating
+[lifecycle_manager-3] [INFO] [1793496436.607809642] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[map_server-1] [INFO] [1793496436.610970719] [map_server]: Activating
+[lifecycle_manager-10] [INFO] [1793496436.615737551] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[amcl-2] [INFO] [1793496436.621254646] [amcl]: Received a 318 X 319 map @ 0.050 m/pix
+[map_server-1] [INFO] [1793496436.623560365] [map_server]: Creating bond (map_server) to lifecycle manager.
+[controller_server-4] [INFO] [1793496436.624981020] [local_costmap.local_costmap]: 
+[controller_server-4] 	local_costmap lifecycle node launched. 
+[controller_server-4] 	Waiting on external lifecycle transitions to activate
+[controller_server-4] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[controller_server-4] [INFO] [1793496436.633191434] [local_costmap.local_costmap]: Creating Costmap
+[planner_server-5] [INFO] [1793496436.663797136] [global_costmap.global_costmap]: 
+[planner_server-5] 	global_costmap lifecycle node launched. 
+[planner_server-5] 	Waiting on external lifecycle transitions to activate
+[planner_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[planner_server-5] [INFO] [1793496436.666485463] [global_costmap.global_costmap]: Creating Costmap
+[bt_navigator-7] [INFO] [1793496436.737547286] [bt_navigator]: 
+[bt_navigator-7] 	bt_navigator lifecycle node launched. 
+[bt_navigator-7] 	Waiting on external lifecycle transitions to activate
+[bt_navigator-7] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[bt_navigator-7] [INFO] [1793496436.745142134] [bt_navigator]: Creating
+[lifecycle_manager-3] [INFO] [1793496436.780301981] [lifecycle_manager_localization]: Server map_server connected with bond.
+[lifecycle_manager-3] [INFO] [1793496436.780353448] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[behavior_server-6] [INFO] [1793496436.781542050] [behavior_server]: 
+[behavior_server-6] 	behavior_server lifecycle node launched. 
+[behavior_server-6] 	Waiting on external lifecycle transitions to activate
+[behavior_server-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+[amcl-2] [INFO] [1793496436.827870199] [amcl]: Activating
+[amcl-2] [INFO] [1793496436.827927847] [amcl]: initialPoseReceived
+[amcl-2] [INFO] [1793496436.831025363] [amcl]: Setting pose (1793496436.831025): 0.000 0.000 0.000
+[amcl-2] [INFO] [1793496436.832524818] [amcl]: Creating bond (amcl) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1793496436.881405149] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[lifecycle_manager-10] [INFO] [1793496436.882386401] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[rviz2-11] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[controller_server-4] [INFO] [1793496436.957210221] [controller_server]: Configuring controller interface
+[controller_server-4] [INFO] [1793496436.957247962] [controller_server]: getting progress checker plugins..
+[controller_server-4] [INFO] [1793496436.957379038] [controller_server]: getting goal checker plugins..
+[controller_server-4] [INFO] [1793496436.957454840] [controller_server]: Controller frequency set to 20.0000Hz
+[controller_server-4] [INFO] [1793496436.957494084] [local_costmap.local_costmap]: Configuring
+[lifecycle_manager-3] [INFO] [1793496436.958938336] [lifecycle_manager_localization]: Server amcl connected with bond.
+[lifecycle_manager-3] [INFO] [1793496436.958973872] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-3] [INFO] [1793496436.958986626] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[controller_server-4] [INFO] [1793496436.965135400] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+[controller_server-4] [INFO] [1793496436.980932348] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[controller_server-4] [INFO] [1793496437.020629047] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+[controller_server-4] [INFO] [1793496437.020670435] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[controller_server-4] [INFO] [1793496437.033879243] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[controller_server-4] [INFO] [1793496437.058665407] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[controller_server-4] [INFO] [1793496437.065053640] [controller_server]: Controller Server has progress_checker  progress checkers available.
+[controller_server-4] [INFO] [1793496437.072776439] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+[controller_server-4] [INFO] [1793496437.082855862] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+[controller_server-4] [INFO] [1793496437.090534759] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[controller_server-4] [INFO] [1793496437.121441163] [controller_server]: Setting transform_tolerance to 1.500000
+[controller_server-4] [INFO] [1793496437.151389802] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[controller_server-4] [INFO] [1793496437.151791766] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.151897325] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[controller_server-4] [INFO] [1793496437.152300732] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.152416009] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[controller_server-4] [INFO] [1793496437.152579626] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.152681417] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[controller_server-4] [INFO] [1793496437.152993994] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.153079855] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[controller_server-4] [INFO] [1793496437.156481050] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.156591267] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[controller_server-4] [INFO] [1793496437.156816009] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.156897783] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[controller_server-4] [INFO] [1793496437.157136781] [controller_server]: Critic plugin initialized
+[controller_server-4] [INFO] [1793496437.157156489] [controller_server]: Controller Server has FollowPath  controllers available.
+[lifecycle_manager-10] [INFO] [1793496437.177193316] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[planner_server-5] [INFO] [1793496437.177503545] [planner_server]: Configuring
+[planner_server-5] [INFO] [1793496437.177542819] [global_costmap.global_costmap]: Configuring
+[planner_server-5] [INFO] [1793496437.186026416] [global_costmap.global_costmap]: Using plugin "static_layer"
+[planner_server-5] [INFO] [1793496437.191419221] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[planner_server-5] [INFO] [1793496437.194875119] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[planner_server-5] [INFO] [1793496437.194897922] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[planner_server-5] [INFO] [1793496437.198585675] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[planner_server-5] [INFO] [1793496437.207079281] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[planner_server-5] [INFO] [1793496437.207127892] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[planner_server-5] [INFO] [1793496437.208427412] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[planner_server-5] [INFO] [1793496437.243406282] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+[planner_server-5] [INFO] [1793496437.243443763] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[planner_server-5] [INFO] [1793496437.244339043] [planner_server]: Planner Server has GridBased  planners available.
+[lifecycle_manager-10] [INFO] [1793496437.261895772] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[planner_server-5] [INFO] [1793496437.273597303] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 318 X 319 at 0.050000 m/pix
+[behavior_server-6] [INFO] [1793496437.287272334] [behavior_server]: Configuring
+[behavior_server-6] [INFO] [1793496437.298881239] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+[behavior_server-6] [INFO] [1793496437.301054940] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+[behavior_server-6] [INFO] [1793496437.303155984] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+[behavior_server-6] [INFO] [1793496437.305303115] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors::AssistedTeleop
+[behavior_server-6] [INFO] [1793496437.308593426] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+[behavior_server-6] [INFO] [1793496437.325124621] [behavior_server]: Configuring spin
+[behavior_server-6] [INFO] [1793496437.330260962] [behavior_server]: Configuring backup
+[behavior_server-6] [INFO] [1793496437.335445255] [behavior_server]: Configuring drive_on_heading
+[behavior_server-6] [INFO] [1793496437.340307733] [behavior_server]: Configuring assisted_teleop
+[behavior_server-6] [INFO] [1793496437.346571333] [behavior_server]: Configuring wait
+[lifecycle_manager-10] [INFO] [1793496437.360176398] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[bt_navigator-7] [INFO] [1793496437.360887593] [bt_navigator]: Configuring
+[bt_navigator-7] [INFO] [1793496437.378084719] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+[bt_navigator-7] [WARN] [1793496437.397167045] [bt_navigator]: Error_code parameters were not set. Using default values of: follow_path_error_code compute_path_error_code
+[bt_navigator-7] Make sure these match your BT and there are not other sources of error codes youreported to your application
+[bt_navigator-7] [INFO] [1793496437.610897909] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+[lifecycle_manager-10] [INFO] [1793496437.661670356] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[waypoint_follower-8] [INFO] [1793496437.662010896] [waypoint_follower]: Configuring
+[waypoint_follower-8] [INFO] [1793496437.726527079] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[lifecycle_manager-10] [INFO] [1793496437.731080518] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[velocity_smoother-9] [INFO] [1793496437.731722363] [velocity_smoother]: Configuring velocity smoother
+[lifecycle_manager-10] [INFO] [1793496437.761631625] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[controller_server-4] [INFO] [1793496437.762216533] [controller_server]: Activating
+[controller_server-4] [INFO] [1793496437.762260285] [local_costmap.local_costmap]: Activating
+[controller_server-4] [INFO] [1793496437.762273099] [local_costmap.local_costmap]: Checking transform
+[controller_server-4] [INFO] [1793496437.762405317] [local_costmap.local_costmap]: start
+[rviz2-11] [INFO] [1793496437.793713005] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-11] [INFO] [1793496437.794214006] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+[controller_server-4] [INFO] [1793496437.815342803] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[rviz2-11] [INFO] [1793496437.866360875] [rviz2]: Stereo is NOT SUPPORTED
+[lifecycle_manager-10] [INFO] [1793496437.949117083] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[lifecycle_manager-10] [INFO] [1793496437.949163700] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[planner_server-5] [INFO] [1793496437.950912957] [planner_server]: Activating
+[planner_server-5] [INFO] [1793496437.950955778] [global_costmap.global_costmap]: Activating
+[planner_server-5] [INFO] [1793496437.950968251] [global_costmap.global_costmap]: Checking transform
+[planner_server-5] [INFO] [1793496437.951010340] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[rviz2-11] [INFO] [1793496438.001341440] [rviz2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+[rviz2-11] 
+[rviz2-11] [INFO] [1793496438.005689703] [rviz2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+[rviz2-11] 
+[rviz2-11] [INFO] [1793496438.086539889] [rviz2]: Subscribing to: /local_costmap/voxel_marked_cloud
+[rviz2-11] 
+[amcl-2] [WARN] [1793496438.104729929] [amcl]: New subscription discovered on topic '/particle_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[rviz2-11] [INFO] [1793496438.134729714] [rviz2]: Subscribing to: /global_costmap/voxel_marked_cloud
+[rviz2-11] 
+[rviz2-11] [INFO] [1793496438.174666623] [rviz2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+[rviz2-11] 
+[rviz2-11] [INFO] [1793496438.187568405] [rviz2]: Subscribing to: /local_costmap/voxel_marked_cloud
+[rviz2-11] 
+[rviz2-11] [INFO] [1793496438.196761524] [rviz2]: Subscribing to: /global_costmap/voxel_marked_cloud
+[rviz2-11] 
+[planner_server-5] [INFO] [1793496438.451460411] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+[amcl-2] [INFO] [1793496438.850990795] [amcl]: createLaserObject
+[rviz2-11] [INFO] [1793496438.907286675] [rviz2]: Trying to create a map of size 318 x 319 using 1 swatches
+[rviz2-11] [ERROR] [1793496438.915342019] [rviz2]: rviz/glsl120/indexed_8bit_image.vert
+[rviz2-11] rviz/glsl120/indexed_8bit_image.frag
+[rviz2-11]  GLSL link result : 
+[rviz2-11] active samplers with a different type refer to the same texture image unit
+[planner_server-5] [INFO] [1793496438.951146458] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Lookup would require extrapolation at time 1793496438.868577, but only time 1793496439.669409 is in the buffer, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+[planner_server-5] [INFO] [1793496439.451097042] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Lookup would require extrapolation at time 1793496438.868577, but only time 1793496439.669409 is in the buffer, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+[rviz2-11] [INFO] [1793496439.926116069] [rviz2]: Trying to create a map of size 100 x 100 using 1 swatches
+[planner_server-5] [INFO] [1793496439.951227734] [global_costmap.global_costmap]: start
+[planner_server-5] [INFO] [1793496440.002742839] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[planner_server-5] [INFO] [1793496440.003785146] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1793496440.112373328] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[lifecycle_manager-10] [INFO] [1793496440.112422150] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[behavior_server-6] [INFO] [1793496440.115928813] [behavior_server]: Activating
+[behavior_server-6] [INFO] [1793496440.115958459] [behavior_server]: Activating spin
+[behavior_server-6] [INFO] [1793496440.115975010] [behavior_server]: Activating backup
+[behavior_server-6] [INFO] [1793496440.115987053] [behavior_server]: Activating drive_on_heading
+[behavior_server-6] [INFO] [1793496440.115998234] [behavior_server]: Activating assisted_teleop
+[behavior_server-6] [INFO] [1793496440.116010116] [behavior_server]: Activating wait
+[behavior_server-6] [INFO] [1793496440.116025605] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[rviz2-11] [INFO] [1793496440.167753703] [rviz2]: Trying to create a map of size 318 x 319 using 1 swatches
+[lifecycle_manager-10] [INFO] [1793496440.230779578] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[lifecycle_manager-10] [INFO] [1793496440.230821717] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[bt_navigator-7] [INFO] [1793496440.235043153] [bt_navigator]: Activating
+[bt_navigator-7] [INFO] [1793496440.502627038] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1793496440.612091418] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[lifecycle_manager-10] [INFO] [1793496440.612141131] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[waypoint_follower-8] [INFO] [1793496440.614259143] [waypoint_follower]: Activating
+[waypoint_follower-8] [INFO] [1793496440.614304107] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[lifecycle_manager-10] [INFO] [1793496440.723557416] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[lifecycle_manager-10] [INFO] [1793496440.723602290] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[velocity_smoother-9] [INFO] [1793496440.724274913] [velocity_smoother]: Activating
+[velocity_smoother-9] [INFO] [1793496440.724348431] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[controller_server-4] [INFO] [1793496440.784663845] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496439.782 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[lifecycle_manager-10] [INFO] [1793496440.833738308] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[lifecycle_manager-10] [INFO] [1793496440.833787210] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[lifecycle_manager-10] [INFO] [1793496440.833802779] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[planner_server-5] [INFO] [1793496441.993538750] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496440.983 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496444.110609348] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496443.109 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496445.138114350] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496444.136 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496447.307624231] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496446.294 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-11] [INFO] [1793496447.571901061] [rviz2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793496437.668 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496448.601901796] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496447.594 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-11] [INFO] [1793496448.777957688] [rviz2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793496438.425 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-11] [INFO] [1793496449.915343428] [rviz2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496438.870 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496450.911406933] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496449.888 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496451.978835849] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496450.974 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496454.386939914] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496453.351 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496455.562568741] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496454.562 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496456.957421600] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496455.950 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496458.384195305] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496457.382 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496459.829715481] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496458.828 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496461.111728755] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496460.099 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496463.617339562] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496462.616 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496463.617668229] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496462.616 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496466.249400452] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496465.220 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496466.271178472] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496465.220 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496468.896290869] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496467.885 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496468.897413527] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496467.885 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496472.387006562] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496471.384 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496472.387339898] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496471.384 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496475.796046130] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496474.795 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496475.805349903] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496474.795 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496479.112399198] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496478.101 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496479.112540043] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496478.101 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496482.025554356] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496481.025 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496482.035024953] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496481.025 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496484.794212726] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496483.785 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496484.794350173] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496483.785 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496488.215012304] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496487.214 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496488.215714946] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496487.214 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496491.812275211] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496490.792 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496491.873133126] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496490.792 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496494.381499847] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496493.381 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496494.381835146] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496493.381 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496497.336185711] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496496.330 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496497.338317504] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496496.330 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496500.091346516] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496499.090 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496500.092449106] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496499.090 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496502.929141825] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496501.916 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496503.176398121] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496501.916 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496505.993426761] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496504.991 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496505.993705844] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496504.991 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496509.603945896] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496508.597 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496509.604076151] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496508.597 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496512.924952897] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496511.921 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496512.925703185] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496511.921 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496515.458169316] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496514.457 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496515.458291735] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496514.457 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496518.856009694] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496517.856 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496518.856297835] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496517.856 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496521.432010565] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496520.431 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496521.432363768] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496520.431 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496525.399605845] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496524.308 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496525.401796206] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496524.308 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496528.852324111] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496527.849 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496528.852876541] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496527.849 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496532.545718835] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496531.525 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496532.545861292] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496531.525 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496536.072650829] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496535.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496536.073506605] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496535.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496540.576370676] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496539.575 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496540.577043509] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496539.575 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496544.992179874] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496543.986 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496544.992329344] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496543.986 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496549.566170017] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496548.565 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496549.567890200] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496548.565 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496553.007042882] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496552.006 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496553.006872362] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496552.006 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496556.200192432] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496555.198 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496556.200338175] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496555.198 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496561.662642367] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496560.661 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496561.664931523] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496560.661 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[controller_server-4] [INFO] [1793496564.860236799] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496563.848 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[planner_server-5] [INFO] [1793496564.879160329] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793496563.848 for reason 'the timestamp on the message is earlier than all the data in the transform cache'

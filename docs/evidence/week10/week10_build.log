@@ -1,0 +1,90 @@
+Starting >>> hand_solo_arm
+Starting >>> hand_solo_virtual_nav
+running egg_info
+creating ../../../build/hand_solo_arm/hand_solo_arm.egg-info
+running egg_info
+creating ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info
+writing ../../../build/hand_solo_arm/hand_solo_arm.egg-info/PKG-INFO
+writing dependency_links to ../../../build/hand_solo_arm/hand_solo_arm.egg-info/dependency_links.txt
+writing entry points to ../../../build/hand_solo_arm/hand_solo_arm.egg-info/entry_points.txt
+writing requirements to ../../../build/hand_solo_arm/hand_solo_arm.egg-info/requires.txt
+writing top-level names to ../../../build/hand_solo_arm/hand_solo_arm.egg-info/top_level.txt
+writing manifest file '../../../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+writing ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/PKG-INFO
+writing dependency_links to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/dependency_links.txt
+writing entry points to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/entry_points.txt
+writing requirements to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/requires.txt
+writing top-level names to ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/top_level.txt
+writing manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+reading manifest file '../../../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+writing manifest file '../../../build/hand_solo_arm/hand_solo_arm.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/irs_ws/build/hand_solo_arm/build
+creating /workspace/irs_ws/build/hand_solo_arm/build/lib
+creating /workspace/irs_ws/build/hand_solo_arm/build/lib/hand_solo_arm
+copying hand_solo_arm/hs_pick_place.py -> /workspace/irs_ws/build/hand_solo_arm/build/lib/hand_solo_arm
+copying hand_solo_arm/__init__.py -> /workspace/irs_ws/build/hand_solo_arm/build/lib/hand_solo_arm
+running install
+running install_lib
+reading manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib
+creating /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+copying hand_solo_virtual_nav/hs_waypoint_follower.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+copying hand_solo_virtual_nav/__init__.py -> /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav
+running install
+running install_lib
+creating /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm
+copying /workspace/irs_ws/build/hand_solo_arm/build/lib/hand_solo_arm/hs_pick_place.py -> /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm
+copying /workspace/irs_ws/build/hand_solo_arm/build/lib/hand_solo_arm/__init__.py -> /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm
+byte-compiling /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm/hs_pick_place.py to hs_pick_place.cpython-312.pyc
+byte-compiling /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /workspace/irs_ws/install/hand_solo_arm/share/ament_index
+creating /workspace/irs_ws/install/hand_solo_arm/share/ament_index/resource_index
+creating /workspace/irs_ws/install/hand_solo_arm/share/ament_index/resource_index/packages
+copying resource/hand_solo_arm -> /workspace/irs_ws/install/hand_solo_arm/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/irs_ws/install/hand_solo_arm/share/hand_solo_arm
+running install_egg_info
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
+copying /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/hs_waypoint_follower.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
+copying /workspace/irs_ws/build/hand_solo_virtual_nav/build/lib/hand_solo_virtual_nav/__init__.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav
+byte-compiling /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav/hs_waypoint_follower.py to hs_waypoint_follower.cpython-312.pyc
+byte-compiling /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/ament_index
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/ament_index/resource_index
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/ament_index/resource_index/packages
+copying resource/hand_solo_virtual_nav -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/ament_index/resource_index/packages
+copying package.xml -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+copying launch/nav_launch.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+copying launch/mapping_launch.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+copying launch/nav_launch_with_waypoints.py -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/launch
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+copying config/pa_nav2_params.yaml -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+copying config/pa_slam_params.yaml -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/config
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+copying rviz/pa_rviz_nav2.rviz -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+copying rviz/pa_rviz_mapping.rviz -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/rviz
+creating /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+copying map/pa_warehouse_map_01.pgm -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+copying map/pa_warehouse_map_01.yaml -> /workspace/irs_ws/install/hand_solo_virtual_nav/share/hand_solo_virtual_nav/map
+running install_egg_info
+Copying ../../../build/hand_solo_virtual_nav/hand_solo_virtual_nav.egg-info to /workspace/irs_ws/install/hand_solo_virtual_nav/lib/python3.12/site-packages/hand_solo_virtual_nav-0.0.0-py3.12.egg-info
+running install_scripts
+Copying ../../../build/hand_solo_arm/hand_solo_arm.egg-info to /workspace/irs_ws/install/hand_solo_arm/lib/python3.12/site-packages/hand_solo_arm-0.0.0-py3.12.egg-info
+running install_scripts
+Installing hs_waypoint_follower script to /workspace/irs_ws/install/hand_solo_virtual_nav/lib/hand_solo_virtual_nav
+writing list of installed files to '/workspace/irs_ws/build/hand_solo_virtual_nav/install.log'
+Finished <<< hand_solo_virtual_nav [3.45s]
+Installing hs_pick_place script to /workspace/irs_ws/install/hand_solo_arm/lib/hand_solo_arm
+writing list of installed files to '/workspace/irs_ws/build/hand_solo_arm/install.log'
+Finished <<< hand_solo_arm [3.69s]
+
+Summary: 2 packages finished [3.96s]
