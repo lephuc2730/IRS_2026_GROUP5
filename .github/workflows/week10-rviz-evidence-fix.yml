@@ -82,17 +82,17 @@ jobs:
             local row_y="$1"
             local x_value="$2"
 
-            # First click opens MoveIt's ProgressBarEditor for this row.
+            # MoveIt's Joints widget creates the ProgressBarEditor on mouse-down
+            # and the editor grabs the mouse while the button remains held.
+            # Therefore we press at the current/zero position, drag to the
+            # requested value, then release to commit the edit.
             xdotool mousemove 350 "$row_y"
-            xdotool click 1
-            sleep 0.25
-
-            # Second click inside the editor sets the requested joint value.
-            xdotool mousemove "$x_value" "$row_y"
             xdotool mousedown 1
-            sleep 0.15
+            sleep 0.20
+            xdotool mousemove "$x_value" "$row_y"
+            sleep 0.25
             xdotool mouseup 1
-            sleep 0.40
+            sleep 0.45
           }
 
           # PICK: [0.785, -0.8, 1.4, 0, 0.8, 0] rad
