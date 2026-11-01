@@ -5,17 +5,7 @@ This repository contains the project work for **12059 Industrial Robots and Syst
 - **Week 5 / Lab 04:** Pine-Apple ROS2 Communication Hub
 - **Week 6 / Lab 05:** Hand Solo's Mapping Mission
 
-## Repository structure
 
-```text
-IRS_2026_GROUP5/
-├── pa_warehouse_status/       # Week 5 ROS2 publisher/subscriber package
-├── hand_solo_virtual_nav/     # Week 6 SLAM/RViz package
-├── docs/                      # Portfolio answers and evidence guidance
-├── scripts/                   # Build/run helper commands
-├── VALIDATION_REPORT.md
-└── README.md
-```
 
 ## Week 5
 
