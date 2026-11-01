@@ -60,7 +60,7 @@ jobs:
           xdotool windowsize --sync "$RVIZ_ID" 1532 903
           xdotool windowmove "$RVIZ_ID" 0 0
           xdotool windowraise "$RVIZ_ID" || true
-          xdotool windowactivate --sync "$RVIZ_ID" || true
+          xdotool windowfocus --sync "$RVIZ_ID" || true
           sleep 5
           xwininfo -id "$RVIZ_ID" > rviz-evidence/window_info_after.txt
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_moveit_before.png
@@ -70,14 +70,21 @@ jobs:
           RVIZ_ID=$(cut -d= -f2 rviz-evidence/selected_window.txt | head -1)
 
           # Click MotionPlanning -> Joints tab.
-          xdotool mousemove --window "$RVIZ_ID" 195 425 click 1
+          xdotool windowfocus --sync "$RVIZ_ID" || true
+          xdotool mousemove 195 425
+          xdotool mousedown 1
+          sleep 0.20
+          xdotool mouseup 1
           sleep 3
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_joints_default.png
 
           set_joint () {
             local row_y="$1"
             local x_value="$2"
-            xdotool mousemove --window "$RVIZ_ID" "$x_value" "$row_y" click 1
+            xdotool mousemove "$x_value" "$row_y"
+            xdotool mousedown 1
+            sleep 0.12
+            xdotool mouseup 1
             sleep 0.35
           }
 
@@ -89,7 +96,7 @@ jobs:
           set_joint 544 355
           set_joint 560 384
           set_joint 576 355
-          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_pick_position_rviz.png
 
@@ -101,7 +108,7 @@ jobs:
           set_joint 544 355
           set_joint 560 391
           set_joint 576 355
-          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_carry_position_rviz.png
 
@@ -113,7 +120,7 @@ jobs:
           set_joint 544 355
           set_joint 560 391
           set_joint 576 355
-          xdotool mousemove --window "$RVIZ_ID" 800 760 click 1
+          xdotool mousemove 800 760 click 1
           sleep 4
           import -display :99 -window root -crop 1532x903+0+0 rviz-evidence/week10_place_position_rviz.png
 
