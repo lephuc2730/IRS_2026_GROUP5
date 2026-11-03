@@ -1,0 +1,18 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-03-11-10-49-961140-runnervm48cm3-111
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [warehouse_mission_controller-1]: process started with pid [114]
+[warehouse_mission_controller-1] [INFO] [1793704251.773023375] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
+[warehouse_mission_controller-1] [INFO] [1793704251.773727411] [warehouse_mission_controller]: Grand Challenge controller ready. Start controller first, then set the judge-specified 2D Pose Estimate in RViz.
+[warehouse_mission_controller-1] [INFO] [1793704252.306866582] [warehouse_mission_controller]: Queued LARGE box from PLC weight=11, location=n/a. Queue=['large']
+[warehouse_mission_controller-1] [INFO] [1793704252.307558535] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
+[warehouse_mission_controller-1] [INFO] [1793704255.724970676] [warehouse_mission_controller]: MISSION STATE: LOCALIZING | Judge/start pose received from RViz /initialpose
+[warehouse_mission_controller-1] [INFO] [1793704256.100065036] [warehouse_mission_controller]: MISSION STATE: LOCALIZED
+[warehouse_mission_controller-1] [INFO] [1793704256.100560877] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
+[warehouse_mission_controller-1] [INFO] [1793704256.101671487] [warehouse_mission_controller]: Arm waypoint 1/1
+[warehouse_mission_controller-1] [ERROR] [1793704256.170024970] [warehouse_mission_controller]: Arm waypoint 1 failed (status=6)
+[warehouse_mission_controller-1] [INFO] [1793704256.170685740] [warehouse_mission_controller]: MISSION STATE: FAILED | Arm waypoint 1 failed (status=6); failed_box=large; use /warehouse/retry_current
+[warehouse_mission_controller-1] [INFO] [1793704263.159505023] [warehouse_mission_controller]: Queued LARGE box from manual large service. Queue=['large']
+[warehouse_mission_controller-1] [INFO] [1793704263.160092121] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
+[warehouse_mission_controller-1] [INFO] [1793704263.161598050] [warehouse_mission_controller]: Arm waypoint 1/1
+[warehouse_mission_controller-1] [ERROR] [1793704263.219168456] [warehouse_mission_controller]: Arm waypoint 1 failed (status=6)
+[warehouse_mission_controller-1] [INFO] [1793704263.219914575] [warehouse_mission_controller]: MISSION STATE: FAILED | Arm waypoint 1 failed (status=6); failed_box=large; use /warehouse/retry_current
