@@ -86,7 +86,7 @@ jobs:
             for i in 1 2 3 4; do
               xdotool mousemove 960 520
               xdotool mousedown 1
-              xdotool mousemove_relative --sync 260 0
+              xdotool mousemove_relative 260 0 || true
               xdotool mouseup 1
               sleep 3
               import -display :99 -window root "docs/live_view/pineapple_camera_right_${i}.png" || true
@@ -95,7 +95,7 @@ jobs:
             # Also try the opposite drag direction in case the viewer's orbit is inverted.
             xdotool mousemove 960 520
             xdotool mousedown 1
-            xdotool mousemove_relative --sync -520 0
+            xdotool mousemove_relative -- -520 0 || true
             xdotool mouseup 1
             sleep 3
             import -display :99 -window root docs/live_view/pineapple_camera_opposite.png || true
