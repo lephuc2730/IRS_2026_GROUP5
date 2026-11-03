@@ -33,9 +33,11 @@ jobs:
 
       - name: Clone official course environment
         run: |
+          mkdir -p /tmp/student-copy
+          rsync -a --exclude '.git' --exclude 'world' ./ /tmp/student-copy/
           git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
-          mkdir -p world/workspace/workspace/irs_ws/src
-          cp -a . world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+          mkdir -p world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+          cp -a /tmp/student-copy/. world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/
 
       - name: Start Pine-Apple simulator and Hand Solo
         working-directory: world
