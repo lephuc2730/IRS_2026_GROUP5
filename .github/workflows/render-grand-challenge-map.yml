@@ -1,0 +1,84 @@
+name: Render Grand Challenge Warehouse Map
+
+on:
+  push:
+    branches:
+      - fix/integrated-warehouse-cycle
+    paths:
+      - '.github/workflows/render-grand-challenge-map.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render-map:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/integrated-warehouse-cycle
+
+      - name: Render coordinate map
+        run: |
+          python3 -m pip install pillow matplotlib
+          python3 - <<'PY'
+          from pathlib import Path
+          import numpy as np
+          from PIL import Image
+          import matplotlib.pyplot as plt
+
+          pgm = Path('hand_solo_virtual_nav/map/pa_warehouse_map_01.pgm')
+          out = Path('docs/grand_challenge_warehouse_map_coordinates.png')
+
+          resolution = 0.05
+          origin_x = -6.543
+          origin_y = -7.000
+
+          img = Image.open(pgm).convert('L')
+          arr = np.array(img)
+
+          h, w = arr.shape
+          x_min = origin_x
+          x_max = origin_x + w * resolution
+          y_min = origin_y
+          y_max = origin_y + h * resolution
+
+          fig, ax = plt.subplots(figsize=(12, 10))
+          ax.imshow(
+              arr,
+              cmap='gray',
+              origin='upper',
+              extent=[x_min, x_max, y_min, y_max],
+              interpolation='nearest',
+          )
+
+          ax.set_title('Group 5 Pine-Apple Warehouse Map — Coordinate Reference')
+          ax.set_xlabel('Map X (metres)')
+          ax.set_ylabel('Map Y (metres)')
+          ax.set_xticks(np.arange(np.floor(x_min), np.ceil(x_max)+1, 1.0))
+          ax.set_yticks(np.arange(np.floor(y_min), np.ceil(y_max)+1, 1.0))
+          ax.grid(True, linewidth=0.5, alpha=0.55)
+
+          ax.axhline(0, linewidth=1.0)
+          ax.axvline(0, linewidth=1.0)
+
+          fig.tight_layout()
+          out.parent.mkdir(parents=True, exist_ok=True)
+          fig.savefig(out, dpi=180)
+          print(f'Saved {out} | map pixels={w}x{h} | x=[{x_min:.3f},{x_max:.3f}] y=[{y_min:.3f},{y_max:.3f}]')
+          PY
+
+      - name: Commit rendered map
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/grand_challenge_warehouse_map_coordinates.png
+          if git diff --cached --quiet; then
+            echo "No map change"
+            exit 0
+          fi
+          git commit -m "Render warehouse map with coordinate grid"
+          git push
