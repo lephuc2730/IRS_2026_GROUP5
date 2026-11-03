@@ -462,9 +462,14 @@ class WarehouseMissionController(Node):
         )
 
     def _release_box(self):
+        category = self.current_category or 'unknown'
         self._gripper_hook('OPEN')
+        self._publish_status(
+            'BOX_RELEASED_ON_SHELF',
+            f'{category} box released; holding briefly for placement verification',
+        )
         self._schedule(
-            0.5,
+            2.0,
             lambda: self._run_arm_sequence(
                 [self.SAFE_ARM],
                 0,
