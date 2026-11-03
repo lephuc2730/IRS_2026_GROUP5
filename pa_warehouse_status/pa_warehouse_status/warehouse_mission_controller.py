@@ -567,8 +567,15 @@ class WarehouseMissionController(Node):
         result = future.result()
         if result is None or result.status != GoalStatus.STATUS_SUCCEEDED:
             status = None if result is None else result.status
+            moveit_error = None
+            if result is not None:
+                try:
+                    moveit_error = result.result.error_code.val
+                except Exception:
+                    pass
             self._fail(
-                f'Arm waypoint {index + 1} failed (status={status})'
+                f'Arm waypoint {index + 1} failed '
+                f'(status={status}, moveit_error={moveit_error})'
             )
             return
 
