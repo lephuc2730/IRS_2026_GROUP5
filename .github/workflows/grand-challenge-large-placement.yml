@@ -120,42 +120,65 @@ jobs:
           mkdir -p ../docs/evidence/grand_challenge
           WS_ID=$(docker compose ps -q omron-workspace)
 
+          # Watch the controller log before starting the manual retry so fast
+          # MoveIt failures cannot be missed.
+          rm -f /tmp/mission_terminal_state.txt
+          (
+            timeout 150s docker exec "$WS_ID" bash -lc '
+              tail -n 0 -F /workspace/grand_challenge_large.log
+            ' | grep -m1 -E "BOX_RELEASED_ON_SHELF|MISSION STATE: FAILED"               > /tmp/mission_terminal_state.txt
+          ) &
+          MONITOR_PID=$!
+          sleep 1
+
           docker exec "$WS_ID" bash -lc '
             source /opt/ros/jazzy/setup.bash
             source /workspace/irs_ws/install/setup.bash
             ros2 service call /warehouse/start_large std_srvs/srv/Trigger "{}"
           ' | tee ../docs/evidence/grand_challenge/04_start_large_service.txt
 
-          # Record mission state. Do not hide failure: save whatever happens.
           set +e
-          timeout 210s docker exec "$WS_ID" bash -lc '
-            source /opt/ros/jazzy/setup.bash
-            source /workspace/irs_ws/install/setup.bash
-            ros2 topic echo /warehouse/mission_status std_msgs/msg/String
-          ' | tee ../docs/evidence/grand_challenge/05_large_mission_status.txt | grep -m1 "BOX_RELEASED_ON_SHELF"
-          RELEASE_RC=${PIPESTATUS[2]}
+          wait "$MONITOR_PID"
+          MONITOR_RC=$?
           set -e
+
+          cp /tmp/mission_terminal_state.txt             ../docs/evidence/grand_challenge/05_large_mission_terminal_state.txt || true
+
+          docker exec "$WS_ID" bash -lc '
+            cat /workspace/grand_challenge_large.log || true
+          ' > ../docs/evidence/grand_challenge/controller_log.txt
+
+          docker compose logs --no-color omron_handsolo             > ../docs/evidence/grand_challenge/omron_handsolo_log.txt 2>&1 || true
 
           SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1 || true)
           if [ -z "$SIM_ID" ]; then
             SIM_ID=$(xdotool search --onlyvisible --name "Warehouse" | head -1 || true)
           fi
-          if [ -n "$SIM_ID" ]; then
-            xdotool windowraise "$SIM_ID" || true
-            sleep 1
-          fi
+          [ -z "$SIM_ID" ] || xdotool windowraise "$SIM_ID" || true
+          sleep 1
 
-          if [ "$RELEASE_RC" -eq 0 ]; then
-            import -display :99 -window root ../docs/evidence/grand_challenge/06_large_box_released_on_shelf.png || true
-            echo "BOX_RELEASED_ON_SHELF reached" > ../docs/evidence/grand_challenge/placement_result.txt
+          if grep -q "BOX_RELEASED_ON_SHELF" /tmp/mission_terminal_state.txt 2>/dev/null; then
+            import -display :99 -window root               ../docs/evidence/grand_challenge/06_large_box_released_on_shelf.png || true
+            echo "BOX_RELEASED_ON_SHELF reached"               > ../docs/evidence/grand_challenge/placement_result.txt
           else
-            import -display :99 -window root ../docs/evidence/grand_challenge/06_large_mission_failure_view.png || true
-            echo "BOX_RELEASED_ON_SHELF was NOT reached" > ../docs/evidence/grand_challenge/placement_result.txt
-          fi
+            import -display :99 -window root               ../docs/evidence/grand_challenge/06_large_mission_failure_view.png || true
+            echo "Controller did not reach BOX_RELEASED_ON_SHELF"               > ../docs/evidence/grand_challenge/placement_result.txt
 
-          docker exec "$WS_ID" bash -lc '
-            cat /workspace/grand_challenge_large.log || true
-          ' > ../docs/evidence/grand_challenge/controller_log.txt
+            # Control test: run the exact Week 10 arm program that previously
+            # completed successfully in this official runtime.
+            set +e
+            timeout 90s docker exec "$WS_ID" bash -lc '
+              source /opt/ros/jazzy/setup.bash
+              source /workspace/irs_ws/install/setup.bash
+              ros2 run hand_solo_arm hs_pick_place
+            ' > ../docs/evidence/grand_challenge/direct_hs_pick_place.log 2>&1
+            DIRECT_RC=$?
+            set -e
+            echo "direct_hs_pick_place_rc=$DIRECT_RC"               >> ../docs/evidence/grand_challenge/placement_result.txt
+            sleep 2
+            [ -z "$SIM_ID" ] || xdotool windowraise "$SIM_ID" || true
+            import -display :99 -window root               ../docs/evidence/grand_challenge/07_after_direct_hs_pick_place.png || true
+          fi
 
           docker exec "$WS_ID" bash -lc '
             source /opt/ros/jazzy/setup.bash
