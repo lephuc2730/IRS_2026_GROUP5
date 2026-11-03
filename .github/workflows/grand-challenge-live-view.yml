@@ -1,0 +1,127 @@
+name: Grand Challenge Live Warehouse View
+
+on:
+  push:
+    branches:
+      - fix/integrated-warehouse-cycle
+    paths:
+      - '.github/workflows/grand-challenge-live-view.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  live-view:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/integrated-warehouse-cycle
+
+      - name: Start virtual Ubuntu display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool imagemagick x11-utils wmctrl
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          echo "LIBGL_ALWAYS_SOFTWARE=1" >> "$GITHUB_ENV"
+          sleep 3
+
+      - name: Clone official course environment
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a . world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start Pine-Apple simulator and Hand Solo
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          sleep 70
+          docker compose ps
+
+      - name: Build student packages
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            set -e
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select pa_warehouse_status hand_solo_virtual_nav hand_solo_arm
+            source install/setup.bash
+          '
+
+      - name: Capture live Ubuntu windows
+        run: |
+          mkdir -p docs/live_view
+          echo "=== Visible windows ==="
+          wmctrl -l || true
+          xdotool search --onlyvisible --name ".*" getwindowname %@ || true
+
+          import -display :99 -window root docs/live_view/desktop_full.png || true
+
+          SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1 || true)
+          if [ -n "$SIM_ID" ]; then
+            import -display :99 -window "$SIM_ID" docs/live_view/pineapple_simulator.png || true
+          fi
+
+          RVIZ_ID=$(xdotool search --onlyvisible --name "RViz" | head -1 || true)
+          if [ -n "$RVIZ_ID" ]; then
+            import -display :99 -window "$RVIZ_ID" docs/live_view/rviz_live.png || true
+          fi
+
+      - name: Launch Group 5 Nav2 RViz if no RViz window exists
+        working-directory: world
+        run: |
+          if [ ! -f ../docs/live_view/rviz_live.png ]; then
+            WS_ID=$(docker compose ps -q omron-workspace)
+            docker exec -d "$WS_ID" bash -lc '
+              export DISPLAY=:99
+              source /opt/ros/jazzy/setup.bash
+              cd /workspace/irs_ws
+              source install/setup.bash
+              ros2 launch hand_solo_virtual_nav nav_launch.py > /workspace/live_nav.log 2>&1
+            '
+            sleep 25
+            RVIZ_ID=$(xdotool search --onlyvisible --name "RViz" | head -1 || true)
+            if [ -n "$RVIZ_ID" ]; then
+              import -display :99 -window "$RVIZ_ID" ../docs/live_view/rviz_live.png || true
+            fi
+          fi
+
+      - name: Capture ROS live state
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            echo "=== /amcl_pose ==="
+            timeout 5s ros2 topic echo /amcl_pose --once || true
+            echo "=== /map metadata ==="
+            timeout 5s ros2 topic echo /map --once | head -n 40 || true
+            echo "=== actions ==="
+            ros2 action list -t | grep -E "navigate_to_pose|move_action" || true
+          ' | tee ../docs/live_view/ros_live_state.txt
+
+      - name: Commit live screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/live_view
+          if git diff --cached --quiet; then
+            echo "No new live-view files"
+            exit 0
+          fi
+          git commit -m "Capture live Pine-Apple Ubuntu Docker warehouse view"
+          git push
+
+      - name: Stop containers
+        if: always()
+        working-directory: world
+        run: docker compose down
