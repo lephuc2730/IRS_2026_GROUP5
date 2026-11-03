@@ -1,0 +1,102 @@
+name: Grand Challenge Build Check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'pa_warehouse_status/**'
+      - 'hand_solo_virtual_nav/**'
+      - 'hand_solo_arm/**'
+      - 'scripts/grand_challenge_preflight.sh'
+      - '.github/workflows/grand-challenge-build-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout Grand Challenge branch
+        uses: actions/checkout@v4
+        with:
+          path: student
+
+      - name: Static syntax checks
+        run: |
+          python3 -m py_compile \
+            student/pa_warehouse_status/pa_warehouse_status/warehouse_mission_controller.py \
+            student/pa_warehouse_status/launch/grand_challenge.launch.py \
+            student/pa_warehouse_status/setup.py
+          bash -n student/scripts/grand_challenge_preflight.sh
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ET.parse('student/pa_warehouse_status/package.xml')
+          print('package.xml OK')
+          PY
+
+      - name: Clone official course environment
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official ROS workspace container
+        working-directory: world
+        run: |
+          docker compose pull omron-workspace
+          docker compose up -d omron-workspace
+          sleep 10
+          docker compose ps omron-workspace
+
+      - name: Build Grand Challenge packages
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            set -e
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select \
+              pa_warehouse_status hand_solo_virtual_nav hand_solo_arm \
+              --event-handlers console_direct+
+            source install/setup.bash
+            ros2 pkg executables pa_warehouse_status
+            ros2 pkg prefix pa_warehouse_status
+            test -f install/pa_warehouse_status/share/pa_warehouse_status/config/grand_challenge_params.yaml
+            test -f install/pa_warehouse_status/share/pa_warehouse_status/launch/grand_challenge.launch.py
+          '
+
+      - name: Smoke-test Grand Challenge node and launch discovery
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+
+            ros2 launch pa_warehouse_status grand_challenge.launch.py --show-args
+
+            set +e
+            timeout 6s ros2 launch pa_warehouse_status grand_challenge.launch.py \
+              > /tmp/grand_challenge_smoke.log 2>&1
+            code=$?
+            cat /tmp/grand_challenge_smoke.log
+            if grep -E "Traceback|ModuleNotFoundError|PackageNotFoundError|ImportError" \
+              /tmp/grand_challenge_smoke.log; then
+              exit 1
+            fi
+            if [ "$code" -ne 0 ] && [ "$code" -ne 124 ]; then
+              exit "$code"
+            fi
+            exit 0
+          '
+
+      - name: Stop containers
+        if: always()
+        working-directory: world
+        run: docker compose down

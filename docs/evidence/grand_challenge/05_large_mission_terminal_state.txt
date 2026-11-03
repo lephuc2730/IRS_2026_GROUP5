@@ -1,0 +1,1 @@
+[warehouse_mission_controller-1] [INFO] [1793705341.494144562] [warehouse_mission_controller]: MISSION STATE: FAILED | Nav2 PICKUP failed (status=6); failed_box=large; use /warehouse/retry_current

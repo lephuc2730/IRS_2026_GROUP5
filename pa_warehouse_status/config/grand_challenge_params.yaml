@@ -1,0 +1,39 @@
+warehouse_mission_controller:
+  ros__parameters:
+    # Pine-Apple Grand Challenge PLC/HMI bridge
+    plc_topic: /hmi/unified_status
+    plc_auto_trigger: true
+
+    # Judges may place Hand Solo at an arbitrary start. Set "2D Pose Estimate"
+    # in RViz before the first cycle; the controller waits for localization.
+    require_initialpose: true
+
+    # PLC count increments are preferred. Weight is a fallback:
+    # Large > 10 kg, Medium 5-10 kg, Small < 5 kg.
+    weight_trigger_without_location: true
+    ready_locations: [ready, pickup, pick, conveyor, sorted, stop]
+
+    # Pickup / waiting pose.
+    pickup_x: 0.15
+    pickup_y: -0.15
+    pickup_yaw: -1.5708
+
+    # Large shelf / right-corner target identified from the official warehouse
+    # map. Stop in free space instead of driving tight against the wall.
+    large_shelf_x: 31.0
+    large_shelf_y: -5.5
+    large_shelf_yaw: 3.14159
+
+    # Medium/Small remain provisional until their judged shelf locations are
+    # identified on the official warehouse map.
+
+    medium_shelf_x: 0.75
+    medium_shelf_y: 0.00
+    medium_shelf_yaw: 1.5708
+
+    small_shelf_x: 0.00
+    small_shelf_y: 0.60
+    small_shelf_yaw: 3.14159
+
+    # Manual fallback for /warehouse/start_cycle.
+    manual_category: large

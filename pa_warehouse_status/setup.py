@@ -1,3 +1,6 @@
+import os
+from glob import glob
+
 from setuptools import find_packages, setup
 
 package_name = 'pa_warehouse_status'
@@ -9,12 +12,14 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='IRS Group 5',
     maintainer_email='group5@example.invalid',
-    description='Week 5 ROS2 communication hub for the Pine-Apple warehouse.',
+    description='Pine-Apple PLC status and Grand Challenge mission controller.',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
@@ -22,6 +27,7 @@ setup(
             'pineapple_gossip_bot = pa_warehouse_status.pineapple_gossip_bot:main',
             'plc_hmi_listener = pa_warehouse_status.plc_hmi_listener:main',
             'plc_topic_probe = pa_warehouse_status.plc_topic_probe:main',
+            'warehouse_mission_controller = pa_warehouse_status.warehouse_mission_controller:main',
         ],
     },
 )

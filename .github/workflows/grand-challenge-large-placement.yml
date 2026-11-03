@@ -1,0 +1,211 @@
+name: Grand Challenge Large Box Placement Evidence
+
+on:
+  push:
+    branches:
+      - fix/integrated-warehouse-cycle
+    paths:
+      - '.github/workflows/grand-challenge-large-placement.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  large-placement:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/integrated-warehouse-cycle
+
+      - name: Start virtual Ubuntu display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb xdotool imagemagick wmctrl
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          echo "LIBGL_ALWAYS_SOFTWARE=1" >> "$GITHUB_ENV"
+          sleep 3
+
+      - name: Clone official course environment
+        run: |
+          mkdir -p /tmp/student-copy
+          rsync -a --exclude '.git' --exclude 'world' ./ /tmp/student-copy/
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+
+          # The course compose changed on 2026-11-03 to tm_use_simulation:=false,
+          # which makes the TM driver try the physical 192.168.1.2 controller.
+          # This is the Pine-Apple digital-twin run, so restore the known-working
+          # Week 10 arm simulation mode while retaining base/Nav2.
+          sed -i 's/tm_use_simulation:=false/tm_use_simulation:=true/' world/compose.yaml
+
+          mkdir -p world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+          cp -a /tmp/student-copy/. world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/
+
+      - name: Start official Pine-Apple stack
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          sleep 70
+          docker compose ps
+
+      - name: Build Group 5 packages
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            set -e
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select pa_warehouse_status hand_solo_virtual_nav hand_solo_arm
+            source install/setup.bash
+          '
+
+      - name: Spawn a physical Big Box from simulator HMI
+        run: |
+          mkdir -p docs/evidence/grand_challenge
+          SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1 || true)
+          if [ -z "$SIM_ID" ]; then
+            SIM_ID=$(xdotool search --onlyvisible --name "Warehouse" | head -1 || true)
+          fi
+          test -n "$SIM_ID"
+
+          xdotool windowmap "$SIM_ID" || true
+          xdotool windowraise "$SIM_ID" || true
+          xdotool windowsize "$SIM_ID" 1920 1080 || true
+          xdotool windowmove "$SIM_ID" 0 0 || true
+          sleep 5
+
+          # Course lab control: P opens the PLC HMI. Send directly to Unity.
+          xdotool key --window "$SIM_ID" p || xdotool key p
+          sleep 3
+          import -display :99 -window root docs/evidence/grand_challenge/01_hmi_before_spawn.png
+
+          # Full-HD HMI coordinates established from the live v6.1 capture:
+          # START PLC ~= (1663, 82); SPAWN BIG BOX ~= (1500, 810)
+          xdotool mousemove --window "$SIM_ID" 1663 82 || xdotool mousemove 1663 82
+          xdotool click 1
+          sleep 2
+          xdotool mousemove --window "$SIM_ID" 1500 810 || xdotool mousemove 1500 810
+          xdotool click 1
+          sleep 4
+          import -display :99 -window root docs/evidence/grand_challenge/02_hmi_after_big_spawn.png
+
+          # Close HMI to return to robot camera.
+          xdotool key --window "$SIM_ID" p || xdotool key p
+          sleep 4
+          import -display :99 -window root docs/evidence/grand_challenge/03_big_box_spawned.png
+
+      - name: Launch Grand Challenge controller
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 launch pa_warehouse_status grand_challenge.launch.py > /workspace/grand_challenge_large.log 2>&1
+          '
+          sleep 5
+
+          # Explicitly initialize AMCL/controller at the current official start.
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            source /workspace/irs_ws/install/setup.bash
+            ros2 topic pub --once /initialpose geometry_msgs/msg/PoseWithCovarianceStamped               "{header: {frame_id: map}, pose: {pose: {position: {x: 0.0, y: 0.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}}}"
+          '
+          sleep 5
+
+      - name: Start Large mission and capture placement state
+        working-directory: world
+        run: |
+          mkdir -p ../docs/evidence/grand_challenge
+          WS_ID=$(docker compose ps -q omron-workspace)
+
+          # Watch the controller log before starting the manual retry so fast
+          # MoveIt failures cannot be missed.
+          rm -f /tmp/mission_terminal_state.txt
+          (
+            timeout 150s docker exec "$WS_ID" bash -lc '
+              tail -n 0 -F /workspace/grand_challenge_large.log
+            ' | grep -m1 -E "BOX_RELEASED_ON_SHELF|MISSION STATE: FAILED"               > /tmp/mission_terminal_state.txt
+          ) &
+          MONITOR_PID=$!
+          sleep 1
+
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            source /workspace/irs_ws/install/setup.bash
+            ros2 service call /warehouse/start_large std_srvs/srv/Trigger "{}"
+          ' | tee ../docs/evidence/grand_challenge/04_start_large_service.txt
+
+          set +e
+          wait "$MONITOR_PID"
+          MONITOR_RC=$?
+          set -e
+
+          cp /tmp/mission_terminal_state.txt             ../docs/evidence/grand_challenge/05_large_mission_terminal_state.txt || true
+
+          docker exec "$WS_ID" bash -lc '
+            cat /workspace/grand_challenge_large.log || true
+          ' > ../docs/evidence/grand_challenge/controller_log.txt
+
+          docker compose logs --no-color omron_handsolo             > ../docs/evidence/grand_challenge/omron_handsolo_log.txt 2>&1 || true
+
+          SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1 || true)
+          if [ -z "$SIM_ID" ]; then
+            SIM_ID=$(xdotool search --onlyvisible --name "Warehouse" | head -1 || true)
+          fi
+          [ -z "$SIM_ID" ] || xdotool windowraise "$SIM_ID" || true
+          sleep 1
+
+          if grep -q "BOX_RELEASED_ON_SHELF" /tmp/mission_terminal_state.txt 2>/dev/null; then
+            import -display :99 -window root               ../docs/evidence/grand_challenge/06_large_box_released_on_shelf.png || true
+            echo "BOX_RELEASED_ON_SHELF reached"               > ../docs/evidence/grand_challenge/placement_result.txt
+          else
+            import -display :99 -window root               ../docs/evidence/grand_challenge/06_large_mission_failure_view.png || true
+            echo "Controller did not reach BOX_RELEASED_ON_SHELF"               > ../docs/evidence/grand_challenge/placement_result.txt
+
+            # Control test: run the exact Week 10 arm program that previously
+            # completed successfully in this official runtime.
+            set +e
+            timeout 90s docker exec "$WS_ID" bash -lc '
+              source /opt/ros/jazzy/setup.bash
+              source /workspace/irs_ws/install/setup.bash
+              ros2 run hand_solo_arm hs_pick_place
+            ' > ../docs/evidence/grand_challenge/direct_hs_pick_place.log 2>&1
+            DIRECT_RC=$?
+            set -e
+            echo "direct_hs_pick_place_rc=$DIRECT_RC"               >> ../docs/evidence/grand_challenge/placement_result.txt
+            sleep 2
+            [ -z "$SIM_ID" ] || xdotool windowraise "$SIM_ID" || true
+            import -display :99 -window root               ../docs/evidence/grand_challenge/07_after_direct_hs_pick_place.png || true
+          fi
+
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            timeout 5s ros2 topic echo /amcl_pose --once || true
+          ' > ../docs/evidence/grand_challenge/final_amcl_pose.txt
+
+      - name: Commit evidence
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/evidence/grand_challenge
+          if git diff --cached --quiet; then
+            echo "No new evidence"
+            exit 0
+          fi
+          git commit -m "Capture live Large box placement evidence"
+          git push
+
+      - name: Stop containers
+        if: always()
+        working-directory: world
+        run: docker compose down
