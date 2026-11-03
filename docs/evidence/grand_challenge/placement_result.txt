@@ -1,1 +1,2 @@
-BOX_RELEASED_ON_SHELF was NOT reached
+Controller did not reach BOX_RELEASED_ON_SHELF
+direct_hs_pick_place_rc=0

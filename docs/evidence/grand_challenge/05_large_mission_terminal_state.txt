@@ -1,0 +1,1 @@
+[warehouse_mission_controller-1] [INFO] [1793704870.154564179] [warehouse_mission_controller]: MISSION STATE: FAILED | Arm waypoint 1 failed (status=6, moveit_error=-4); failed_box=large; use /warehouse/retry_current

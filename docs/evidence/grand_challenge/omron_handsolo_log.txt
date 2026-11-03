@@ -1,0 +1,791 @@
+omron_handsolo  | [INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-03-11-19-10-644558-runnervm48cm3-1
+omron_handsolo  | [INFO] [launch]: Default logging verbosity is set to INFO
+omron_handsolo  | [INFO] [move_group-4]: process started with pid [40]
+omron_handsolo  | [INFO] [rviz2-15]: process started with pid [51]
+omron_handsolo  | [INFO] [tm_driver-1]: process started with pid [37]
+omron_handsolo  | [INFO] [amr_core-2]: process started with pid [38]
+omron_handsolo  | [INFO] [robot_state_publisher-3]: process started with pid [39]
+omron_handsolo  | [INFO] [map_server-5]: process started with pid [41]
+omron_handsolo  | [INFO] [amcl-6]: process started with pid [42]
+omron_handsolo  | [INFO] [lifecycle_manager-7]: process started with pid [43]
+omron_handsolo  | [INFO] [controller_server-8]: process started with pid [44]
+omron_handsolo  | [INFO] [planner_server-9]: process started with pid [45]
+omron_handsolo  | [INFO] [behavior_server-10]: process started with pid [46]
+omron_handsolo  | [INFO] [bt_navigator-11]: process started with pid [47]
+omron_handsolo  | [INFO] [waypoint_follower-12]: process started with pid [48]
+omron_handsolo  | [INFO] [velocity_smoother-13]: process started with pid [49]
+omron_handsolo  | [INFO] [lifecycle_manager-14]: process started with pid [50]
+omron_handsolo  | [INFO] [rviz2-16]: process started with pid [52]
+omron_handsolo  | [INFO] [velocity_filter-17]: process started with pid [53]
+omron_handsolo  | [tm_driver-1] [INFO] [1793704751.867199351] [rclcpp]: Ethernet slave communication: TmSvrCommunication
+omron_handsolo  | [tm_driver-1] [INFO] [1793704751.868046941] [rclcpp]: Listen node communication: TmSctCommunication
+omron_handsolo  | [amr_core-2] [INFO] [1793704751.886292523] [amr_core]: Publishing status information disabled
+omron_handsolo  | [amr_core-2] [INFO] [1793704751.886356924] [amr_core]: Publishing laser scans disabled
+omron_handsolo  | [amr_core-2] ArLog::init:  StdOut	 Normal	 Not logging time	 Not also printing
+omron_handsolo  | [amr_core-2] ArClientBase: New enforceProtocolVersionSet
+omron_handsolo  | [robot_state_publisher-3] [INFO] [1793704751.928655637] [robot_state_publisher]: Robot initialized
+omron_handsolo  | [velocity_smoother-13] [INFO] [1793704751.932892352] [velocity_smoother]: 
+omron_handsolo  | [velocity_smoother-13] 	velocity_smoother lifecycle node launched. 
+omron_handsolo  | [velocity_smoother-13] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [velocity_smoother-13] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [map_server-5] [INFO] [1793704751.964537062] [map_server]: 
+omron_handsolo  | [map_server-5] 	map_server lifecycle node launched. 
+omron_handsolo  | [map_server-5] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [map_server-5] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [map_server-5] [INFO] [1793704751.964606311] [map_server]: Creating
+omron_handsolo  | [tm_driver-1] [INFO] [1793704752.030176783] [rclcpp]: Ethernet slave communication: start
+omron_handsolo  | [tm_driver-1] [INFO] [1793704752.030238980] [rclcpp]: TM_COM: ip:=192.168.1.2
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704752.051871066] [waypoint_follower]: 
+omron_handsolo  | [waypoint_follower-12] 	waypoint_follower lifecycle node launched. 
+omron_handsolo  | [waypoint_follower-12] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [waypoint_follower-12] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.059398818] [planner_server]: 
+omron_handsolo  | [planner_server-9] 	planner_server lifecycle node launched. 
+omron_handsolo  | [planner_server-9] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [planner_server-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.069208869] [planner_server]: Creating
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704752.076353929] [waypoint_follower]: Creating
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.093169092] [global_costmap.global_costmap]: 
+omron_handsolo  | [planner_server-9] 	global_costmap lifecycle node launched. 
+omron_handsolo  | [planner_server-9] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [planner_server-9] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.097019254] [global_costmap.global_costmap]: Creating Costmap
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.191052304] [lifecycle_manager_navigation]: Creating
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.239605457] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.259305862] [lifecycle_manager_localization]: Creating
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.279537742] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704752.329659637] [bt_navigator]: 
+omron_handsolo  | [bt_navigator-11] 	bt_navigator lifecycle node launched. 
+omron_handsolo  | [bt_navigator-11] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [bt_navigator-11] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704752.346331770] [bt_navigator]: Creating
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.455198205] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.455255703] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+omron_handsolo  | [map_server-5] [INFO] [1793704752.455548743] [map_server]: Configuring
+omron_handsolo  | [map_server-5] [INFO] [1793704752.455630757] [map_io]: Loading yaml file: /omron_ws/install/handsolo_ros/share/handsolo_ros/map/warehouse_with_conveyer.yaml
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456028242] [map_io]: resolution: 0.05
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456046997] [map_io]: origin[0]: -12.6
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456056335] [map_io]: origin[1]: -7.71
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456062406] [map_io]: origin[2]: 0
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456068337] [map_io]: free_thresh: 0.25
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456074188] [map_io]: occupied_thresh: 0.65
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456083035] [map_io]: mode: trinary
+omron_handsolo  | [map_server-5] [INFO] [1793704752.456090008] [map_io]: negate: 0
+omron_handsolo  | [map_server-5] [INFO] [1793704752.462057862] [map_io]: Loading image_file: /omron_ws/install/handsolo_ros/share/handsolo_ros/map/warehouse_with_conveyer.pgm
+omron_handsolo  | [amcl-6] [INFO] [1793704752.465630732] [amcl]: 
+omron_handsolo  | [amcl-6] 	amcl lifecycle node launched. 
+omron_handsolo  | [amcl-6] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [amcl-6] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [amcl-6] [INFO] [1793704752.470122508] [amcl]: Creating
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.478305358] [controller_server]: 
+omron_handsolo  | [controller_server-8] 	controller_server lifecycle node launched. 
+omron_handsolo  | [controller_server-8] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [controller_server-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.540297269] [behavior_server]: 
+omron_handsolo  | [behavior_server-10] 	behavior_server lifecycle node launched. 
+omron_handsolo  | [behavior_server-10] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [behavior_server-10] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [map_server-5] [INFO] [1793704752.560984904] [map_io]: Read map /omron_ws/install/handsolo_ros/share/handsolo_ros/map/warehouse_with_conveyer.pgm: 933 X 533 map @ 0.05 m/cell
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.586299217] [controller_server]: Creating controller server
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.614067914] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+omron_handsolo  | [amcl-6] [INFO] [1793704752.614408030] [amcl]: Configuring
+omron_handsolo  | [amcl-6] [INFO] [1793704752.614538435] [amcl]: initTransforms
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.635430044] [local_costmap.local_costmap]: 
+omron_handsolo  | [controller_server-8] 	local_costmap lifecycle node launched. 
+omron_handsolo  | [controller_server-8] 	Waiting on external lifecycle transitions to activate
+omron_handsolo  | [controller_server-8] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
+omron_handsolo  | [amcl-6] [INFO] [1793704752.644510705] [amcl]: initPubSub
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.647795328] [local_costmap.local_costmap]: Creating Costmap
+omron_handsolo  | [amcl-6] [INFO] [1793704752.661556879] [amcl]: Subscribed to map topic.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.667239861] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.667289194] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.670197118] [controller_server]: Configuring controller interface
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.670224850] [controller_server]: getting progress checker plugins..
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.670339996] [controller_server]: getting goal checker plugins..
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.670417571] [controller_server]: Controller frequency set to 20.0000Hz
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.670457115] [local_costmap.local_costmap]: Configuring
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.672237143] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+omron_handsolo  | [map_server-5] [INFO] [1793704752.672424935] [map_server]: Activating
+omron_handsolo  | [map_server-5] [INFO] [1793704752.673613244] [map_server]: Creating bond (map_server) to lifecycle manager.
+omron_handsolo  | [amcl-6] [INFO] [1793704752.686040825] [amcl]: Received a 933 X 533 map @ 0.050 m/pix
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.695452751] [local_costmap.local_costmap]: Using plugin "voxel_layer"
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.713496847] [local_costmap.local_costmap]: Subscribed to Topics: scan
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.735949953] [local_costmap.local_costmap]: Initialized plugin "voxel_layer"
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.735985260] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.740318025] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.758007705] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.758224322] [controller_server]: Controller Server has progress_checker  progress checkers available.
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.758964721] [controller_server]: Created goal checker : general_goal_checker of type nav2_controller::SimpleGoalChecker
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.759389387] [controller_server]: Controller Server has general_goal_checker  goal checkers available.
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.767072879] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.768550531] [controller_server]: Setting transform_tolerance to 0.500000
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.780562613] [lifecycle_manager_localization]: Server map_server connected with bond.
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.780599984] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+omron_handsolo  | [amcl-6] [INFO] [1793704752.780839242] [amcl]: Activating
+omron_handsolo  | [amcl-6] [INFO] [1793704752.780877233] [amcl]: initialPoseReceived
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.782415488] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.783075987] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.783301961] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.783922996] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.784110117] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.784394881] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.784566783] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.785118568] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.785306711] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.785932896] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.786057690] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.786475644] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.786633730] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.786964611] [controller_server]: Critic plugin initialized
+omron_handsolo  | [controller_server-8] [INFO] [1793704752.786984739] [controller_server]: Controller Server has FollowPath  controllers available.
+omron_handsolo  | [amcl-6] [INFO] [1793704752.786319512] [amcl]: Setting pose (1793704752.786319): 0.000 0.000 0.000
+omron_handsolo  | [amcl-6] [INFO] [1793704752.786946468] [amcl]: Creating bond (amcl) to lifecycle manager.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.797236942] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.797518530] [planner_server]: Configuring
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.797557703] [global_costmap.global_costmap]: Configuring
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.815600086] [global_costmap.global_costmap]: Using plugin "static_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.821944056] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.823594170] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.823616481] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.826095323] [global_costmap.global_costmap]: Subscribed to Topics: scan
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.834929412] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.834952545] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.836382006] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.867875942] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 933 X 533 at 0.050000 m/pix
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.869982424] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner::NavfnPlanner
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.870021637] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+omron_handsolo  | [planner_server-9] [INFO] [1793704752.871067319] [planner_server]: Planner Server has GridBased  planners available.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704752.897297627] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.897908172] [behavior_server]: Configuring
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.900879216] [lifecycle_manager_localization]: Server amcl connected with bond.
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.900917398] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+omron_handsolo  | [lifecycle_manager-7] [INFO] [1793704752.900932015] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.915649402] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors::Spin
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.918385714] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors::BackUp
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.923904107] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors::DriveOnHeading
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.926711603] [behavior_server]: Creating behavior plugin assisted_teleop of type nav2_behaviors::AssistedTeleop
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.934290699] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors::Wait
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.957197304] [behavior_server]: Configuring spin
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.976467200] [behavior_server]: Configuring backup
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.983270471] [behavior_server]: Configuring drive_on_heading
+omron_handsolo  | [behavior_server-10] [INFO] [1793704752.992580384] [behavior_server]: Configuring assisted_teleop
+omron_handsolo  | [behavior_server-10] [INFO] [1793704753.006542343] [behavior_server]: Configuring wait
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704753.023742077] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704753.024618070] [bt_navigator]: Configuring
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704753.058053987] [bt_navigator]: Creating navigator id navigate_to_pose of type nav2_bt_navigator::NavigateToPoseNavigator
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704753.120416453] [move_group]: Using default pipeline 'ompl'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704753.132589487] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0 seconds[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704753.132664698] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [rviz2-16] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+omron_handsolo  | [rviz2-15] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704753.276065701] [bt_navigator]: Creating navigator id navigate_through_poses of type nav2_bt_navigator::NavigateThroughPosesNavigator
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704753.336180691] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704753.337012892] [waypoint_follower]: Configuring
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704753.384577191] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704753.390184627] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+omron_handsolo  | [velocity_smoother-13] [INFO] [1793704753.390504818] [velocity_smoother]: Configuring velocity smoother
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704753.406300607] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704753.406613956] [controller_server]: Activating
+omron_handsolo  | [controller_server-8] [INFO] [1793704753.406654783] [local_costmap.local_costmap]: Activating
+omron_handsolo  | [controller_server-8] [INFO] [1793704753.406668589] [local_costmap.local_costmap]: Checking transform
+omron_handsolo  | [controller_server-8] [INFO] [1793704753.406712882] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704753.451778742] [rviz2]: Stereo is NOT SUPPORTED[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704753.451866076] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)[0m
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.475882386] [rviz2]: Stereo is NOT SUPPORTED
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.476718354] [rviz2]: OpenGl version: 4.5 (GLSL 4.5)
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704753.501812242] [rviz2]: Stereo is NOT SUPPORTED[0m
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.516272564] [rviz2]: Stereo is NOT SUPPORTED
+omron_handsolo  | [rviz2-15] [33m[WARN] [1793704753.644665041] [rcl.logging_rosout]: Publisher already registered for node name: 'rviz2_moveit'. If this is due to multiple nodes with the same name then all logs for the logger named 'rviz2_moveit' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.[0m
+omron_handsolo  | [rviz2-15] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+omron_handsolo  | [rviz2-15]          at line 321 in /opt/ros/jazzy/include/class_loader/class_loader/class_loader_core.hpp
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704753.699282302] [rviz2_moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.007586 seconds[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704753.700299389] [rviz2_moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.719013559] [rviz2_nav2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.723133755] [rviz2_nav2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [amcl-6] [WARN] [1793704753.764495158] [amcl]: New subscription discovered on topic '/particle_cloud', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.808373697] [rviz2_nav2]: Subscribing to: /global_costmap/voxel_marked_cloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.832077513] [rviz2_nav2]: Subscribing to: /local_costmap/voxel_marked_cloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.866767682] [rviz2_nav2]: Subscribing to: /mobile_base/sensors/bumper_pointcloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.890391016] [rviz2_nav2]: Subscribing to: /global_costmap/voxel_marked_cloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704753.900195956] [rviz2_nav2]: Subscribing to: /local_costmap/voxel_marked_cloud
+omron_handsolo  | [rviz2-16] 
+omron_handsolo  | [controller_server-8] [INFO] [1793704753.906807771] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704754.312319571] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'tmr_arm': 1 1 1 1 1 1[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704754.406992621] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704754.525620444] [rviz2]: Trying to create a map of size 933 x 533 using 1 swatches
+omron_handsolo  | [rviz2-16] [ERROR] [1793704754.534112324] [rviz2]: rviz/glsl120/indexed_8bit_image.vert
+omron_handsolo  | [rviz2-16] rviz/glsl120/indexed_8bit_image.frag
+omron_handsolo  | [rviz2-16]  GLSL link result : 
+omron_handsolo  | [rviz2-16] active samplers with a different type refer to the same texture image unit
+omron_handsolo  | [controller_server-8] [INFO] [1793704754.906782825] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704755.412175861] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.709808440] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.710003193] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.710792806] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.711300714] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.711328986] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.712946303] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.715050679] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.715168699] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.716033762] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.716059861] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.717714788] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704755.719430919] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704755.720677625] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead[0m
+omron_handsolo  | [move_group-4] [31m[ERROR] [1793704755.720710557] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704755.906778528] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704756.406782096] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704756.906802319] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704757.406781514] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704757.906778393] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704758.406792614] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704758.911179527] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704759.406779448] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704759.911178063] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704760.406780479] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [31m[ERROR] [1793704760.486180749] [rviz2_moveit.moveit.ros.motion_planning_frame]: Action server: /recognize_objects not available[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704760.560238873] [rviz2_moveit.moveit.ros.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704760.906784751] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704760.925964950] [rviz2_moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.00672656 seconds[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704760.931273698] [rviz2_moveit.moveit.core.robot_model]: Loading robot model 'ld250_tm12x'...[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704761.406783944] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704761.906779080] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704762.135314745] [rviz2_moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'tmr_arm': 1 1 1 1 1 1[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704762.406784025] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [tm_driver-1] [WARN] [1793704762.474216454] [rclcpp]: TM_COM: Connection timeout count:=1
+omron_handsolo  | [tm_driver-1] [INFO] [1793704762.474523730] [rclcpp]: TM_ROS: get data thread begin
+omron_handsolo  | [tm_driver-1] [INFO] [1793704762.474580115] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [INFO] [1793704762.491625750] [rclcpp]: Listen node communication: start
+omron_handsolo  | [controller_server-8] [INFO] [1793704762.906788349] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704763.406791981] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704763.908953861] [local_costmap.local_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to virtual_hand_solo/odom to become available, tf error: Invalid frame ID "virtual_hand_solo/odom" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704764.052551636] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704764.058828660] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Listening to '/moveit_cpp/monitored_planning_scene'[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704764.231615225] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704764.236021828] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Listening to '/monitored_planning_scene'[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704764.406962591] [local_costmap.local_costmap]: start
+omron_handsolo  | [controller_server-8] [INFO] [1793704764.509616937] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704764.585038843] [interactive_marker_display_94584763411296]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic[0m
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704764.620132772] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704764.621188433] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704764.621576480] [planner_server]: Activating
+omron_handsolo  | [planner_server-9] [INFO] [1793704764.621621144] [global_costmap.global_costmap]: Activating
+omron_handsolo  | [planner_server-9] [INFO] [1793704764.621634048] [global_costmap.global_costmap]: Checking transform
+omron_handsolo  | [planner_server-9] [INFO] [1793704764.621683341] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704765.121765041] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704765.526520717] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.302 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704765.622447388] [interactive_marker_display_94584763411296]: Sending request for interactive markers[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704765.621900392] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704765.994004688] [interactive_marker_display_94584763411296]: Service response received for initialization[0m
+omron_handsolo  | [rviz2-16] [INFO] [1793704766.020581692] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.460 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704766.121750147] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704766.624177407] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704767.121771861] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [tm_driver-1] [WARN] [1793704767.489193796] [rclcpp]: TM_COM: Connection timeout count:=2
+omron_handsolo  | [tm_driver-1] [INFO] [1793704767.489264689] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704767.623184799] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704768.121752288] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704768.125945282] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.302 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704768.621749830] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704768.713799148] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704767.209 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704769.121748435] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704769.223248197] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Failed to call service get_planning_scene, have you launched move_group or called psm.providePlanningSceneService()?[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704769.621747731] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704769.792572665] [rviz2_moveit.moveit.ros.planning_scene_monitor]: Failed to call service get_planning_scene, have you launched move_group or called psm.providePlanningSceneService()?[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704769.792723286] [rviz2_moveit.moveit.ros.motion_planning_frame]: group tmr_arm[0m
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704769.792738996] [rviz2_moveit.moveit.ros.motion_planning_frame]: Constructing new MoveGroup connection for group 'tmr_arm' in namespace ''[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704770.121762185] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704770.621755689] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704770.627425168] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.302 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704771.125179702] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704771.405671101] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704770.066 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704771.621765941] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.039133476] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.043219640] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045034439] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045066379] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045565952] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045588194] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045628309] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045714780] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.045739747] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.049895109] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.053916321] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.054643890] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.056697426] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.057091923] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.060043827] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704772.121749927] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.210688273] [move_group.moveit.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for tmr_arm_controller[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.211754745] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.212604352] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.213133741] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is managing controllers[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.213435986] [move_group]: MoveGroup debug mode is ON[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/ClearOctomapService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/GetUrdfService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupMoveAction'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupPlanService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+omron_handsolo  | [move_group-4] [96mLoading 'move_group/SaveGeometryToFileService'...[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.362461860] [move_group.moveit.moveit.ros.move_group.executable]: 
+omron_handsolo  | [move_group-4] 
+omron_handsolo  | [move_group-4] ********************************************************
+omron_handsolo  | [move_group-4] * MoveGroup using: 
+omron_handsolo  | [move_group-4] *     - apply_planning_scene_service
+omron_handsolo  | [move_group-4] *     - clear_octomap_service
+omron_handsolo  | [move_group-4] *     - get_group_urdf
+omron_handsolo  | [move_group-4] *     - load_geometry_from_file
+omron_handsolo  | [move_group-4] *     - CartesianPathService
+omron_handsolo  | [move_group-4] *     - execute_trajectory_action
+omron_handsolo  | [move_group-4] *     - get_planning_scene_service
+omron_handsolo  | [move_group-4] *     - kinematics_service
+omron_handsolo  | [move_group-4] *     - move_action
+omron_handsolo  | [move_group-4] *     - motion_plan_service
+omron_handsolo  | [move_group-4] *     - query_planners_service
+omron_handsolo  | [move_group-4] *     - state_validation_service
+omron_handsolo  | [move_group-4] *     - save_geometry_to_file
+omron_handsolo  | [move_group-4] ********************************************************
+omron_handsolo  | [move_group-4] [0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.362662044] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704772.362704253] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete[0m
+omron_handsolo  | [move_group-4] 
+omron_handsolo  | [move_group-4] [92mYou can start planning now![0m
+omron_handsolo  | [move_group-4] 
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704772.478993453] [rviz2_moveit.moveit.ros.move_group_interface]: Ready to take commands for planning group tmr_arm.[0m
+omron_handsolo  | [tm_driver-1] [WARN] [1793704772.549183046] [rclcpp]: TM_COM: Connection timeout count:=3
+omron_handsolo  | [tm_driver-1] [INFO] [1793704772.549252886] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [rviz2-15] [31m[ERROR] [1793704772.596942882] [interactive_marker_display_94584763411296]: Resetting due to transform error: [tf2::ExtrapolationException]: Lookup would require extrapolation at time 1793704772.487559, but only time 1793704764.302057 is in the buffer, when looking up transform from frame [virtual_hand_solo/base_link] to frame [virtual_hand_solo/odom][0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704772.621749948] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [tm_driver-1] [WARN] [1793704772.710190388] [rclcpp]: TM_COM: Connection timeout count:=1
+omron_handsolo  | [tm_driver-1] [INFO] [1793704772.747542984] [rclcpp]: $TMSCT,17,Tag,QueueTag(1,0),*26
+omron_handsolo  | [tm_driver-1] 
+omron_handsolo  | [tm_driver-1] [INFO] [1793704772.764344628] [rclcpp]: TM_ROS: sct_response thread begin
+omron_handsolo  | [tm_driver-1] [INFO] [1793704772.764412686] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704772.961423344] [interactive_marker_display_94584763411296]: Sending request for interactive markers[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704773.121753638] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704773.156330227] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.302 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-15] [0m[INFO] [1793704773.302217092] [interactive_marker_display_94584763411296]: Service response received for initialization[0m
+omron_handsolo  | [planner_server-9] [INFO] [1793704773.621753110] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704773.915356879] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704772.608 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704774.121744466] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704774.621745190] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704775.121753879] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [planner_server-9] [INFO] [1793704775.623188092] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704775.828030867] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704764.302 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704776.122467331] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704776.486460689] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704775.058 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704776.621755238] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704776.680478314] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704776.378 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704777.121748478] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [amcl-6] [INFO] [1793704777.379594156] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704776.378 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704777.603177389] [rclcpp]: TM_COM: Connection timeout count:=4
+omron_handsolo  | [tm_driver-1] [INFO] [1793704777.603252609] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704777.624192681] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [tm_driver-1] [WARN] [1793704777.794176098] [rclcpp]: TM_COM: Connection timeout count:=2
+omron_handsolo  | [tm_driver-1] [INFO] [1793704777.794242672] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704778.121752908] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704778.466186152] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704776.373 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704778.621751009] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [rviz2-16] [INFO] [1793704779.022927216] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704777.558 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704779.121750562] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [amcl-6] [INFO] [1793704779.605924364] [amcl]: createLaserObject
+omron_handsolo  | [planner_server-9] [INFO] [1793704779.621857716] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Invalid frame ID "map" passed to canTransform argument target_frame - frame does not exist
+omron_handsolo  | [controller_server-8] [INFO] [1793704779.934339416] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704779.617 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704780.121801685] [global_costmap.global_costmap]: Timed out waiting for transform from virtual_hand_solo/base_link to map to become available, tf error: Lookup would require extrapolation at time 1793704779.615800, but only time 1793704779.665347 is in the buffer, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [rviz2-16] [INFO] [1793704780.585015832] [rviz2]: Trying to create a map of size 100 x 100 using 1 swatches
+omron_handsolo  | [planner_server-9] [INFO] [1793704780.622693038] [global_costmap.global_costmap]: start
+omron_handsolo  | [amcl-6] [INFO] [1793704781.538874901] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704780.536 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704781.544762297] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704778.709 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704781.677348709] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+omron_handsolo  | [planner_server-9] [INFO] [1793704781.678031479] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704781.790916722] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704781.790965052] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791526302] [behavior_server]: Activating
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791558051] [behavior_server]: Activating spin
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791577638] [behavior_server]: Activating backup
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791588969] [behavior_server]: Activating drive_on_heading
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791598968] [behavior_server]: Activating assisted_teleop
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791608926] [behavior_server]: Activating wait
+omron_handsolo  | [behavior_server-10] [INFO] [1793704781.791624486] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+omron_handsolo  | [rviz2-16] [INFO] [1793704781.812923139] [rviz2]: Trying to create a map of size 933 x 533 using 1 swatches
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704781.897799396] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704781.897842407] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704781.898323286] [bt_navigator]: Activating
+omron_handsolo  | [planner_server-9] [INFO] [1793704781.969304974] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704781.666 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [bt_navigator-11] [INFO] [1793704782.208471884] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.334171691] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.334217287] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704782.420868317] [waypoint_follower]: Activating
+omron_handsolo  | [waypoint_follower-12] [INFO] [1793704782.420938328] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.524694805] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.524743447] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+omron_handsolo  | [velocity_smoother-13] [INFO] [1793704782.549242185] [velocity_smoother]: Activating
+omron_handsolo  | [velocity_smoother-13] [INFO] [1793704782.549342213] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+omron_handsolo  | [tm_driver-1] [WARN] [1793704782.658204598] [rclcpp]: TM_COM: Connection timeout count:=5
+omron_handsolo  | [tm_driver-1] [INFO] [1793704782.658275291] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.664905986] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.664946122] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+omron_handsolo  | [lifecycle_manager-14] [INFO] [1793704782.664958785] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+omron_handsolo  | [tm_driver-1] [WARN] [1793704782.891231322] [rclcpp]: TM_COM: Connection timeout count:=3
+omron_handsolo  | [tm_driver-1] [INFO] [1793704782.891333754] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [controller_server-8] [INFO] [1793704782.912425859] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704782.609 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704784.608245150] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704783.590 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704785.104560508] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704784.762 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704785.257409953] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704778.664 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704785.406773695] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704779.611 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704786.364437461] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704786.013 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704787.715724800] [rclcpp]: TM_COM: Connection timeout count:=6
+omron_handsolo  | [tm_driver-1] [INFO] [1793704787.716196784] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704787.905186726] [rclcpp]: TM_COM: Connection timeout count:=4
+omron_handsolo  | [tm_driver-1] [INFO] [1793704787.905259733] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704787.934438105] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704786.210 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704787.934553631] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704785.997 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704788.168218361] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704787.141 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704788.750657722] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704788.450 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704789.904504358] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704789.603 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704790.477273762] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704788.308 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704790.477380913] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704787.140 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704791.821920762] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704779.617 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704792.157432622] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704791.854 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704792.773184463] [rclcpp]: TM_COM: Connection timeout count:=7
+omron_handsolo  | [tm_driver-1] [INFO] [1793704792.773266858] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704792.855482385] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704791.854 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704792.961177074] [rclcpp]: TM_COM: Connection timeout count:=5
+omron_handsolo  | [tm_driver-1] [INFO] [1793704792.961243809] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [controller_server-8] [INFO] [1793704793.246228324] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704792.933 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704795.392325417] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704795.090 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704796.083090910] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704794.062 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704796.092511675] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704795.090 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704796.474885839] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704796.173 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704797.936189762] [rclcpp]: TM_COM: Connection timeout count:=8
+omron_handsolo  | [tm_driver-1] [INFO] [1793704797.936257268] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704798.040216915] [rclcpp]: TM_COM: Connection timeout count:=6
+omron_handsolo  | [tm_driver-1] [INFO] [1793704798.040292737] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704798.934532797] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704798.633 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704798.968406290] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704797.257 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704799.134958242] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704797.187 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704799.643213963] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704798.633 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704800.246788689] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704799.937 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704801.544245833] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704801.217 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704801.613332973] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704799.957 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704801.781892686] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704799.901 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704802.217404293] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704801.217 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704802.823193575] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704802.511 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704802.945187580] [rclcpp]: TM_COM: Connection timeout count:=9
+omron_handsolo  | [tm_driver-1] [INFO] [1793704802.945258413] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704803.074183938] [rclcpp]: TM_COM: Connection timeout count:=7
+omron_handsolo  | [tm_driver-1] [INFO] [1793704803.074253729] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704804.214510329] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704803.911 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704804.228540932] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704802.607 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704804.390356589] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704802.509 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704804.911546528] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704803.911 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704805.470775922] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704805.169 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704806.830618389] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704804.907 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704807.061480126] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704803.909 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704807.584405945] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704807.284 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704807.935008752] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704797.173113 but the earliest data is at time 1793704798.621448, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [tm_driver-1] [WARN] [1793704808.001195946] [rclcpp]: TM_COM: Connection timeout count:=10
+omron_handsolo  | [tm_driver-1] [INFO] [1793704808.001264864] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704808.133186023] [rclcpp]: TM_COM: Connection timeout count:=8
+omron_handsolo  | [tm_driver-1] [INFO] [1793704808.133902465] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704808.287343655] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704807.284 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704808.802795575] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704808.502 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704808.932662977] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704797.173113 but the earliest data is at time 1793704798.621448, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704809.477271492] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704807.357 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704809.670963893] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704806.248 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704809.671034866] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704797.189 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704809.931591217] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704797.173113 but the earliest data is at time 1793704799.812252, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [ERROR] [1793704810.931601276] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704797.173113 but the earliest data is at time 1793704801.197522, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [INFO] [1793704811.005324087] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704810.694 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704812.106723479] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704811.806 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704813.057185971] [rclcpp]: TM_COM: Connection timeout count:=11
+omron_handsolo  | [tm_driver-1] [INFO] [1793704813.057251343] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704813.205413812] [rclcpp]: TM_COM: Connection timeout count:=9
+omron_handsolo  | [tm_driver-1] [INFO] [1793704813.206349134] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704813.764218520] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704812.763 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704814.403240040] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704814.100 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704814.833811061] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704812.907 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704815.579194077] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704815.277 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704816.305662791] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704815.277 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704816.545227664] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704814.089 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704817.794827235] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704815.507 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704818.012430594] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704817.712 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704818.115268418] [rclcpp]: TM_COM: Connection timeout count:=12
+omron_handsolo  | [tm_driver-1] [INFO] [1793704818.115339271] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704818.273218916] [rclcpp]: TM_COM: Connection timeout count:=10
+omron_handsolo  | [tm_driver-1] [INFO] [1793704818.273277205] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704819.273639392] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704816.441 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704819.650242425] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704819.335 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704820.359114972] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704818.039 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704820.391340804] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704819.335 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704821.289247644] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704820.979 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704821.946999778] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704819.333 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704822.821225061] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704822.517 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704822.862275096] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704820.452 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704823.171313032] [rclcpp]: TM_COM: Connection timeout count:=13
+omron_handsolo  | [tm_driver-1] [INFO] [1793704823.171374167] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704823.301814169] [rclcpp]: TM_COM: Connection timeout count:=11
+omron_handsolo  | [tm_driver-1] [INFO] [1793704823.301873971] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704823.518450346] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704822.517 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704824.359500208] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704824.040 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704824.726447815] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704820.977 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704824.932241528] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704814.041062, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704825.687064859] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704822.448 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704825.929776015] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704816.408323, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [controller_server-8] [INFO] [1793704825.990676890] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704825.690 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704826.702237436] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704825.690 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704826.925478145] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704817.701896, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [INFO] [1793704827.107635336] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704826.806 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704827.253128918] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704824.039 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704827.933457779] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704817.701896, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [tm_driver-1] [WARN] [1793704828.225179579] [rclcpp]: TM_COM: Connection timeout count:=14
+omron_handsolo  | [tm_driver-1] [INFO] [1793704828.225238320] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704828.226749478] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704825.598 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704828.226878881] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704814.100 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704828.353228638] [rclcpp]: TM_COM: Connection timeout count:=12
+omron_handsolo  | [tm_driver-1] [INFO] [1793704828.353908331] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [controller_server-8] [INFO] [1793704828.528929041] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704828.214 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704828.925844679] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704819.310585, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [amcl-6] [INFO] [1793704829.332251498] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704828.214 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704829.858520014] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704826.801 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704829.928498085] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704820.961639, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [INFO] [1793704829.989445912] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704829.687 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704830.797708833] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704828.255 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704830.936041620] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704820.961639, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704830.985864234] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704816.443 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704831.126097189] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704830.798 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704831.929176540] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704820.961639, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704832.711375918] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704829.685 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704832.932906937] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704822.491577, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [amcl-6] [INFO] [1793704833.065421572] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704832.056 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704833.281195187] [rclcpp]: TM_COM: Connection timeout count:=15
+omron_handsolo  | [tm_driver-1] [INFO] [1793704833.281259969] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704833.400178882] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704831.602 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704833.439847584] [rclcpp]: TM_COM: Connection timeout count:=13
+omron_handsolo  | [tm_driver-1] [INFO] [1793704833.439911264] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704833.569350215] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704833.248 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704833.928999999] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704824.014788, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704834.470307520] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704820.979 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704834.724024135] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704834.419 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704834.934072151] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704825.670858, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704835.359257484] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704832.054 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704835.927791130] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704812.805907 but the earliest data is at time 1793704826.786907, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704836.026457887] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704833.899 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704836.992514444] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704836.690 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704837.703218085] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704836.690 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704838.337194241] [rclcpp]: TM_COM: Connection timeout count:=16
+omron_handsolo  | [tm_driver-1] [INFO] [1793704838.337259964] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704838.467195209] [rclcpp]: TM_COM: Connection timeout count:=14
+omron_handsolo  | [tm_driver-1] [INFO] [1793704838.467256163] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [controller_server-8] [INFO] [1793704838.513423103] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704838.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704838.818355945] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704836.799 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704839.896394893] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704839.594 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704840.597548025] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704839.594 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704840.669965350] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704838.199 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704841.332400949] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704841.010 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704841.354090003] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704839.400 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704842.568674667] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704842.266 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704843.413100170] [rclcpp]: TM_COM: Connection timeout count:=17
+omron_handsolo  | [tm_driver-1] [INFO] [1793704843.413208804] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704843.522556478] [rclcpp]: TM_COM: Connection timeout count:=15
+omron_handsolo  | [tm_driver-1] [INFO] [1793704843.522624596] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704844.312355385] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704843.183 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [controller_server-8] [INFO] [1793704844.701448188] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704844.383 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704845.113443016] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704843.389 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704845.940627459] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704845.639 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704846.793410783] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704844.377 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704847.861829083] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704846.768 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704847.863970745] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704845.240 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704848.307098009] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704847.987 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704848.453171040] [rclcpp]: TM_COM: Connection timeout count:=18
+omron_handsolo  | [tm_driver-1] [INFO] [1793704848.453233808] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704848.581226655] [rclcpp]: TM_COM: Connection timeout count:=16
+omron_handsolo  | [tm_driver-1] [INFO] [1793704848.581287379] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704849.440670916] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704846.765 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704849.564558302] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704849.264 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704850.454113063] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704848.343 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704850.941390407] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704850.641 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704851.643517875] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704850.641 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704851.972336065] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704849.262 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704852.152476812] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704851.779 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704853.159498506] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704850.590 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704853.634174772] [rclcpp]: TM_COM: Connection timeout count:=17
+omron_handsolo  | [tm_driver-1] [INFO] [1793704853.634238772] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704853.779001428] [rclcpp]: TM_COM: Connection timeout count:=19
+omron_handsolo  | [tm_driver-1] [INFO] [1793704853.779067903] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [controller_server-8] [INFO] [1793704854.330133881] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704854.022 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704854.511510033] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704850.639 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704854.935989321] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704844.320415, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [amcl-6] [INFO] [1793704855.023239958] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704854.022 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704855.871769222] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704855.570 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704855.908635219] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704853.472 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704855.934129789] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704845.625680, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [ERROR] [1793704856.931667036] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704847.966536, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704857.152857397] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704854.021 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704857.152954488] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704844.383 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704857.356289096] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704856.922 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704857.924869634] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704856.922 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704857.956010504] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704847.966536, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704858.582389242] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704855.413 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704858.693173004] [rclcpp]: TM_COM: Connection timeout count:=18
+omron_handsolo  | [tm_driver-1] [INFO] [1793704858.693236162] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [tm_driver-1] [WARN] [1793704858.819971197] [rclcpp]: TM_COM: Connection timeout count:=20
+omron_handsolo  | [tm_driver-1] [INFO] [1793704858.820054393] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [planner_server-9] [ERROR] [1793704858.938708489] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704849.251245, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [INFO] [1793704859.704236499] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704859.403 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704859.761777313] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704855.569 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704859.931588008] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704850.608342, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [planner_server-9] [ERROR] [1793704860.941033724] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704851.696489, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704860.985987359] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704847.987 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704861.277120196] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704858.513 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704861.292231948] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704860.933 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704861.944849873] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704851.696489, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [amcl-6] [INFO] [1793704862.053227156] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704860.933 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [amcl-6] [INFO] [1793704862.294262230] [amcl]: initialPoseReceived
+omron_handsolo  | [amcl-6] [WARN] [1793704862.294384649] [amcl]: Failed to transform initial pose in time (Lookup would require extrapolation into the future.  Requested time 1793704862.294316 but the latest data is at time 1793704862.145825, when looking up transform from frame [virtual_hand_solo/base_link] to frame [virtual_hand_solo/odom])
+omron_handsolo  | [amcl-6] [INFO] [1793704862.294404276] [amcl]: Setting pose (1793704862.294404): 0.000 0.000 0.000
+omron_handsolo  | [rviz2-16] [INFO] [1793704862.365623567] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704859.401 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [INFO] [1793704862.449550515] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704862.148 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704862.932243460] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704852.815982, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [tm_driver-1] [WARN] [1793704863.746174046] [rclcpp]: TM_COM: Connection timeout count:=19
+omron_handsolo  | [tm_driver-1] [INFO] [1793704863.746240080] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704863.794811364] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704861.613 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704863.927423361] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704854.010996, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [tm_driver-1] [WARN] [1793704864.130207752] [rclcpp]: TM_COM: Connection timeout count:=21
+omron_handsolo  | [tm_driver-1] [INFO] [1793704864.130273616] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [rviz2-16] [INFO] [1793704864.458163727] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704851.779 for reason 'discarding message because the queue is full'
+omron_handsolo  | [controller_server-8] [INFO] [1793704864.750830369] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704864.450 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704864.877345296] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704862.146 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704864.932642656] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704855.504405, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [amcl-6] [INFO] [1793704865.450870984] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704864.450 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704865.809421516] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704865.496 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704865.939582497] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704855.504405, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704866.398863570] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704864.261 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704866.933824323] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704856.905293, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704867.382670087] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704864.448 for reason 'discarding message because the queue is full'
+omron_handsolo  | [rviz2-16] [INFO] [1793704867.857513616] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704855.570 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704867.925836212] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704858.009615, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [controller_server-8] [INFO] [1793704868.137075138] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704867.826 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704868.801182772] [rclcpp]: TM_COM: Connection timeout count:=20
+omron_handsolo  | [tm_driver-1] [INFO] [1793704868.801247773] [rclcpp]: TM_ROS: (Listen node): Reconnecting...
+omron_handsolo  | [amcl-6] [INFO] [1793704868.826969588] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704867.826 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704868.929275763] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704858.009615, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [rviz2-16] [INFO] [1793704869.020757414] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704866.713 for reason 'discarding message because the queue is full'
+omron_handsolo  | [tm_driver-1] [WARN] [1793704869.185179567] [rclcpp]: TM_COM: Connection timeout count:=22
+omron_handsolo  | [tm_driver-1] [INFO] [1793704869.185242234] [rclcpp]: TM_ROS: (Ethernet slave): Reconnecting...
+omron_handsolo  | [planner_server-9] [INFO] [1793704869.348766145] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704869.046 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [rviz2-16] [INFO] [1793704869.912236855] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704866.610 for reason 'discarding message because the queue is full'
+omron_handsolo  | [planner_server-9] [ERROR] [1793704869.932912253] [transformPoseInTargetFrame]: Extrapolation Error looking up target frame: Lookup would require extrapolation into the past.  Requested time 1793704843.265765 but the earliest data is at time 1793704859.385723, when looking up transform from frame [virtual_hand_solo/base_link] to frame [map]
+omron_handsolo  | [planner_server-9] 
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.000771973] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.001636263] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.002022667] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704870.002752885] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704870.003080489] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.003489285] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.006310702] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.006378248] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704870.006576299] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.006637314] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.006697727] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.011803223] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.018642247] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.087627858] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.091348459] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.094267829] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704870.094460981] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.100342451] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.100425938] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.100566160] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.130881144] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.131081049] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.131180104] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.134631291] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending trajectory to tmr_arm_controller[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.140219139] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704870.140261248] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request rejected[0m
+omron_handsolo  | [move_group-4] [31m[ERROR] [1793704870.140305150] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal was rejected by server[0m
+omron_handsolo  | [move_group-4] [31m[ERROR] [1793704870.140370453] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Failed to send trajectory part 1 of 1 to controller tmr_arm_controller[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.140408785] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status ABORTED ...[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793704870.139027308] [rclcpp]: [ACTION] Received new action goal b08df157-35b3-e47f-002e-6afbe40e3b0f
+omron_handsolo  | [tm_driver-1] [INFO] [1793704870.139047716] [rclcpp]: [ACTION] -----GOAL REJECT-----
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704870.141290827] [move_group.moveit.moveit.ros.move_group.move_action]: CONTROL_FAILED[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.941296886] [move_group.moveit.moveit.ros.move_group.move_action]: MoveGroupMoveAction: Received request[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942184167] [move_group.moveit.moveit.ros.move_group.move_action]: executing..[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942431210] [move_group.moveit.moveit.ros.move_group.move_action]: Combined planning and execution request received for MoveGroup action. Forwarding to planning and execution pipeline.[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704871.942477106] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as start state in the motion planning request[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704871.942507704] [move_group.moveit.moveit.ros.move_group.capability]: Execution of motions should always start at the robot's current state. Ignoring the state supplied as difference in the planning scene diff[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942523984] [move_group.moveit.moveit.ros.plan_execution]: Planning attempt 1 of at most 1[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942744137] [move_group]: Calling PlanningRequestAdapter 'ResolveConstraintFrames'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942795934] [move_group]: Calling PlanningRequestAdapter 'ValidateWorkspaceBounds'[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704871.942806484] [move_group.moveit.moveit.ros.validate_workspace_bounds]: It looks like the planning volume was not specified. Using default values.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942839185] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateBounds'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.942873329] [move_group]: Calling PlanningRequestAdapter 'CheckStartStateCollision'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.943247730] [move_group.moveit.moveit.planners.ompl.model_based_planning_context]: Planner configuration 'tmr_arm' will use planner 'geometric::RRTConnect'. Additional configuration parameters will be set when the planner is constructed.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.943345474] [move_group]: Calling Planner 'OMPL'[0m
+omron_handsolo  | [controller_server-8] [INFO] [1793704871.939487515] [local_costmap.local_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704871.639 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [planner_server-9] [INFO] [1793704871.946214512] [global_costmap.global_costmap]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704871.639 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.990716136] [move_group]: Calling PlanningResponseAdapter 'AddTimeOptimalParameterization'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.993631749] [move_group]: Calling PlanningResponseAdapter 'ValidateSolution'[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.994586768] [move_group]: Calling PlanningResponseAdapter 'DisplayMotionPath'[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704871.996314345] [move_group.moveit.moveit.ros.planning_pipeline]: The planner plugin did not fill out the 'planner_id' field of the MotionPlanResponse. Setting it to the planner ID name of the MotionPlanRequest assuming that the planner plugin does warn you if it does not use the requested planner.[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704871.996954505] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.033251155] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.033799472] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Validating trajectory with allowed_start_tolerance 0.1[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.034170504] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Starting trajectory execution ...[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.034251817] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.034315176] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.034611010] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: sending continuation for the currently executed trajectory to tmr_arm_controller[0m
+omron_handsolo  | [tm_driver-1] [INFO] [1793704872.036893970] [rclcpp]: [ACTION] Received new action goal ba6425c7-8a4f-e246-4b59-59b1197d475e
+omron_handsolo  | [tm_driver-1] [INFO] [1793704872.036915060] [rclcpp]: [ACTION] -----GOAL REJECT-----
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.074100022] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: tmr_arm_controller started execution[0m
+omron_handsolo  | [move_group-4] [33m[WARN] [1793704872.074183128] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal request rejected[0m
+omron_handsolo  | [move_group-4] [31m[ERROR] [1793704872.074156117] [moveit.simple_controller_manager.follow_joint_trajectory_controller_handle]: Goal was rejected by server[0m
+omron_handsolo  | [move_group-4] [31m[ERROR] [1793704872.074336805] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Failed to send trajectory part 1 of 1 to controller tmr_arm_controller[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.074387761] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Completed trajectory execution with status ABORTED ...[0m
+omron_handsolo  | [move_group-4] [0m[INFO] [1793704872.084082569] [move_group.moveit.moveit.ros.move_group.move_action]: CONTROL_FAILED[0m
+omron_handsolo  | [rviz2-16] [INFO] [1793704872.523541383] [rviz2_nav2]: Message Filter dropping message: frame 'virtual_hand_solo/odom' at time 1793704870.212 for reason 'discarding message because the queue is full'
+omron_handsolo  | [amcl-6] [INFO] [1793704872.639867698] [amcl]: Message Filter dropping message: frame 'virtual_hand_solo/lidar_link' at time 1793704871.639 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
