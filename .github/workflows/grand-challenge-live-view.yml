@@ -80,6 +80,26 @@ jobs:
             xdotool windowmove "$SIM_ID" 0 0 || true
             sleep 8
             import -display :99 -window root docs/live_view/pineapple_simulator_front.png || true
+
+            # Capture several camera rotations to expose the warehouse right side.
+            # The Pine-Apple viewer uses mouse-drag orbit controls.
+            for i in 1 2 3 4; do
+              xdotool mousemove 960 520
+              xdotool mousedown 1
+              xdotool mousemove_relative --sync 260 0
+              xdotool mouseup 1
+              sleep 3
+              import -display :99 -window root "docs/live_view/pineapple_camera_right_${i}.png" || true
+            done
+
+            # Also try the opposite drag direction in case the viewer's orbit is inverted.
+            xdotool mousemove 960 520
+            xdotool mousedown 1
+            xdotool mousemove_relative --sync -520 0
+            xdotool mouseup 1
+            sleep 3
+            import -display :99 -window root docs/live_view/pineapple_camera_opposite.png || true
+
             xwd -silent -root -display :99 -out /tmp/simulator_root.xwd || true
             convert /tmp/simulator_root.xwd docs/live_view/pineapple_simulator_xwd.png || true
           fi
