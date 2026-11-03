@@ -21,64 +21,80 @@ jobs:
         with:
           ref: fix/integrated-warehouse-cycle
 
-      - name: Render coordinate map
+      - name: Clone official Hand Solo map source
         run: |
-          python3 -m pip install pillow matplotlib
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/omron_handsolo.git /tmp/omron_handsolo
+
+      - name: Render coordinate maps
+        run: |
+          python3 -m pip install pillow matplotlib numpy
           python3 - <<'PY'
           from pathlib import Path
           import numpy as np
           from PIL import Image
           import matplotlib.pyplot as plt
 
-          pgm = Path('hand_solo_virtual_nav/map/pa_warehouse_map_01.pgm')
-          out = Path('docs/grand_challenge_warehouse_map_coordinates.png')
+          def render(pgm, out, resolution, origin_x, origin_y, title):
+              img = Image.open(pgm).convert('L')
+              arr = np.array(img)
+              h, w = arr.shape
+              x_min = origin_x
+              x_max = origin_x + w * resolution
+              y_min = origin_y
+              y_max = origin_y + h * resolution
 
-          resolution = 0.05
-          origin_x = -6.543
-          origin_y = -7.000
+              fig, ax = plt.subplots(figsize=(14, 10))
+              ax.imshow(
+                  arr,
+                  cmap='gray',
+                  origin='upper',
+                  extent=[x_min, x_max, y_min, y_max],
+                  interpolation='nearest',
+              )
+              ax.set_title(title, fontsize=16)
+              ax.set_xlabel('Map X (metres)')
+              ax.set_ylabel('Map Y (metres)')
+              ax.set_xticks(np.arange(np.floor(x_min), np.ceil(x_max) + 1, 1.0))
+              ax.set_yticks(np.arange(np.floor(y_min), np.ceil(y_max) + 1, 1.0))
+              ax.grid(True, linewidth=0.45, alpha=0.55)
+              ax.axhline(0, linewidth=1.2)
+              ax.axvline(0, linewidth=1.2)
+              fig.tight_layout()
+              out.parent.mkdir(parents=True, exist_ok=True)
+              fig.savefig(out, dpi=190)
+              plt.close(fig)
+              print(
+                  f'Saved {out} | pixels={w}x{h} | '
+                  f'x=[{x_min:.3f},{x_max:.3f}] y=[{y_min:.3f},{y_max:.3f}]'
+              )
 
-          img = Image.open(pgm).convert('L')
-          arr = np.array(img)
-
-          h, w = arr.shape
-          x_min = origin_x
-          x_max = origin_x + w * resolution
-          y_min = origin_y
-          y_max = origin_y + h * resolution
-
-          fig, ax = plt.subplots(figsize=(12, 10))
-          ax.imshow(
-              arr,
-              cmap='gray',
-              origin='upper',
-              extent=[x_min, x_max, y_min, y_max],
-              interpolation='nearest',
+          render(
+              Path('/tmp/omron_handsolo/handsolo_ros/map/warehouse_with_conveyer.pgm'),
+              Path('docs/official_pineapple_warehouse_with_conveyor_coordinates.png'),
+              0.05,
+              -12.6,
+              -7.71,
+              'Official Pine-Apple Warehouse with Conveyor — Coordinate Reference',
           )
 
-          ax.set_title('Group 5 Pine-Apple Warehouse Map — Coordinate Reference')
-          ax.set_xlabel('Map X (metres)')
-          ax.set_ylabel('Map Y (metres)')
-          ax.set_xticks(np.arange(np.floor(x_min), np.ceil(x_max)+1, 1.0))
-          ax.set_yticks(np.arange(np.floor(y_min), np.ceil(y_max)+1, 1.0))
-          ax.grid(True, linewidth=0.5, alpha=0.55)
-
-          ax.axhline(0, linewidth=1.0)
-          ax.axvline(0, linewidth=1.0)
-
-          fig.tight_layout()
-          out.parent.mkdir(parents=True, exist_ok=True)
-          fig.savefig(out, dpi=180)
-          print(f'Saved {out} | map pixels={w}x{h} | x=[{x_min:.3f},{x_max:.3f}] y=[{y_min:.3f},{y_max:.3f}]')
+          render(
+              Path('hand_solo_virtual_nav/map/pa_warehouse_map_01.pgm'),
+              Path('docs/grand_challenge_warehouse_map_coordinates.png'),
+              0.05,
+              -6.543,
+              -7.000,
+              'Group 5 Saved SLAM Map — Coordinate Reference',
+          )
           PY
 
-      - name: Commit rendered map
+      - name: Commit rendered maps
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/grand_challenge_warehouse_map_coordinates.png
+          git add             docs/official_pineapple_warehouse_with_conveyor_coordinates.png             docs/grand_challenge_warehouse_map_coordinates.png
           if git diff --cached --quiet; then
             echo "No map change"
             exit 0
           fi
-          git commit -m "Render warehouse map with coordinate grid"
+          git commit -m "Render official Pine-Apple warehouse coordinate map"
           git push
