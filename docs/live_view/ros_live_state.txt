@@ -1,8 +1,8 @@
 === /amcl_pose ===
 header:
   stamp:
-    sec: 1793700627
-    nanosec: 647186944
+    sec: 1793701804
+    nanosec: 653215744
   frame_id: map
 pose:
   pose:
@@ -56,13 +56,13 @@ pose:
 === /map metadata ===
 header:
   stamp:
-    sec: 1793700611
-    nanosec: 820909991
+    sec: 1793701777
+    nanosec: 255893689
   frame_id: map
 info:
   map_load_time:
-    sec: 1793700611
-    nanosec: 820905534
+    sec: 1793701777
+    nanosec: 255891064
   resolution: 0.05000000074505806
   width: 933
   height: 533
