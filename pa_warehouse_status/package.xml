@@ -2,12 +2,17 @@
 <package format="3">
   <name>pa_warehouse_status</name>
   <version>0.0.0</version>
-  <description>Week 5 ROS2 communication hub for the Pine-Apple warehouse.</description>
+  <description>ROS2 PLC status and integrated warehouse mission controller.</description>
   <maintainer email="group5@example.invalid">IRS Group 5</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>action_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>moveit_msgs</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
