@@ -184,24 +184,18 @@ Then update only `grand_challenge_params.yaml`; the state machine code does not 
 
 ## IMPORTANT: physical box grasp
 
-The captured Group 5 runtime exposes MoveIt and Nav2 actions, but it did not expose a verified gripper action/service. The controller therefore publishes explicit:
+The official runtime probe confirms that MoveIt and Nav2 are available, but it exposes **no obvious grip/pick/attach/vacuum action or service**. The previously observed `/virtual_hand_solo/han_shot_first` topic was also confirmed to be a `sensor_msgs/msg/Image` camera topic from `static_image_publisher`, so it must **not** be used as a gripper command.
+
+The controller publishes:
 
 ```text
 /warehouse/gripper_command = CLOSE
 /warehouse/gripper_command = OPEN
 ```
 
-hooks at the correct points in the state machine.
+as explicit integration hooks at the correct points in the state machine, but they are not claimed to actuate a physical/simulated gripper.
 
-The arm pick/retract/place motions are integrated, but **the real simulator box attachment/gripper interface must be identified in the live environment before claiming a successful physical grasp**.
-
-The preflight script also checks the previously observed simulator topic:
-
-```text
-/virtual_hand_solo/han_shot_first
-```
-
-and prints its type if it exists. If that is the simulator's grasp interface, bridge it to the CLOSE/OPEN hook only after confirming its message semantics.
+This matches the Week 10 course exercise, which controls the programmatic pick/carry/place sequence through MoveIt's `/move_action` and recorded joint positions rather than defining a separate ROS gripper action. For tomorrow's demonstration, verify how the current Pine-Apple simulator represents box attachment during the arm motion before claiming a physical grasp.
 
 ## Existing semester packages
 
