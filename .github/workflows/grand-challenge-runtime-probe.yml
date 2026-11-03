@@ -1,0 +1,126 @@
+name: Grand Challenge Runtime Probe
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'pa_warehouse_status/**'
+      - 'hand_solo_virtual_nav/**'
+      - 'hand_solo_arm/**'
+      - 'scripts/grand_challenge_preflight.sh'
+      - '.github/workflows/grand-challenge-runtime-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  runtime-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout Grand Challenge branch
+        uses: actions/checkout@v4
+        with:
+          path: student
+
+      - name: Start headless display
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb x11-utils
+          Xvfb :99 -screen 0 1920x1080x24 -ac > /tmp/xvfb.log 2>&1 &
+          echo "DISPLAY=:99" >> "$GITHUB_ENV"
+          sleep 2
+
+      - name: Clone official course environment and stage project
+        run: |
+          git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+          mkdir -p world/workspace/workspace/irs_ws/src
+          cp -a student world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
+
+      - name: Start official Pine-Apple + Hand Solo stack
+        working-directory: world
+        run: |
+          docker compose pull irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          docker compose up -d irs-simulation omron_handsolo omron-workspace irs-openplc-runtime
+          sleep 65
+          docker compose ps
+
+      - name: Build Grand Challenge project
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            set -e
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            colcon build --packages-select \
+              pa_warehouse_status hand_solo_virtual_nav hand_solo_arm \
+              --event-handlers console_direct+
+            source install/setup.bash
+            ros2 pkg executables pa_warehouse_status
+          '
+
+      - name: Launch controller in safety-locked state
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec -d "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            ros2 launch pa_warehouse_status grand_challenge.launch.py \
+              > /workspace/grand_challenge_controller.log 2>&1
+          '
+          sleep 8
+
+      - name: Run Grand Challenge preflight
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            cd /workspace/irs_ws
+            source install/setup.bash
+            bash src/IRS_2026_GROUP5/scripts/grand_challenge_preflight.sh
+            echo
+            echo "=== Controller log ==="
+            cat /workspace/grand_challenge_controller.log
+            echo
+            echo "=== Warehouse interfaces ==="
+            ros2 service list -t | grep /warehouse || true
+            ros2 topic list -t | grep /warehouse || true
+          '
+
+      - name: Probe simulator grasp and PLC interfaces
+        working-directory: world
+        run: |
+          WS_ID=$(docker compose ps -q omron-workspace)
+          docker exec "$WS_ID" bash -lc '
+            source /opt/ros/jazzy/setup.bash
+            echo "=== Relevant topics ==="
+            ros2 topic list -t | grep -E "han_shot_first|hmi/unified_status|joint_states|virtual_hand_solo/scan" || true
+            echo
+            echo "=== han_shot_first details ==="
+            if ros2 topic list | grep -Fxq /virtual_hand_solo/han_shot_first; then
+              ros2 topic info /virtual_hand_solo/han_shot_first -v || true
+              timeout 5s ros2 topic echo /virtual_hand_solo/han_shot_first --once || true
+            else
+              echo "not present"
+            fi
+            echo
+            echo "=== HMI status sample ==="
+            timeout 5s ros2 topic echo /hmi/unified_status --once || true
+            echo
+            echo "=== Action servers ==="
+            ros2 action list -t | grep -E "move_action|navigate_to_pose|grip|pick|attach" || true
+            echo
+            echo "=== Services that may relate to grasping ==="
+            ros2 service list -t | grep -Ei "grip|pick|attach|vacuum|hand|solo" || true
+          '
+
+      - name: Stop containers
+        if: always()
+        working-directory: world
+        run: docker compose down
