@@ -36,6 +36,13 @@ jobs:
           mkdir -p /tmp/student-copy
           rsync -a --exclude '.git' --exclude 'world' ./ /tmp/student-copy/
           git clone --depth 1 https://github.com/CollaborativeRoboticsLab/industrial-robots-and-systems-world.git world
+
+          # The course compose changed on 2026-11-03 to tm_use_simulation:=false,
+          # which makes the TM driver try the physical 192.168.1.2 controller.
+          # This is the Pine-Apple digital-twin run, so restore the known-working
+          # Week 10 arm simulation mode while retaining base/Nav2.
+          sed -i 's/tm_use_simulation:=false/tm_use_simulation:=true/' world/compose.yaml
+
           mkdir -p world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5
           cp -a /tmp/student-copy/. world/workspace/workspace/irs_ws/src/IRS_2026_GROUP5/
 
