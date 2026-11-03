@@ -6,7 +6,9 @@ set -euo pipefail
 # BOX_RELEASED_ON_SHELF, raises the Pine-Apple simulator window, and captures
 # the desktop/window as placement evidence.
 
-OUT_DIR="${1:-$PWD/grand_challenge_evidence}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+OUT_DIR="${1:-$REPO_ROOT/docs/evidence/grand_challenge}"
 mkdir -p "$OUT_DIR"
 
 WS_ID="$(docker compose ps -q omron-workspace)"
