@@ -68,27 +68,29 @@ jobs:
           fi
           test -n "$SIM_ID"
 
-          xdotool windowactivate --sync "$SIM_ID"
-          xdotool windowraise "$SIM_ID"
+          xdotool windowmap "$SIM_ID" || true
+          xdotool windowraise "$SIM_ID" || true
           xdotool windowsize "$SIM_ID" 1920 1080 || true
           xdotool windowmove "$SIM_ID" 0 0 || true
           sleep 5
 
-          # Course lab control: P opens the PLC HMI.
-          xdotool key p
+          # Course lab control: P opens the PLC HMI. Send directly to Unity.
+          xdotool key --window "$SIM_ID" p || xdotool key p
           sleep 3
           import -display :99 -window root docs/evidence/grand_challenge/01_hmi_before_spawn.png
 
           # Full-HD HMI coordinates established from the live v6.1 capture:
           # START PLC ~= (1663, 82); SPAWN BIG BOX ~= (1500, 810)
-          xdotool mousemove 1663 82 click 1
+          xdotool mousemove --window "$SIM_ID" 1663 82 || xdotool mousemove 1663 82
+          xdotool click 1
           sleep 2
-          xdotool mousemove 1500 810 click 1
+          xdotool mousemove --window "$SIM_ID" 1500 810 || xdotool mousemove 1500 810
+          xdotool click 1
           sleep 4
           import -display :99 -window root docs/evidence/grand_challenge/02_hmi_after_big_spawn.png
 
           # Close HMI to return to robot camera.
-          xdotool key p
+          xdotool key --window "$SIM_ID" p || xdotool key p
           sleep 4
           import -display :99 -window root docs/evidence/grand_challenge/03_big_box_spawned.png
 
@@ -139,7 +141,6 @@ jobs:
             SIM_ID=$(xdotool search --onlyvisible --name "Warehouse" | head -1 || true)
           fi
           if [ -n "$SIM_ID" ]; then
-            xdotool windowactivate --sync "$SIM_ID" || true
             xdotool windowraise "$SIM_ID" || true
             sleep 1
           fi
