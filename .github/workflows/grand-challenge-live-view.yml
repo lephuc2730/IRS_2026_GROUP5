@@ -66,17 +66,33 @@ jobs:
           wmctrl -l || true
           xdotool search --onlyvisible --name ".*" getwindowname %@ || true
 
-          import -display :99 -window root docs/live_view/desktop_full.png || true
-
+          # OpenGL windows can capture black when obscured. Raise each GUI and
+          # capture the X root framebuffer after it has repainted.
           SIM_ID=$(xdotool search --onlyvisible --name "IRS_Warehouse" | head -1 || true)
+          if [ -z "$SIM_ID" ]; then
+            SIM_ID=$(xdotool search --onlyvisible --name "Warehouse" | head -1 || true)
+          fi
           if [ -n "$SIM_ID" ]; then
-            import -display :99 -window "$SIM_ID" docs/live_view/pineapple_simulator.png || true
+            xdotool windowmap "$SIM_ID" || true
+            xdotool windowactivate --sync "$SIM_ID" || true
+            xdotool windowraise "$SIM_ID" || true
+            xdotool windowsize "$SIM_ID" 1920 1080 || true
+            xdotool windowmove "$SIM_ID" 0 0 || true
+            sleep 8
+            import -display :99 -window root docs/live_view/pineapple_simulator_front.png || true
+            xwd -silent -root -display :99 -out /tmp/simulator_root.xwd || true
+            convert /tmp/simulator_root.xwd docs/live_view/pineapple_simulator_xwd.png || true
           fi
 
           RVIZ_ID=$(xdotool search --onlyvisible --name "RViz" | head -1 || true)
           if [ -n "$RVIZ_ID" ]; then
-            import -display :99 -window "$RVIZ_ID" docs/live_view/rviz_live.png || true
+            xdotool windowactivate --sync "$RVIZ_ID" || true
+            xdotool windowraise "$RVIZ_ID" || true
+            sleep 5
+            import -display :99 -window root docs/live_view/rviz_front.png || true
           fi
+
+          import -display :99 -window root docs/live_view/desktop_full.png || true
 
       - name: Launch Group 5 Nav2 RViz if no RViz window exists
         working-directory: world
