@@ -81,6 +81,13 @@ jobs:
             sleep 8
             import -display :99 -window root docs/live_view/pineapple_simulator_front.png || true
 
+            # Open the simulator PLC HMI (course labs: press P) and capture it.
+            xdotool key p
+            sleep 3
+            import -display :99 -window root docs/live_view/pineapple_hmi.png || true
+            xdotool key p
+            sleep 2
+
             # Capture several camera rotations to expose the warehouse right side.
             # The Pine-Apple viewer uses mouse-drag orbit controls.
             for i in 1 2 3 4; do
