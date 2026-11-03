@@ -1,18 +1,22 @@
-[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-03-11-20-56-717324-runnervm48cm3-112
+[INFO] [launch]: All log files can be found below /root/.ros/log/2026-11-03-11-28-45-251537-runnervm48cm3-111
 [INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [warehouse_mission_controller-1]: process started with pid [115]
-[warehouse_mission_controller-1] [INFO] [1793704859.482328505] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
-[warehouse_mission_controller-1] [INFO] [1793704859.483305726] [warehouse_mission_controller]: Grand Challenge controller ready. Start controller first, then set the judge-specified 2D Pose Estimate in RViz.
-[warehouse_mission_controller-1] [INFO] [1793704859.485531638] [warehouse_mission_controller]: Queued LARGE box from PLC weight=11, location=n/a. Queue=['large']
-[warehouse_mission_controller-1] [INFO] [1793704859.486691392] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
-[warehouse_mission_controller-1] [INFO] [1793704862.304830488] [warehouse_mission_controller]: MISSION STATE: LOCALIZING | Judge/start pose received from RViz /initialpose
-[warehouse_mission_controller-1] [INFO] [1793704869.991268227] [warehouse_mission_controller]: MISSION STATE: LOCALIZED
-[warehouse_mission_controller-1] [INFO] [1793704869.992527798] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
-[warehouse_mission_controller-1] [INFO] [1793704869.994341356] [warehouse_mission_controller]: Arm waypoint 1/1
-[warehouse_mission_controller-1] [ERROR] [1793704870.153177992] [warehouse_mission_controller]: Arm waypoint 1 failed (status=6, moveit_error=-4)
-[warehouse_mission_controller-1] [INFO] [1793704870.154564179] [warehouse_mission_controller]: MISSION STATE: FAILED | Arm waypoint 1 failed (status=6, moveit_error=-4); failed_box=large; use /warehouse/retry_current
-[warehouse_mission_controller-1] [INFO] [1793704871.936492014] [warehouse_mission_controller]: Queued LARGE box from manual large service. Queue=['large']
-[warehouse_mission_controller-1] [INFO] [1793704871.937850289] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
-[warehouse_mission_controller-1] [INFO] [1793704871.939586092] [warehouse_mission_controller]: Arm waypoint 1/1
-[warehouse_mission_controller-1] [ERROR] [1793704872.086927800] [warehouse_mission_controller]: Arm waypoint 1 failed (status=6, moveit_error=-4)
-[warehouse_mission_controller-1] [INFO] [1793704872.088281727] [warehouse_mission_controller]: MISSION STATE: FAILED | Arm waypoint 1 failed (status=6, moveit_error=-4); failed_box=large; use /warehouse/retry_current
+[INFO] [warehouse_mission_controller-1]: process started with pid [114]
+[warehouse_mission_controller-1] [INFO] [1793705327.985049875] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
+[warehouse_mission_controller-1] [INFO] [1793705327.986265002] [warehouse_mission_controller]: Grand Challenge controller ready. Start controller first, then set the judge-specified 2D Pose Estimate in RViz.
+[warehouse_mission_controller-1] [INFO] [1793705328.265212870] [warehouse_mission_controller]: Queued LARGE box from PLC weight=11, location=n/a. Queue=['large']
+[warehouse_mission_controller-1] [INFO] [1793705328.266592634] [warehouse_mission_controller]: MISSION STATE: WAITING_FOR_JUDGE_INITIAL_POSE
+[warehouse_mission_controller-1] [INFO] [1793705331.159590709] [warehouse_mission_controller]: MISSION STATE: LOCALIZING | Judge/start pose received from RViz /initialpose
+[warehouse_mission_controller-1] [INFO] [1793705332.941837955] [warehouse_mission_controller]: MISSION STATE: LOCALIZED
+[warehouse_mission_controller-1] [INFO] [1793705332.942680637] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
+[warehouse_mission_controller-1] [INFO] [1793705332.944348099] [warehouse_mission_controller]: Arm waypoint 1/1
+[warehouse_mission_controller-1] [INFO] [1793705335.696868095] [warehouse_mission_controller]: MISSION STATE: NAVIGATING_PICKUP
+[warehouse_mission_controller-1] [INFO] [1793705335.698436972] [warehouse_mission_controller]: Nav2 goal PICKUP: x=0.15, y=-0.15
+[warehouse_mission_controller-1] [ERROR] [1793705335.793871923] [warehouse_mission_controller]: Nav2 PICKUP failed (status=6)
+[warehouse_mission_controller-1] [INFO] [1793705335.794995740] [warehouse_mission_controller]: MISSION STATE: FAILED | Nav2 PICKUP failed (status=6); failed_box=large; use /warehouse/retry_current
+[warehouse_mission_controller-1] [INFO] [1793705340.627780364] [warehouse_mission_controller]: Queued LARGE box from manual large service. Queue=['large']
+[warehouse_mission_controller-1] [INFO] [1793705340.628483866] [warehouse_mission_controller]: MISSION STATE: SAFE_ARM_BEFORE_PICKUP | Preparing large box cycle
+[warehouse_mission_controller-1] [INFO] [1793705340.657925385] [warehouse_mission_controller]: Arm waypoint 1/1
+[warehouse_mission_controller-1] [INFO] [1793705341.424787748] [warehouse_mission_controller]: MISSION STATE: NAVIGATING_PICKUP
+[warehouse_mission_controller-1] [INFO] [1793705341.425961688] [warehouse_mission_controller]: Nav2 goal PICKUP: x=0.15, y=-0.15
+[warehouse_mission_controller-1] [ERROR] [1793705341.492934755] [warehouse_mission_controller]: Nav2 PICKUP failed (status=6)
+[warehouse_mission_controller-1] [INFO] [1793705341.494144562] [warehouse_mission_controller]: MISSION STATE: FAILED | Nav2 PICKUP failed (status=6); failed_box=large; use /warehouse/retry_current
