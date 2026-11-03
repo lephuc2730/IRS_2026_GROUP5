@@ -11,6 +11,9 @@ on:
       - '.github/workflows/grand-challenge-build-check.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build-check:
     runs-on: ubuntu-24.04
