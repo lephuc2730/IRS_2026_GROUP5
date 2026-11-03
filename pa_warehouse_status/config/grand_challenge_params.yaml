@@ -18,12 +18,14 @@ warehouse_mission_controller:
     pickup_y: -0.15
     pickup_yaw: -1.5708
 
-    # IMPORTANT: These are provisional Group 5 map waypoints, NOT verified
-    # Large/Medium/Small shelf poses in the judged warehouse. Calibrate them
-    # in RViz on the exact map used tomorrow before the assessed run.
-    large_shelf_x: 0.10
-    large_shelf_y: -0.50
-    large_shelf_yaw: 0.0
+    # Large shelf / right-corner target identified from the official warehouse
+    # map. Stop in free space instead of driving tight against the wall.
+    large_shelf_x: 31.0
+    large_shelf_y: -5.5
+    large_shelf_yaw: 3.14159
+
+    # Medium/Small remain provisional until their judged shelf locations are
+    # identified on the official warehouse map.
 
     medium_shelf_x: 0.75
     medium_shelf_y: 0.00
