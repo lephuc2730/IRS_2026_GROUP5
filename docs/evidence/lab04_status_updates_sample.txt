@@ -1,2 +1,0 @@
-data: Route check complete - systems nominal.
----
